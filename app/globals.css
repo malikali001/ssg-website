@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-obsidian: #0F1115;
+  --color-obsidian-light: #1A1D23;
+  --color-gunmetal: #1A1D23;
+  --color-gunmetal-dark: #0F1115;
+  --color-signal-red: #E31E24;
+  --color-signal-red-glow: rgba(227, 30, 36, 0.5);
+  --color-text-main: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+
+  /* Font Families */
+  --font-family-montserrat: 'Montserrat', sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-down: slide-down 0.6s ease-out;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-scroll-left: scroll-left 30s linear infinite;
+
+  /* Keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes glow-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(227, 30, 36, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 40px rgba(227, 30, 36, 0.6);
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:root {
+  --obsidian: #0F1115;
+  --gunmetal: #1A1D23;
+  --signal-red: #E31E24;
+  --text-main: #F3F4F6;
+  --text-muted: #9CA3AF;
+}
+
+@layer base {
+  body {
+    background-color: var(--obsidian);
+    color: var(--text-main);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+    }
+
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.75rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+@layer components {
+
+  /* Tactical Button Styles */
+  .btn-primary {
+    background-color: #E31E24;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(227, 30, 36, 0.6);
+    transform: scale(1.05);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    border: 2px solid #F3F4F6;
+    color: #F3F4F6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background-color: #F3F4F6;
+    color: #0F1115;
+    transform: scale(1.05);
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.95);
+  }
+
+  /* Card Styles */
+  .card-tactical {
+    background-color: #1A1D23;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+  }
+
+  .card-tactical:hover {
+    box-shadow: 0 4px 20px rgba(227, 30, 36, 0.2);
+    border-bottom-color: #E31E24;
+  }
+
+  /* Grid Background */
+  .grid-bg {
+    background-image: linear-gradient(to right, rgba(227, 30, 36, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(227, 30, 36, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-color: var(--obsidian);
+  }
+
+  /* Glow Effect */
+  .glow-red {
+    box-shadow: 0 0 20px rgba(227, 30, 36, 0.4);
+  }
+
+  /* Backdrop Blur Header */
+  .header-blur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(15, 17, 21, 0.9);
+  }
+
+  /* Tactical Input */
+  .input-tactical {
+    background-color: #1A1D23;
+    border: 1px solid rgba(156, 163, 175, 0.3);
+    color: #F3F4F6;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+  }
+
+  .input-tactical:focus {
+    outline: none;
+    border-color: #E31E24;
+    box-shadow: 0 0 0 1px #E31E24;
+  }
+
+  /* Section Container */
+  .section-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gunmetal);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--signal-red);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--signal-red);
+  color: white;
+}
