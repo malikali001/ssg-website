@@ -27,9 +27,12 @@ export default function MainNav() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
-                        <div className="text-2xl font-montserrat font-black tracking-wider">
-                            <span className="text-signal-red">SSG</span>
-                            <span className="text-text-main ml-2">UK LTD</span>
+                        <div className="relative h-16 w-38">
+                            <img
+                                src="/ssg-logo.jpg"
+                                alt="SSG UK LTD"
+                                className="h-full w-full object-contain"
+                            />
                         </div>
                     </Link>
 
