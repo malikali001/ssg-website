@@ -3,14 +3,20 @@
 
 @theme {
   /* Colors */
-  --color-obsidian: #0F1115;
-  --color-obsidian-light: #1A1D23;
-  --color-gunmetal: #1A1D23;
-  --color-gunmetal-dark: #0F1115;
+  --color-obsidian: #FFFFFF;
+  /* White */
+  --color-obsidian-light: #F9FAFB;
+  /* Gray 50 */
+  --color-gunmetal: #F3F4F6;
+  /* Gray 100 */
+  --color-gunmetal-dark: #E5E7EB;
+  /* Gray 200 */
   --color-signal-red: #E31E24;
-  --color-signal-red-glow: rgba(227, 30, 36, 0.5);
-  --color-text-main: #F3F4F6;
-  --color-text-muted: #9CA3AF;
+  --color-signal-red-glow: rgba(227, 30, 36, 0.2);
+  --color-text-main: #111827;
+  /* Gray 900 */
+  --color-text-muted: #6B7280;
+  /* Gray 500 */
 
   /* Font Families */
   --font-family-montserrat: 'Montserrat', sans-serif;
@@ -21,8 +27,19 @@
   --animate-slide-down: slide-down 0.6s ease-out;
   --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
   --animate-scroll-left: scroll-left 30s linear infinite;
+  --animate-move-grid: move-grid 20s linear infinite;
 
   /* Keyframes */
+  @keyframes move-grid {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -61,11 +78,11 @@
 
     0%,
     100% {
-      box-shadow: 0 0 20px rgba(227, 30, 36, 0.3);
+      box-shadow: 0 0 20px rgba(227, 30, 36, 0.1);
     }
 
     50% {
-      box-shadow: 0 0 40px rgba(227, 30, 36, 0.6);
+      box-shadow: 0 0 30px rgba(227, 30, 36, 0.3);
     }
   }
 
@@ -81,11 +98,11 @@
 }
 
 :root {
-  --obsidian: #0F1115;
-  --gunmetal: #1A1D23;
+  --obsidian: #FFFFFF;
+  --gunmetal: #F3F4F6;
   --signal-red: #E31E24;
-  --text-main: #F3F4F6;
-  --text-muted: #9CA3AF;
+  --text-main: #111827;
+  --text-muted: #6B7280;
 }
 
 @layer base {
@@ -162,7 +179,7 @@
   }
 
   .btn-primary:hover {
-    box-shadow: 0 0 30px rgba(227, 30, 36, 0.6);
+    box-shadow: 0 4px 12px rgba(227, 30, 36, 0.3);
     transform: scale(1.05);
   }
 
@@ -171,8 +188,8 @@
   }
 
   .btn-secondary {
-    border: 2px solid #F3F4F6;
-    color: #F3F4F6;
+    border: 2px solid #111827;
+    color: #111827;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
     font-weight: 600;
@@ -180,8 +197,8 @@
   }
 
   .btn-secondary:hover {
-    background-color: #F3F4F6;
-    color: #0F1115;
+    background-color: #111827;
+    color: #FFFFFF;
     transform: scale(1.05);
   }
 
@@ -191,42 +208,44 @@
 
   /* Card Styles */
   .card-tactical {
-    background-color: #1A1D23;
+    background-color: #FFFFFF;
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: all 0.3s;
-    border-bottom: 2px solid transparent;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .card-tactical:hover {
-    box-shadow: 0 4px 20px rgba(227, 30, 36, 0.2);
-    border-bottom-color: #E31E24;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #E31E24;
   }
 
   /* Grid Background */
   .grid-bg {
-    background-image: linear-gradient(to right, rgba(227, 30, 36, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(227, 30, 36, 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     background-color: var(--obsidian);
   }
 
   /* Glow Effect */
   .glow-red {
-    box-shadow: 0 0 20px rgba(227, 30, 36, 0.4);
+    box-shadow: 0 0 20px rgba(227, 30, 36, 0.2);
   }
 
   /* Backdrop Blur Header */
   .header-blur {
     backdrop-filter: blur(12px);
-    background-color: rgba(15, 17, 21, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   /* Tactical Input */
   .input-tactical {
-    background-color: #1A1D23;
-    border: 1px solid rgba(156, 163, 175, 0.3);
-    color: #F3F4F6;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    color: #111827;
     padding: 0.75rem 1rem;
     border-radius: 0.25rem;
     transition: all 0.2s;

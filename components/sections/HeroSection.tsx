@@ -1,15 +1,36 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function HeroSection() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 0.5;
+        }
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Animated Background */}
             <div className="absolute inset-0 w-full h-full z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-gunmetal to-obsidian animate-gradient-shift" />
-                <div className="absolute inset-0 grid-bg opacity-30" />
+                <div className="absolute inset-0 grid-bg opacity-30 animate-move-grid" />
+
+                {/* Hero Video */}
+                <video
+                    ref={videoRef}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-multiply grayscale-[0.2]"
+                >
+                    <source src="/hero-video.mp4" type="video/mp4" />
+                </video>
             </div>
 
             {/* Dark overlay for readability */}
@@ -18,21 +39,28 @@ export default function HeroSection() {
             {/* Content */}
             <div className="relative z-10 section-container text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-black mb-6 text-balance">
                         Precision Protection.
                         <br />
-                        <span className="text-signal-red">Integrated Intelligence.</span>
+                        <motion.span
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                            className="text-signal-red inline-block"
+                        >
+                            Integrated Intelligence.
+                        </motion.span>
                     </h1>
                 </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
                     className="text-xl md:text-2xl text-text-muted max-w-3xl mx-auto mb-12"
                 >
                     SSG UK Ltd provides elite, technology-driven security and facilities management across the UK.
