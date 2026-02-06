@@ -74,7 +74,7 @@ export default function ReceptionContent() {
                 title="Reception Services."
                 subtitle="Excellence in Hospitality."
                 description="The first interaction defines your brand. Our reception and concierge teams provide a seamless, professional welcome that leaves a lasting impression."
-                imageSrc="/images/reception-hero.jpg"
+                imageSrc="/images/corporate-hero.png"
             />
 
             <div className="relative z-20">

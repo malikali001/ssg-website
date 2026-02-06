@@ -33,7 +33,7 @@ export default function CorporateContent() {
                 title="Corporate Security."
                 subtitle="Business Uninterrupted."
                 description="Protect your people, property, and reputation. We provide seamless security solutions for corporate headquarters and office environments."
-                imageSrc="/images/corporate-hero.jpg"
+                imageSrc="/images/corporate-hero.png"
             />
 
             <div className="relative z-20">

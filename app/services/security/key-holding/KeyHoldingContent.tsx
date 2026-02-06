@@ -65,7 +65,7 @@ export default function KeyHoldingContent() {
                 title="Key Holding & Response."
                 subtitle="Zero Risk. Total Peace of Mind."
                 description="Protect your staff from out-of-hours call-out risks. Our SIA-licensed officers hold your keys securely and respond to alarms 24/7."
-                imageSrc="/images/keyholding-hero.jpg"
+                imageSrc="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80"
             />
 
             <div className="relative z-20">

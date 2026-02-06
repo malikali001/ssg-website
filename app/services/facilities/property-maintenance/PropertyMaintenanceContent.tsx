@@ -71,7 +71,7 @@ export default function PropertyMaintenanceContent() {
                 title="Property Maintenance."
                 subtitle="Built to Last."
                 description="Preserve the value of your assets. Our multi-skilled tradespeople provide proactive maintenance and reactive repairs to keep your business running smoothly."
-                imageSrc="/images/maintenance-hero.jpg"
+                imageSrc="/images/office-hero.png"
             />
 
             <div className="relative z-20">

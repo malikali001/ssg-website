@@ -59,9 +59,11 @@ export default function ServiceHero({
                 <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-screen bg-slate-100">
                     <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent z-10 lg:w-32" />
                     {/* Placeholder for actual image */}
-                    <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400">
-                        <span className="text-lg font-semibold">[High-Res Security Officer Image]</span>
-                    </div>
+                    <img
+                        src={imageSrc}
+                        alt="Security Professional"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
                 </div>
             </div>
         </section>

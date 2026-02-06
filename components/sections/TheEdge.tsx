@@ -23,33 +23,26 @@ export default function TheEdge() {
                     transition={{ duration: 0.6 }}
                     className="relative"
                 >
-                    <div className="relative aspect-[4/3] bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 shadow-2xl p-8 flex items-center justify-center overflow-hidden">
-                        {/* Placeholder for 3D tablet mockup */}
-                        <div className="text-center relative z-10 w-full">
-                            <div className="w-full h-64 bg-deep-navy rounded-lg border border-gray-700 shadow-xl flex items-center justify-center mb-6 transform rotate-x-6 transition-transform hover:rotate-0 duration-500">
-                                <div className="text-white font-montserrat font-bold text-2xl tracking-widest">
-                                    INTELLIGENCE<br /><span className="text-signal-red">PORTAL</span>
-                                </div>
+                    <div className="relative aspect-[4/3] rounded-2xl border border-gray-200 shadow-2xl overflow-hidden group">
+                        <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
+                            alt="SSG Intelligence Portal Dashboard"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+
+                        {/* Overlay Stats */}
+                        <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 border border-white/20 shadow-lg">
+                                <div className="text-signal-red text-2xl font-bold">247</div>
+                                <div className="text-slate-600 text-[10px] font-bold uppercase tracking-wider">Active Guards</div>
                             </div>
-                            <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto">
-                                <div className="bg-white/90 backdrop-blur rounded-lg p-4 border border-gray-200 shadow-lg">
-                                    <div className="text-signal-red text-3xl font-bold">247</div>
-                                    <div className="text-gray-500 text-xs font-semibold uppercase">Active Guards</div>
-                                </div>
-                                <div className="bg-white/90 backdrop-blur rounded-lg p-4 border border-gray-200 shadow-lg">
-                                    <div className="text-green-500 text-3xl font-bold">98%</div>
-                                    <div className="text-gray-500 text-xs font-semibold uppercase">Compliance</div>
-                                </div>
+                            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 border border-white/20 shadow-lg">
+                                <div className="text-green-600 text-2xl font-bold">98%</div>
+                                <div className="text-slate-600 text-[10px] font-bold uppercase tracking-wider">Compliance</div>
                             </div>
                         </div>
-
-                        {/* Decorative elements */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -z-0 opacity-50" />
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-100 rounded-full blur-3xl -z-0 opacity-50" />
                     </div>
-
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 bg-signal-red/5 blur-3xl -z-10" />
                 </motion.div>
 
                 {/* Text Side */}

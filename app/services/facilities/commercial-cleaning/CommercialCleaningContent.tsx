@@ -66,7 +66,7 @@ export default function CommercialCleaningContent() {
                 title="Commercial Cleaning."
                 subtitle="Immaculate Standards."
                 description="Create a pristine environment for your business. Our sustainable, high-spec cleaning services ensure your premises reflect your professional excellence."
-                imageSrc="/images/cleaning-hero.jpg"
+                imageSrc="/images/office-hero.png"
             />
 
             <div className="relative z-20">

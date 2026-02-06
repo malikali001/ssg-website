@@ -56,7 +56,7 @@ export default function MobileContent() {
                 title="Mobile Security Patrols."
                 subtitle="Everywhere You Need Us."
                 description="A cost-effective alternative to static guarding. Our high-visibility patrol units provide randomized checks and rapid response across the UK."
-                imageSrc="/images/mobile-hero.jpg"
+                imageSrc="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80"
             />
 
             <div className="relative z-20">

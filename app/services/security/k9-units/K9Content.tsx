@@ -42,7 +42,7 @@ export default function K9Content() {
                 title="Elite K9 Units."
                 subtitle="Unmatched Detection."
                 description="When visual presence isn't enough. Our NASDU-certified dog units provide an impenetrable layer of security for high-risk sites and events."
-                imageSrc="/images/k9-hero.jpg"
+                imageSrc="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80"
             />
 
             <div className="relative z-20">

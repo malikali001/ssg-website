@@ -55,7 +55,7 @@ export default function WasteManagementContent() {
                 title="Waste Management."
                 subtitle="Responsible Disposal."
                 description="Sustainable waste solutions that reduce costs and your carbon footprint. We help you achieve zero-to-landfill status through intelligent sorting and recycling."
-                imageSrc="/images/waste-hero.jpg"
+                imageSrc="/images/office-hero.png"
             />
 
             <div className="relative z-20">

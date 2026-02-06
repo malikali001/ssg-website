@@ -47,7 +47,7 @@ export default function ElectronicContent() {
                 title="Electronic Security."
                 subtitle="Always Watching."
                 description="Technology never sleeps. Our integrated security systems monitor your assets 24/7, providing instant alerts and verified police response."
-                imageSrc="/images/cctv-hero.jpg"
+                imageSrc="/images/office-hero.png"
             />
 
             <div className="relative z-20">

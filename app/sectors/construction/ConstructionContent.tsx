@@ -33,7 +33,7 @@ export default function ConstructionContent() {
                 title="Construction Security."
                 subtitle="Build Without Risk."
                 description="From groundworks to handover, we secure your site against theft, vandalism, and liability. Fully accredited CSCS licensed officers and advanced perimeter technology."
-                imageSrc="/images/construction-hero.jpg"
+                imageSrc="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80"
             />
 
             <div className="relative z-20">
