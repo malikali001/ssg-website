@@ -14,7 +14,7 @@ export default function SectorsDropdown() {
     ];
 
     return (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[320px] bg-gunmetal border border-text-muted/20 rounded-lg shadow-2xl p-4 animate-fade-in">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[350px] bg-white border border-slate-200 rounded-xl shadow-2xl p-4 animate-fade-in z-50">
             <div className="grid grid-cols-2 gap-2">
                 {sectors.map((sector) => {
                     const Icon = sector.icon;
@@ -22,15 +22,21 @@ export default function SectorsDropdown() {
                         <Link
                             key={sector.href}
                             href={sector.href}
-                            className="flex flex-col items-center gap-2 p-4 rounded hover:bg-obsidian transition-all duration-200 group"
+                            className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all duration-200 group"
                         >
-                            <Icon className="w-8 h-8 text-text-muted group-hover:text-signal-red transition-colors" />
-                            <span className="text-sm text-text-main group-hover:text-signal-red transition-colors text-center">
+                            <Icon className="w-8 h-8 text-slate-400 group-hover:text-signal-red transition-colors" />
+                            <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors text-center">
                                 {sector.name}
                             </span>
                         </Link>
                     );
                 })}
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-slate-100 text-center">
+                <Link href="/contact" className="text-xs font-bold text-signal-red hover:underline uppercase tracking-wide">
+                    View Case Studies →
+                </Link>
             </div>
         </div>
     );
