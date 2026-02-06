@@ -34,7 +34,7 @@ export default function SectorsDropdown() {
             </div>
 
             <div className="mt-4 pt-4 border-t border-slate-100 text-center">
-                <Link href="/contact" className="text-xs font-bold text-signal-red hover:underline uppercase tracking-wide">
+                <Link href="/case-studies" className="text-xs font-bold text-signal-red hover:underline uppercase tracking-wide">
                     View Case Studies →
                 </Link>
             </div>
