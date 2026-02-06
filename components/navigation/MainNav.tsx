@@ -20,18 +20,18 @@ export default function MainNav() {
 
     return (
         <nav
-            className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? 'header-blur shadow-lg' : 'bg-obsidian'
+            className={`sticky top-0 z-40 transition-all duration-300 bg-white border-b border-slate-100 ${isScrolled ? 'shadow-sm' : ''
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center">
-                        <div className="relative h-16 w-38">
+                    <Link href="/" className="flex items-center group">
+                        <div className="relative h-16 w-38 overflow-hidden rounded-sm">
                             <img
                                 src="/ssg-logo.jpg"
                                 alt="SSG UK LTD"
-                                className="h-full w-full object-contain"
+                                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                             />
                         </div>
                     </Link>
@@ -40,55 +40,56 @@ export default function MainNav() {
                     <div className="hidden lg:flex items-center gap-8">
                         {/* Services Dropdown */}
                         <div
-                            className="relative"
+                            className="relative group h-20 flex items-center"
                             onMouseEnter={() => setActiveDropdown('services')}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button className="flex items-center gap-1 text-text-main hover:text-signal-red transition-colors duration-200 font-medium">
+                            <button className="flex items-center gap-1 text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium py-2">
                                 Services
-                                <ChevronDown className="w-4 h-4" />
+                                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                             </button>
-                            {activeDropdown === 'services' && <ServicesMegaMenu />}
+                            {activeDropdown === 'services' && (
+                                <div className="absolute top-full left-0 pt-2">
+                                    <ServicesMegaMenu />
+                                </div>
+                            )}
                         </div>
 
                         {/* Sectors Dropdown */}
                         <div
-                            className="relative"
+                            className="relative group h-20 flex items-center"
                             onMouseEnter={() => setActiveDropdown('sectors')}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button className="flex items-center gap-1 text-text-main hover:text-signal-red transition-colors duration-200 font-medium">
+                            <button className="flex items-center gap-1 text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium py-2">
                                 Sectors
-                                <ChevronDown className="w-4 h-4" />
+                                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                             </button>
-                            {activeDropdown === 'sectors' && <SectorsDropdown />}
+                            {activeDropdown === 'sectors' && (
+                                <div className="absolute top-full left-0 pt-2">
+                                    <SectorsDropdown />
+                                </div>
+                            )}
                         </div>
 
                         <Link
-                            href="/case-studies"
-                            className="text-text-main hover:text-signal-red transition-colors duration-200 font-medium"
+                            href="/esg"
+                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
                         >
-                            Case Studies
-                        </Link>
-
-                        <Link
-                            href="/about"
-                            className="text-text-main hover:text-signal-red transition-colors duration-200 font-medium"
-                        >
-                            About
+                            ESG & Compliance
                         </Link>
 
                         <Link
                             href="/careers"
-                            className="text-text-main hover:text-signal-red transition-colors duration-200 font-medium"
+                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
                         >
                             Careers
                         </Link>
                     </div>
 
                     {/* CTA Button */}
-                    <Link href="/quote" className="btn-primary">
-                        GET A QUOTE
+                    <Link href="/quote" className="btn-primary flex items-center gap-2 shadow-lg shadow-red-500/20">
+                        Get a Quote
                     </Link>
                 </div>
             </div>

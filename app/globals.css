@@ -5,22 +5,26 @@
   /* Colors */
   --color-obsidian: #FFFFFF;
   /* White */
-  --color-obsidian-light: #F9FAFB;
-  /* Gray 50 */
-  --color-gunmetal: #F3F4F6;
-  /* Gray 100 */
-  --color-gunmetal-dark: #E5E7EB;
-  /* Gray 200 */
+  --color-obsidian-light: #F8FAFC;
+  /* Slate-50 */
+  --color-gunmetal: #F1F5F9;
+  /* Slate-100 */
+  --color-gunmetal-dark: #E2E8F0;
+  /* Slate-200 */
+  --color-deep-navy: #0F172A;
+  /* Slate-900 */
+  --color-electric-blue: #E31E24;
+  /* Mapped to SSG Red for safety */
+  --color-silver: #CBD5E1;
+  /* Slate-300 */
   --color-signal-red: #E31E24;
   --color-signal-red-glow: rgba(227, 30, 36, 0.2);
-  --color-text-main: #111827;
-  /* Gray 900 */
-  --color-text-muted: #6B7280;
-  /* Gray 500 */
+  --color-text-main: #0F172A;
+  /* Slate-900 */
+  --color-text-muted: #64748B;
+  /* Slate-500 */
 
-  /* Font Families */
-  --font-family-montserrat: 'Montserrat', sans-serif;
-
+  /* ... Font Families & Animations remain ... */
   /* Animations */
   --animate-fade-in: fade-in 0.6s ease-out;
   --animate-slide-up: slide-up 0.6s ease-out;
@@ -99,10 +103,13 @@
 
 :root {
   --obsidian: #FFFFFF;
-  --gunmetal: #F3F4F6;
+  --gunmetal: #F8FAFC;
+  --deep-navy: #0F172A;
+  --electric-blue: #E31E24;
+  --silver: #CBD5E1;
   --signal-red: #E31E24;
-  --text-main: #111827;
-  --text-muted: #6B7280;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
 }
 
 @layer base {
@@ -123,6 +130,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 0.025em;
+    color: var(--deep-navy);
   }
 
   h1 {
@@ -170,26 +178,29 @@
 
   /* Tactical Button Styles */
   .btn-primary {
-    background-color: #E31E24;
+    background-color: var(--signal-red);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
     font-weight: 600;
     transition: all 0.3s;
+    border: 1px solid var(--signal-red);
   }
 
   .btn-primary:hover {
     box-shadow: 0 4px 12px rgba(227, 30, 36, 0.3);
-    transform: scale(1.05);
+    background-color: #c91a1f;
+    transform: translateY(-1px);
   }
 
   .btn-primary:active {
-    transform: scale(0.95);
+    transform: translateY(0);
   }
 
   .btn-secondary {
-    border: 2px solid #111827;
-    color: #111827;
+    border: 2px solid var(--signal-red);
+    color: var(--signal-red);
+    background-color: transparent;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
     font-weight: 600;
@@ -197,13 +208,13 @@
   }
 
   .btn-secondary:hover {
-    background-color: #111827;
+    background-color: var(--signal-red);
     color: #FFFFFF;
-    transform: scale(1.05);
+    transform: translateY(-1px);
   }
 
   .btn-secondary:active {
-    transform: scale(0.95);
+    transform: translateY(0);
   }
 
   /* Card Styles */

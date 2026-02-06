@@ -16,10 +16,7 @@ export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Animated Background */}
-            <div className="absolute inset-0 w-full h-full z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-gunmetal to-obsidian animate-gradient-shift" />
-                <div className="absolute inset-0 grid-bg opacity-30 animate-move-grid" />
-
+            <div className="absolute inset-0 w-full h-full z-0 bg-black">
                 {/* Hero Video */}
                 <video
                     ref={videoRef}
@@ -27,32 +24,32 @@ export default function HeroSection() {
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-multiply grayscale-[0.2]"
+                    className="absolute inset-0 w-full h-full object-cover opacity-80"
                 >
                     <source src="/hero-video.mp4" type="video/mp4" />
                 </video>
+                <div className="absolute inset-0 bg-black/40" />
             </div>
 
-            {/* Dark overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-obsidian/70 via-obsidian/60 to-obsidian/80 z-[1]" />
-
             {/* Content */}
-            <div className="relative z-10 section-container text-center">
+            <div className="relative z-10 section-container text-center pt-32 pb-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-black mb-6 text-balance">
-                        Precision Protection.
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-black mb-6 text-balance text-white leading-tight">
+                        Smarter Security.
+                        <br />
+                        <span className="text-white">Seamless Facilities.</span>
                         <br />
                         <motion.span
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                            className="text-signal-red inline-block"
+                            className="text-signal-red inline-block mt-2"
                         >
-                            Integrated Intelligence.
+                            Total Support.
                         </motion.span>
                     </h1>
                 </motion.div>
@@ -61,38 +58,53 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="text-xl md:text-2xl text-text-muted max-w-3xl mx-auto mb-12"
+                    className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 font-medium"
                 >
-                    SSG UK Ltd provides elite, technology-driven security and facilities management across the UK.
+                    Integrating elite personnel with real-time intelligence to protect your assets and elevate your environment across the UK.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
                 >
-                    <Link href="/quote" className="btn-primary text-lg px-8 py-4">
-                        Request a Quote
+                    <Link href="#sectors" className="btn-primary text-lg px-8 py-4 shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300">
+                        Explore Our Solutions
                     </Link>
-                    <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-                        Our Services
-                    </Link>
+                    <button
+                        onClick={() => window.open('https://www.youtube.com/watch?v=your-video-id', '_blank')}
+                        className="btn-secondary text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-deep-navy flex items-center gap-3 group"
+                    >
+                        <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-deep-navy/10 group-hover:text-deep-navy transition-colors">
+                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                        Watch Our Story
+                    </button>
                 </motion.div>
 
                 {/* Scroll indicator */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => {
+                        const nextSection = document.getElementById('trust-bar');
+                        if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
+                    }}
                 >
-                    <div className="w-6 h-10 border-2 border-text-muted/30 rounded-full flex items-start justify-center p-2">
-                        <motion.div
-                            animate={{ y: [0, 12, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                            className="w-1.5 h-1.5 bg-signal-red rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-xs uppercase tracking-widest text-gray-400">Scroll</span>
+                        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+                            <motion.div
+                                animate={{ y: [0, 12, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
+                                className="w-1.5 h-1.5 bg-electric-blue rounded-full"
+                            />
+                        </div>
                     </div>
                 </motion.div>
             </div>
