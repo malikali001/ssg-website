@@ -10,8 +10,8 @@ export default function SectorGrid() {
         { name: 'Retail & Leisure', icon: ShoppingCart, href: '/sectors/retail', description: 'Loss prevention and public safety.', color: 'from-blue-800/40' },
         { name: 'Construction & Infrastructure', icon: Building2, href: '/sectors/construction', description: 'CCTV, perimeter, and logistics.', color: 'from-blue-700/40' },
         { name: 'Logistics & Distribution', icon: Hotel, href: '/sectors/logistics', description: 'Gatehouse and yard management.', color: 'from-blue-600/40' },
-        { name: 'Public Sector & Healthcare', icon: Heart, href: '/sectors/public', description: 'Compliance and sensitive guarding.', color: 'from-blue-500/40' },
-        { name: 'Soft Services', icon: GraduationCap, href: '/sectors/cleaning', description: 'Professional cleaning and FM.', color: 'from-blue-400/40' },
+        { name: 'Public Sector & Healthcare', icon: Heart, href: '/sectors/public-sector', description: 'Compliance and sensitive guarding.', color: 'from-blue-500/40' },
+        { name: 'Soft Services', icon: GraduationCap, href: '/services/soft-services', description: 'Professional cleaning and FM.', color: 'from-blue-400/40' },
     ];
 
     return (

@@ -21,9 +21,15 @@ export default function ServicesMegaMenu() {
         { name: 'Reception Services', href: '/services/facilities/reception', icon: Monitor },
     ];
 
+    const sectorServices = [
+        { name: 'Logistics & Distribution', href: '/sectors/logistics', icon: Car }, // Using Car/Truck proxy
+        { name: 'Public Sector & Healthcare', href: '/sectors/public-sector', icon: Shield },
+        { name: 'Soft Services', href: '/services/soft-services', icon: Sparkles },
+    ];
+
     return (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] bg-white border border-slate-200 rounded-xl shadow-2xl p-8 animate-fade-in z-50">
-            <div className="grid grid-cols-2 gap-10">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1000px] bg-white border border-slate-200 rounded-xl shadow-2xl p-8 animate-fade-in z-50">
+            <div className="grid grid-cols-3 gap-10">
                 {/* Security Solutions */}
                 <div>
                     <h3 className="text-signal-red font-montserrat font-bold text-lg mb-4 flex items-center gap-2">
@@ -65,6 +71,31 @@ export default function ServicesMegaMenu() {
                                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200 group border border-transparent hover:border-slate-100"
                                 >
                                     <Icon className="w-5 h-5 text-slate-400 group-hover:text-deep-navy transition-colors" />
+                                    <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
+                                        {service.name}
+                                    </span>
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {/* Specialist Sectors */}
+                <div>
+                    <h3 className="text-slate-900 font-montserrat font-bold text-lg mb-4 flex items-center gap-2">
+                        <Sparkles className="w-5 h-5" />
+                        Specialist Sectors
+                    </h3>
+                    <div className="space-y-2">
+                        {sectorServices.map((service) => {
+                            const Icon = service.icon;
+                            return (
+                                <Link
+                                    key={service.href}
+                                    href={service.href}
+                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200 group border border-transparent hover:border-slate-100"
+                                >
+                                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-colors" />
                                     <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
                                         {service.name}
                                     </span>
