@@ -5,6 +5,7 @@ import PrimaryFunnel from "@/components/sections/PrimaryFunnel";
 import TheEdge from "@/components/sections/TheEdge";
 import SectorGrid from "@/components/sections/SectorGrid";
 import WhySSG from "@/components/sections/WhySSG";
+import AwardsPreview from "@/components/sections/AwardsPreview";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <PrimaryFunnel />
       <TheEdge />
       <SectorGrid />
+      <AwardsPreview />
       <WhySSG />
     </main>
   );
