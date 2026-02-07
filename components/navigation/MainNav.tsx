@@ -88,7 +88,7 @@ export default function MainNav() {
                     </div>
 
                     {/* CTA Button */}
-                    <Link href="/quote" className="btn-primary flex items-center gap-2 shadow-lg shadow-red-500/20">
+                    <Link href="/get-a-quote" className="btn-primary flex items-center gap-2 shadow-lg shadow-red-500/20">
                         Get a Quote
                     </Link>
                 </div>

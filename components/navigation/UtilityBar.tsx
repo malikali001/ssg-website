@@ -22,12 +22,14 @@ export default function UtilityBar() {
 
                     {/* Right: Client Portal */}
                     <div className="flex items-center gap-4">
-                        <Link
-                            href="/portals/client"
-                            className="text-slate-500 hover:text-signal-red transition-colors duration-200 text-xs font-medium uppercase tracking-wider"
+                        <a
+                            href="https://portal.thefmcloud.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-500 hover:text-signal-red transition-colors duration-200 text-xs font-medium uppercase tracking-wider flex items-center gap-2"
                         >
                             Client Portal [Login]
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

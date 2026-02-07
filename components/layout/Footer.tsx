@@ -22,7 +22,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <Link
-                        href="/quote"
+                        href="/get-a-quote"
                         className="bg-signal-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded shadow-lg shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-1"
                     >
                         Request a Site Survey
