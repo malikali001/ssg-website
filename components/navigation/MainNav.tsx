@@ -49,7 +49,7 @@ export default function MainNav() {
                                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                             </button>
                             {activeDropdown === 'services' && (
-                                <div className="absolute top-full left-0 pt-2">
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
                                     <ServicesMegaMenu />
                                 </div>
                             )}
@@ -66,7 +66,7 @@ export default function MainNav() {
                                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                             </button>
                             {activeDropdown === 'sectors' && (
-                                <div className="absolute top-full left-0 pt-2">
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
                                     <SectorsDropdown />
                                 </div>
                             )}
@@ -79,11 +79,19 @@ export default function MainNav() {
                             ESG & Compliance
                         </Link>
 
+
                         <Link
                             href="/careers"
                             className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
                         >
                             Careers
+                        </Link>
+
+                        <Link
+                            href="/contact-us"
+                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
+                        >
+                            Contact
                         </Link>
                     </div>
 

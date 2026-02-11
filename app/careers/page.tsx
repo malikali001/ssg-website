@@ -300,15 +300,15 @@ export default function CareersPage() {
             </section>
 
             {/* 6. Application Form */}
-            <section id="application-form" className="py-24 bg-[--color-deep-navy] relative">
+            <section id="application-form" className="py-24 bg-slate-50 relative">
                 <div className="section-container max-w-4xl text-center">
-                    <div className="inline-block p-3 rounded-full bg-white/10 mb-6">
-                        <FileText className="w-8 h-8 text-white" />
+                    <div className="inline-block p-3 rounded-full bg-[--color-deep-navy]/5 mb-6">
+                        <FileText className="w-8 h-8 text-[--color-signal-red]" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-montserrat font-black text-white mb-6">
+                    <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6">
                         Ready to Join Us?
                     </h2>
-                    <p className="text-slate-100 text-lg mb-12 font-medium">
+                    <p className="text-slate-600 text-lg mb-12 font-medium">
                         Complete the form below to start your application. Please ensure you have your SIA licence details ready.
                     </p>
 
@@ -353,7 +353,7 @@ export default function CareersPage() {
                                 <div className="mt-2 text-xs text-slate-500">* Please email your full CV to jobs@ssg-net.com after submitting this form.</div>
                             </div>
 
-                            <button type="button" className="w-full py-4 bg-[--color-signal-red] hover:bg-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
+                            <button type="button" className="w-full py-4 bg-[#E31E24] hover:bg-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
                                 Submit Application
                             </button>
 

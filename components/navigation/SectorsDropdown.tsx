@@ -14,7 +14,7 @@ export default function SectorsDropdown() {
     ];
 
     return (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[350px] bg-white border border-slate-200 rounded-xl shadow-2xl p-4 animate-fade-in z-50">
+        <div className="w-[350px] bg-white border border-slate-200 rounded-xl shadow-2xl p-4 animate-fade-in z-50">
             <div className="grid grid-cols-2 gap-2">
                 {sectors.map((sector) => {
                     const Icon = sector.icon;

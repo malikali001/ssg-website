@@ -28,7 +28,7 @@ export default function ServicesMegaMenu() {
     ];
 
     return (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1000px] bg-white border border-slate-200 rounded-xl shadow-2xl p-8 animate-fade-in z-50">
+        <div className="w-[1000px] bg-white border border-slate-200 rounded-xl shadow-2xl p-8 animate-fade-in z-50">
             <div className="grid grid-cols-3 gap-10">
                 {/* Security Solutions */}
                 <div>
