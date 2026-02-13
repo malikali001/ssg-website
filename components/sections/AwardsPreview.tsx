@@ -1,40 +1,14 @@
 'use client';
 
-import { Award, Trophy, Star, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { awards } from '@/data/awards';
+import AwardBlock from '@/components/ui/AwardBlock';
 
 export default function AwardsPreview() {
-    const awards = [
-        {
-            title: "UK OSPA Awards 2018",
-            subtitle: "Outstanding Young Security Professional",
-            status: "Finalist",
-            icon: Star,
-            color: "text-amber-500",
-            bg: "bg-amber-50",
-            images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=500"]
-        },
-        {
-            title: "ACS Champion of the Year",
-            status: "Finalist",
-            icon: Trophy,
-            color: "text-[--color-signal-red]",
-            bg: "bg-red-50",
-            images: [
-                "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&q=80&w=500",
-                "https://images.unsplash.com/photo-1560250097-9b93dbd96328?auto=format&fit=crop&q=80&w=500" // Person image placeholder
-            ]
-        },
-        {
-            title: "ACS Pacesetters Award",
-            status: "Winner",
-            icon: Award,
-            color: "text-blue-600",
-            bg: "bg-blue-50",
-            images: [] // No image
-        }
-    ];
+    // Select featured awards, limit to 3
+    const featuredAwards = awards.filter(a => a.featured).slice(0, 3);
 
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden">
@@ -50,96 +24,29 @@ export default function AwardsPreview() {
                             Awards & <span className="text-[--color-signal-red]">Recognition</span>
                         </h2>
                     </div>
-                    <div className="md:text-right">
-                        <Link
-                            href="/awards-recognition"
-                            className="hidden md:inline-flex items-center gap-2 text-[--color-deep-navy] font-bold hover:text-[--color-signal-red] transition-colors group"
-                        >
-                            View All Awards <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {awards.map((award, idx) => (
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                    {featuredAwards.map((award, idx) => (
                         <motion.div
-                            key={idx}
+                            key={award.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-100 hover:-translate-y-1 group overflow-hidden flex flex-col"
+                            className="h-full"
                         >
-                            <div className="h-48 relative overflow-hidden shrink-0 group-hover:bg-slate-50 transition-colors">
-                                <div className="absolute top-0 right-0 p-4 z-10">
-                                    <span className="px-3 py-1 bg-slate-900/90 backdrop-blur-sm text-white text-xs font-bold rounded-full uppercase tracking-wider">
-                                        {award.status}
-                                    </span>
-                                </div>
-
-                                {award.images.length === 0 ? (
-                                    <div className={`w-full h-full ${award.bg} flex items-center justify-center relative overflow-hidden`}>
-                                        <award.icon className={`w-24 h-24 ${award.color} opacity-20 absolute -bottom-4 -right-4 rotate-12`} />
-                                        <award.icon className={`w-12 h-12 ${award.color} opacity-50 relative z-10`} />
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-transparent" />
-                                    </div>
-                                ) : award.images.length === 1 ? (
-                                    <>
-                                        <img
-                                            src={award.images[0]}
-                                            alt={award.title}
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[--color-deep-navy]/80 to-transparent opacity-60" />
-                                    </>
-                                ) : (
-                                    <div className="w-full h-full grid grid-cols-2 gap-0.5 bg-white">
-                                        <div className="relative overflow-hidden h-full">
-                                            <img
-                                                src={award.images[0]}
-                                                alt={`${award.title} Award`}
-                                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 origin-left"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[--color-deep-navy]/60 to-transparent opacity-60" />
-                                        </div>
-                                        <div className="relative overflow-hidden h-full">
-                                            <img
-                                                src={award.images[1]}
-                                                alt={`${award.title} Recipient`}
-                                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 origin-right"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[--color-deep-navy]/60 to-transparent opacity-60" />
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div className="p-8 flex-grow flex flex-col relative">
-                                <div className={`absolute -top-6 left-6 w-12 h-12 ${award.bg} rounded-xl flex items-center justify-center shadow-lg`}>
-                                    <award.icon className={`w-6 h-6 ${award.color}`} />
-                                </div>
-
-                                <div className="mt-4">
-                                    <h3 className="text-xl font-bold text-[--color-deep-navy] mb-2 leading-tight">
-                                        {award.title}
-                                    </h3>
-                                    {award.subtitle && (
-                                        <p className="text-sm text-[--color-signal-red] font-bold">
-                                            {award.subtitle}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
+                            <AwardBlock award={award} layout="compact" />
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="mt-8 text-center md:hidden">
+                <div className="text-center">
                     <Link
                         href="/awards-recognition"
-                        className="inline-flex items-center gap-2 text-[--color-deep-navy] font-bold hover:text-[--color-signal-red] transition-colors"
+                        className="inline-flex items-center gap-2 text-[--color-deep-navy] font-bold hover:text-[--color-signal-red] transition-colors group px-8 py-4 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md"
                     >
-                        View All Awards <ArrowRight className="w-5 h-5" />
+                        View All Awards <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>
