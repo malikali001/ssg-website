@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Linkedin, Twitter, Phone, Mail, MapPin, ArrowUp, CheckCircle } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Phone, Mail, MapPin, ArrowUp, CheckCircle, Instagram } from 'lucide-react';
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -53,6 +53,9 @@ export default function Footer() {
                             </a>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-signal-red hover:text-white transition-colors duration-300">
                                 <Facebook className="w-5 h-5" />
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-signal-red hover:text-white transition-colors duration-300">
+                                <Instagram className="w-5 h-5" />
                             </a>
                         </div>
                     </div>

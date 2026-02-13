@@ -14,14 +14,15 @@ export default function AwardsPreview() {
         <section className="py-24 bg-slate-50 relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-[--color-signal-red]/5 rounded-full blur-3xl -mr-32 -mb-32 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--signal-red)]/5 rounded-full blur-3xl -mr-32 -mb-32 pointer-events-none" />
 
             <div className="section-container relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <span className="text-[--color-signal-red] font-bold tracking-wider uppercase text-sm">Excellence</span>
-                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mt-2">
-                            Awards & <span className="text-[--color-signal-red]">Recognition</span>
+                        <span className="text-[var(--signal-red)] font-bold tracking-wider uppercase text-sm">Excellence</span>
+                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[var(--deep-navy)] mt-2">
+                            Awards & <span className="text-[var(--signal-red)]">Recognition</span>
                         </h2>
                     </div>
                 </div>
@@ -44,7 +45,7 @@ export default function AwardsPreview() {
                 <div className="text-center">
                     <Link
                         href="/awards-recognition"
-                        className="inline-flex items-center gap-2 text-[--color-deep-navy] font-bold hover:text-[--color-signal-red] transition-colors group px-8 py-4 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md"
+                        className="inline-flex items-center gap-2 text-[var(--deep-navy)] font-bold hover:text-[var(--signal-red)] transition-colors group px-8 py-4 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md"
                     >
                         View All Awards <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>

@@ -73,7 +73,7 @@ export default function HeroSection() {
                         Explore Our Solutions
                     </Link>
                     <button
-                        onClick={() => window.open('https://www.youtube.com/watch?v=your-video-id', '_blank')}
+                        onClick={() => window.open('https://www.youtube.com/watch?v=Z4F3AXvrLKo', '_blank')}
                         className="btn-secondary text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-deep-navy flex items-center gap-3 group"
                     >
                         <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-deep-navy/10 group-hover:text-deep-navy transition-colors">

@@ -32,7 +32,7 @@ export default function GetAQuotePage() {
                     </p>
                     <a
                         href="/"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-[--color-signal-red] hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--signal-red)] hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl"
                     >
                         Return Home
                     </a>
@@ -210,7 +210,7 @@ export default function GetAQuotePage() {
                                     <button
                                         type="submit"
                                         disabled={formStatus === 'submitting'}
-                                        className="w-full py-4 bg-[--color-signal-red] hover:bg-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                        className="w-full py-4 bg-[var(--signal-red)] hover:bg-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
                                         {formStatus === 'submitting' ? (
                                             <>Processing...</>
