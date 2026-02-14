@@ -32,7 +32,7 @@ export default function MannedGuardingContent() {
                 title="Elite Manned Guarding."
                 subtitle="Intelligent Protection."
                 description="We don't just supply guards; we provide highly trained security professionals backed by data-driven intelligence to protect your people, assets, and reputation."
-                imageSrc="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80"
+                imageSrc="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80"
             />
 
             <div className="relative z-20">

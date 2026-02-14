@@ -12,7 +12,7 @@ export default function CaseStudiesPage() {
             client: "National Retail Chain",
             sector: "Retail",
             summary: "Implementing a data-driven store detective strategy that identified internal theft rings and reduced stock loss significantly within 3 months.",
-            imageSrc: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80",
+            imageSrc: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
             stats: [
                 { label: "Shrinkage", value: "-45%" },
                 { label: "Recovery", value: "£1.2M" }
@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
             client: "Tier 1 Contractor",
             sector: "Construction",
             summary: "Deploying biometric access control and perimeter detection for a high-risk city center development, ensuring 100% CSCS compliance.",
-            imageSrc: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
+            imageSrc: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
             stats: [
                 { label: "Incidents", value: "0" },
                 { label: "Compliance", value: "100%" }
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
             client: "FinTech Corp",
             sector: "Corporate",
             summary: "Replacing legacy systems with a seamless digital concierge experience, improving visitor flow and front-of-house security.",
-            imageSrc: "https://images.unsplash.com/photo-1497366216548-37526070299c?auto=format&fit=crop&q=80",
+            imageSrc: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
             stats: [
                 { label: "Check-in", value: "30s" },
                 { label: "Satisfaction", value: "5/5" }
@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
             client: "NHS Trust",
             sector: "Healthcare",
             summary: "Providing conflict management trained officers to support clinical staff in a high-pressure A&E department.",
-            imageSrc: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80",
+            imageSrc: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&q=80",
             stats: [
                 { label: "Assaults", value: "-60%" },
                 { label: "Support", value: "24/7" }
@@ -63,7 +63,7 @@ export default function CaseStudiesPage() {
                 title="Success Stories."
                 subtitle="Proven Results."
                 description="Real-world examples of how SSG Security delivers operational excellence and measurable value across diverse sectors."
-                imageSrc="https://images.unsplash.com/photo-1555962937-236fabbea35b?auto=format&fit=crop&q=80"
+                imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
             />
 
             <div className="relative z-20">

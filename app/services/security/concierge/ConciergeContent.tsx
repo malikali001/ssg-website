@@ -62,7 +62,7 @@ export default function ConciergeContent() {
                 title="Concierge Security."
                 subtitle="Service Meets Safety."
                 description="The face of your building, the guardians of your people. Our concierge security officers provide a seamless blend of five-star hospitality and vigilant protection."
-                imageSrc="/images/corporate-hero.png"
+                imageSrc="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"
             />
 
             <div className="relative z-20">

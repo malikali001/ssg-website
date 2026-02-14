@@ -33,7 +33,7 @@ export default function HospitalityContent() {
                 title="Hospitality Security."
                 subtitle="Secure Experience."
                 description="Protecting your guests and your license. We provide door supervision and event security that enhances the customer experience rather than hindering it."
-                imageSrc="/images/corporate-hero.png"
+                imageSrc="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"
             />
 
             <div className="relative z-20">

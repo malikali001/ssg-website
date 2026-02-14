@@ -33,7 +33,7 @@ export default function RetailContent() {
                 title="Retail Security."
                 subtitle="Protecting Profits."
                 description="Combat shrinkage and keep your customers safe. Our retail security solutions blend loss prevention expertise with exceptional customer service."
-                imageSrc="/images/retail-hero.png"
+                imageSrc="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80"
             />
 
             <div className="relative z-20">

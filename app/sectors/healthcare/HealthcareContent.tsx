@@ -33,7 +33,7 @@ export default function HealthcareContent() {
                 title="Healthcare Security."
                 subtitle="Clinical Safety."
                 description="Supporting the NHS and private healthcare providers. Our officers are trained to manage aggression and protect vulnerable patients in clinical settings."
-                imageSrc="/images/healthcare-hero.png"
+                imageSrc="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80"
             />
 
             <div className="relative z-20">

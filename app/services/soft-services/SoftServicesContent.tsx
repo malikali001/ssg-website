@@ -20,7 +20,7 @@ export default function SoftServicesContent() {
                 title="Soft Services."
                 subtitle="Facility Excellence."
                 description="Beyond security, we maintain the operational excellence of your working environment. Cleaning, maintenance, and concierge services delivered with the same SSG precision."
-                imageSrc="https://images.unsplash.com/photo-1581578731117-10d52b4d80cd?auto=format&fit=crop&q=80"
+                imageSrc="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
             />
 
             <div className="relative z-20">

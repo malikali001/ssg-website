@@ -33,7 +33,7 @@ export default function EducationContent() {
                 title="Education Security."
                 subtitle="Safe Learning."
                 description="Creating secure environments for schools, colleges, and universities. Our officers are DBS enhanced checked and safeguarding trained."
-                imageSrc="/images/office-hero.png"
+                imageSrc="https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80"
             />
 
             <div className="relative z-20">
