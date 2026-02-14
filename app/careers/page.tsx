@@ -21,7 +21,7 @@ export default function CareersPage() {
                         alt="Security professional on duty"
                         className="w-full h-full object-cover opacity-50"
                     />
-                    <div className="absolute inset-0 bg-black/70" />
+                    <div className="absolute inset-0 bg-black/40" />
                 </div>
 
                 <div className="relative z-10 section-container text-center pt-20">
@@ -35,7 +35,7 @@ export default function CareersPage() {
                         </div>
                         <h1 className="text-5xl md:text-7xl font-montserrat font-black text-white mb-8 leading-tight drop-shadow-2xl">
                             Build Your Career in <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[--color-signal-red] to-red-600">
+                            <span className="text-[--color-signal-red]">
                                 Professional Security
                             </span>
                         </h1>
@@ -119,11 +119,11 @@ export default function CareersPage() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <div>
                             <span className="text-[--color-signal-red] font-bold tracking-wider uppercase text-sm">Opportunities</span>
-                            <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mt-2">
+                            <h2 className="text-3xl md:text-5xl font-montserrat font-black text-white mt-2">
                                 Roles We <span className="text-[--color-signal-red]">Hire For</span>
                             </h2>
                         </div>
-                        <p className="text-slate-700 max-w-md font-bold">
+                        <p className="text-white max-w-md font-medium">
                             Join our team across various sectors including Corporate, Retail, Logistics, and Events.
                         </p>
                     </div>
@@ -291,7 +291,7 @@ export default function CareersPage() {
                         </div>
                         <div className="flex-grow text-center md:text-left">
                             <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-2">We Invest in You</h3>
-                            <p className="text-slate-700 font-medium">
+                            <p className="text-slate-600 font-medium">
                                 Successful candidates receive site-specific induction, ongoing upskilling (First Aid, Fire Marshal), and opportunities for career advancement into supervisory roles.
                             </p>
                         </div>
