@@ -39,32 +39,50 @@ export default function ServiceHero({
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="#audit"
-                                className="bg-signal-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded shadow-lg shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-1"
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
-                                Request Site Audit
-                            </Link>
-                            <Link
-                                href="#capabilities"
-                                className="border-2 border-slate-200 hover:border-signal-red text-slate-900 hover:text-signal-red font-bold py-4 px-8 rounded transition-all duration-300"
+                                <Link
+                                    href="#audit"
+                                    className="bg-signal-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 inline-block"
+                                >
+                                    Request Site Audit
+                                </Link>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
-                                View Capabilities
-                            </Link>
+                                <Link
+                                    href="#capabilities"
+                                    className="border-2 border-slate-200 hover:border-signal-red text-slate-900 hover:text-signal-red font-bold py-4 px-8 rounded transition-all duration-300 inline-block"
+                                >
+                                    View Capabilities
+                                </Link>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>
 
                 {/* Image Side */}
-                <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-screen bg-slate-100">
+                <motion.div
+                    className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-screen bg-slate-100 overflow-hidden"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                >
                     <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent z-10 lg:w-32" />
                     {/* Placeholder for actual image */}
-                    <img
+                    <motion.img
                         src={imageSrc}
                         alt="Security Professional"
                         className="absolute inset-0 w-full h-full object-cover"
+                        initial={{ scale: 1.2 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
                     />
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -29,7 +29,9 @@ export default function CaseStudyCard({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+            whileHover={{ y: -10, scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+            className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-2xl hover:shadow-signal-red/10 transition-all duration-300 flex flex-col h-full"
         >
             {/* Image Section */}
             <div className="relative h-64 overflow-hidden">

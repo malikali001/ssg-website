@@ -29,7 +29,7 @@ export default function ServiceCTA() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link
-                            href="/contact"
+                            href="/contact-us"
                             className="w-full sm:w-auto bg-signal-red hover:bg-red-600 text-white font-bold py-5 px-10 rounded-lg shadow-lg shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
                         >
                             Request Free Site Audit

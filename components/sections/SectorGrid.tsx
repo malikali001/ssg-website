@@ -41,18 +41,23 @@ export default function SectorGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{ y: -10, scale: 1.02 }}
                         >
                             <Link
                                 href={sector.href}
-                                className="group relative block h-full bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-signal-red/30 transition-all duration-300"
+                                className="group relative block h-full bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-signal-red/30 transition-all duration-300 hover:shadow-2xl hover:shadow-signal-red/10"
                             >
                                 {/* Gradient Background on Hover */}
                                 <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
                                 <div className="relative p-8 flex flex-col items-center text-center h-full">
-                                    <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white transition-all duration-300 shadow-sm">
+                                    <motion.div
+                                        className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-white transition-all duration-300 shadow-sm"
+                                        whileHover={{ rotate: 360, scale: 1.2 }}
+                                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    >
                                         <Icon className="w-8 h-8 text-deep-navy group-hover:text-signal-red transition-colors duration-300" />
-                                    </div>
+                                    </motion.div>
 
                                     <h3 className="text-xl font-montserrat font-bold text-deep-navy mb-3">
                                         {sector.name}

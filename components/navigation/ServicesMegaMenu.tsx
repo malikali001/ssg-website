@@ -112,7 +112,7 @@ export default function ServicesMegaMenu() {
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     24/7 Control Room Active
                 </span>
-                <Link href="/contact" className="text-signal-red font-bold hover:underline">
+                <Link href="/contact-us" className="text-signal-red font-bold hover:underline">
                     Book a Free Site Audit →
                 </Link>
             </div>

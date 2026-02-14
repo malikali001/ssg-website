@@ -189,10 +189,10 @@ export default function Footer() {
                         &copy; 2026 SSG Support Services Group LTD. All rights reserved.
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
-                        <Link href="/modern-slavery" className="hover:text-signal-red transition-colors">Modern Slavery Statement</Link>
-                        <Link href="/privacy" className="hover:text-signal-red transition-colors">Privacy Policy</Link>
-                        <Link href="/cookies" className="hover:text-signal-red transition-colors">Cookie Policy</Link>
-                        <Link href="/terms" className="hover:text-signal-red transition-colors">Terms & Conditions</Link>
+                        <Link href="/modern-slavery-statement" className="hover:text-signal-red transition-colors">Modern Slavery Statement</Link>
+                        <Link href="/privacy-policy" className="hover:text-signal-red transition-colors">Privacy Policy</Link>
+                        <Link href="/cookie-policy" className="hover:text-signal-red transition-colors">Cookie Policy</Link>
+                        <Link href="/terms-and-conditions" className="hover:text-signal-red transition-colors">Terms & Conditions</Link>
                         <Link href="/sitemap" className="hover:text-signal-red transition-colors">Site Map</Link>
                     </div>
                 </div>

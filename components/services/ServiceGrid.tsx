@@ -39,11 +39,16 @@ export default function ServiceGrid({ title, subtitle, description, services }: 
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group p-8 bg-white rounded-xl border border-slate-200 hover:border-signal-red transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                                whileHover={{ y: -8, scale: 1.03 }}
+                                className="group p-8 bg-white rounded-xl border border-slate-200 hover:border-signal-red transition-all duration-300 hover:shadow-2xl hover:shadow-signal-red/10"
                             >
-                                <div className="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-signal-red transition-colors duration-300">
+                                <motion.div
+                                    className="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-signal-red transition-colors duration-300"
+                                    whileHover={{ scale: 1.1, rotate: [0, -10, 10, -10, 0] }}
+                                    transition={{ duration: 0.5 }}
+                                >
                                     <Icon className="w-6 h-6 text-slate-900 group-hover:text-white transition-colors duration-300" />
-                                </div>
+                                </motion.div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-signal-red transition-colors">
                                     {service.title}
                                 </h3>
