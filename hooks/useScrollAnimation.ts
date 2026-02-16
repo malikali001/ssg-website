@@ -3,7 +3,6 @@ import { useRef } from 'react';
 
 interface UseScrollAnimationOptions {
     once?: boolean;
-    margin?: string;
     threshold?: number;
 }
 
@@ -11,7 +10,6 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
     const ref = useRef(null);
     const isInView = useInView(ref, {
         once: options.once ?? true,
-        margin: options.margin,
         amount: options.threshold ?? 0.3
     });
 
