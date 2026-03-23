@@ -2,13 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors - Navy/White/Amber Corporate Theme (Intraguard style) */
+  /* Colors - Navy/White/Red Corporate Theme */
   --color-obsidian: #FFFFFF;
   --color-obsidian-light: #F8FAFC;
   --color-gunmetal: #F5F7FA;
   --color-gunmetal-dark: #E2E8F0;
   --color-deep-navy: #2b2a29;
-  --color-electric-blue: #E8A838;
+  --color-electric-blue: #C83232;
   --color-silver: #CBD5E1;
   --color-signal-red: #C83232;
   --color-signal-red-glow: rgba(200, 50, 50, 0.15);
@@ -16,8 +16,8 @@
   --color-text-muted: #6B7B8D;
 
   /* Extended palette */
-  --color-accent-amber: #E8A838;
-  --color-accent-amber-hover: #D49730;
+  --color-accent-amber: #C83232;
+  --color-accent-amber-hover: #A82828;
   --color-navy-light: #2A4F72;
   --color-section-dark: #0C1E33;
   --color-section-light: #F5F7FA;
@@ -103,13 +103,13 @@
   --obsidian: #FFFFFF;
   --gunmetal: #F5F7FA;
   --deep-navy: #2b2a29;
-  --electric-blue: #E8A838;
+  --electric-blue: #C83232;
   --silver: #CBD5E1;
   --signal-red: #C83232;
   --text-main: #2b2a29;
   --text-muted: #6B7B8D;
-  --accent-amber: #E8A838;
-  --accent-amber-hover: #D49730;
+  --accent-amber: #C83232;
+  --accent-amber-hover: #A82828;
   --navy-light: #2A4F72;
   --section-dark: #0C1E33;
   --section-light: #F5F7FA;
@@ -121,7 +121,7 @@
     background-color: var(--obsidian);
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -129,9 +129,19 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   }
 
   h1,
@@ -147,15 +157,29 @@
   }
 
   h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
     font-size: 1.875rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.875rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -193,11 +217,19 @@
   .btn-primary {
     background-color: var(--accent-amber);
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.625rem 1.25rem;
     border-radius: 9999px;
     font-weight: 600;
+    font-size: 0.875rem;
     transition: all 0.3s;
     border: 1px solid var(--accent-amber);
+  }
+
+  @media (min-width: 640px) {
+    .btn-primary {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
   }
 
   .btn-primary:hover {
@@ -213,10 +245,18 @@
     border: 2px solid var(--signal-red);
     color: var(--signal-red);
     background-color: transparent;
-    padding: 0.75rem 1.5rem;
+    padding: 0.625rem 1.25rem;
     border-radius: 9999px;
     font-weight: 600;
+    font-size: 0.875rem;
     transition: all 0.3s;
+  }
+
+  @media (min-width: 640px) {
+    .btn-secondary {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
   }
 
   .btn-secondary:hover {
@@ -305,22 +345,24 @@
     max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
   }
 
   @media (min-width: 640px) {
     .section-container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      padding: 5rem 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .section-container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding: 6rem 2rem;
     }
   }
 }

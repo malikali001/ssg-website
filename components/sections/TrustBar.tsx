@@ -15,7 +15,7 @@ export default function TrustBar() {
     return (
         <section className="bg-white border-t border-[var(--border-color)]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left — Text */}
                     <motion.div
                         initial={{ opacity: 0, x: -15 }}
@@ -40,12 +40,12 @@ export default function TrustBar() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="grid grid-cols-3 gap-4"
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4"
                     >
                         {accreditations.map((accred, index) => (
                             <div
                                 key={index}
-                                className="aspect-square bg-[#F7F7F7] rounded-2xl border border-gray-200/80 flex items-center justify-center p-5 hover:shadow-md transition-shadow duration-300"
+                                className="aspect-square bg-[#F7F7F7] rounded-xl sm:rounded-2xl border border-gray-200/80 flex items-center justify-center p-3 sm:p-5 hover:shadow-md transition-shadow duration-300"
                                 title={accred.name}
                             >
                                 <img

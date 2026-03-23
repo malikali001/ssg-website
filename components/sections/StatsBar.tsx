@@ -19,14 +19,14 @@ export default function StatsBar() {
                 backgroundSize: '22px 22px',
             }} />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 sm:mb-16"
                 >
                     <h2 className="mb-4">
                         Trusted Security. Proven Results.
@@ -37,7 +37,7 @@ export default function StatsBar() {
                 </motion.div>
 
                 {/* Stats Cards */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
                     {stats.map((stat, index) => {
                         const Icon = stat.icon;
                         return (
@@ -47,20 +47,20 @@ export default function StatsBar() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="bg-white rounded-2xl border border-gray-200/80 p-7 md:p-9 shadow-[0_1px_4px_rgba(0,0,0,0.04)]"
+                                className="bg-white rounded-xl sm:rounded-2xl border border-gray-200/80 p-4 sm:p-7 md:p-9 shadow-[0_1px_4px_rgba(0,0,0,0.04)]"
                             >
                                 {/* Icon in circle */}
-                                <div className="w-14 h-14 rounded-full border-[1.5px] border-[var(--section-dark)] flex items-center justify-center mb-6">
-                                    <Icon className="w-6 h-6 text-[#C83232]" strokeWidth={1.8} />
+                                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border-[1.5px] border-[var(--section-dark)] flex items-center justify-center mb-3 sm:mb-6">
+                                    <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-[#C83232]" strokeWidth={1.8} />
                                 </div>
 
                                 {/* Stat number */}
-                                <div className="text-[2rem] md:text-[2.4rem] font-bold text-[#C83232] leading-none mb-3">
+                                <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.4rem] font-bold text-[#C83232] leading-none mb-2 sm:mb-3">
                                     {stat.value}
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-[var(--text-main)] text-[15px] leading-snug">
+                                <p className="text-[var(--text-main)] text-xs sm:text-[15px] leading-snug">
                                     {stat.label}
                                 </p>
                             </motion.div>

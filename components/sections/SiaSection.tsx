@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function SiaSection() {
     return (
-        <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+        <section className="py-12 sm:py-24 bg-white border-t border-slate-100 relative overflow-hidden">
             <div className="section-container relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Content Side */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -15,7 +15,7 @@ export default function SiaSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-black text-[--color-deep-navy] mb-2">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-[--color-deep-navy] mb-2">
                             SSG Support Services Group LTD
                         </h2>
                         <div className="flex items-center gap-3 mb-8">
@@ -23,7 +23,7 @@ export default function SiaSection() {
                             <span className="text-lg font-bold text-[--color-text-muted] tracking-wide uppercase">SIA Approved Contractor</span>
                         </div>
 
-                        <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-lg">
+                        <div className="space-y-4 sm:space-y-6 text-slate-600 font-medium leading-relaxed text-base sm:text-lg">
                             <p>
                                 SSG Support Services Group LTD is specialists in provision of <strong className="text-[--color-deep-navy]">Manned Guarding Security Services</strong>, Door Supervision, Security Guarding, Out of Hours Support, Concierge, Front of House Reception, Retail, Porter, Event Security, Mobile Response, CCTV Monitoring, Key Holding and Alarm Response.
                             </p>
@@ -53,7 +53,7 @@ export default function SiaSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex justify-center lg:justify-end"
                     >
-                        <div className="bg-white p-12 rounded-3xl shadow-2xl border border-slate-100 relative group max-w-md w-full flex justify-center items-center">
+                        <div className="bg-white p-8 sm:p-12 rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 relative group max-w-md w-full flex justify-center items-center">
                             {/* Decorative glow */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-red-500/10 blur-3xl rounded-full group-hover:bg-red-600/20 transition-all duration-700" />
 

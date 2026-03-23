@@ -39,10 +39,10 @@ export default function MainNav() {
                 onMouseLeave={closeDropdown}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-20">
+                    <div className="flex items-center justify-between h-16 sm:h-20">
                         {/* Logo */}
                         <Link href="/" className="flex items-center group">
-                            <div className="relative h-16 w-38 overflow-hidden rounded-sm">
+                            <div className="relative h-12 w-28 sm:h-16 sm:w-38 overflow-hidden rounded-sm">
                                 <img
                                     src="/ssg-logo.jpg"
                                     alt="SSG UK LTD"
@@ -56,7 +56,7 @@ export default function MainNav() {
                             {navItems.map((item) => (
                                 <div
                                     key={item.key}
-                                    className="relative h-20 flex items-center"
+                                    className="relative h-16 sm:h-20 flex items-center"
                                     onMouseEnter={() => setActiveDropdown(item.key)}
                                 >
                                     <button className={`flex items-center gap-1 px-4 transition-colors duration-200 font-medium py-2 ${activeDropdown === item.key ? 'text-[var(--signal-red)]' : 'text-[var(--text-main)] hover:text-[var(--signal-red)]'}`}>
@@ -80,7 +80,7 @@ export default function MainNav() {
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/contact-us"
-                                className="hidden sm:inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-7 py-3 rounded-full font-semibold text-sm hover:scale-110 transition-transform duration-200"
+                                className="hidden sm:inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-200"
                             >
                                 Contact Us
                             </Link>

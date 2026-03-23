@@ -32,15 +32,15 @@ export default function ValuePropositions() {
 
     return (
         <section className="bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-                <div className="bg-[#F7F7F7] rounded-2xl border border-gray-200/80 p-8 md:p-12 lg:p-14">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
+                <div className="bg-[#F7F7F7] rounded-xl sm:rounded-2xl border border-gray-200/80 p-5 sm:p-8 md:p-12 lg:p-14">
                     {/* Centered Heading */}
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
-                        className="text-center mb-10"
+                        className="text-center mb-8 sm:mb-10"
                     >
                         <h2 className="mb-3">
                             We secure what you value
@@ -60,7 +60,7 @@ export default function ValuePropositions() {
                             transition={{ duration: 0.5 }}
                             className="h-full"
                         >
-                            <div className="rounded-xl overflow-hidden h-full min-h-[400px] relative">
+                            <div className="rounded-xl overflow-hidden h-full min-h-[250px] sm:min-h-[350px] lg:min-h-[400px] relative">
                                 <AnimatePresence mode="wait">
                                     <motion.img
                                         key={activeIndex}
@@ -88,7 +88,8 @@ export default function ValuePropositions() {
                                 <div
                                     key={index}
                                     onMouseEnter={() => setActiveIndex(index)}
-                                    className={`cursor-pointer border-l-[3px] transition-all duration-300 pl-6 py-5 ${
+                                    onClick={() => setActiveIndex(index)}
+                                    className={`cursor-pointer border-l-[3px] transition-all duration-300 pl-4 sm:pl-6 py-4 sm:py-5 ${
                                         activeIndex === index
                                             ? 'border-l-[var(--deep-navy)]'
                                             : 'border-l-gray-300'

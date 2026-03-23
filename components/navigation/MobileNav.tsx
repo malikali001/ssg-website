@@ -57,13 +57,13 @@ export default function MobileNav({ onClose }: MobileNavProps) {
     const [openSection, setOpenSection] = useState<string | null>(null);
 
     return (
-        <div className="lg:hidden fixed inset-0 top-[calc(2.5rem+5rem)] z-30 bg-white overflow-y-auto">
-            <div className="px-4 py-4 space-y-1">
+        <div className="lg:hidden fixed inset-0 top-[calc(2.5rem+4rem)] sm:top-[calc(2.5rem+5rem)] z-30 bg-white overflow-y-auto">
+            <div className="px-4 sm:px-6 py-4 space-y-1">
                 {menuSections.map((section) => (
                     <div key={section.title} className="border-b border-[var(--border-color)]">
                         <button
                             onClick={() => setOpenSection(openSection === section.title ? null : section.title)}
-                            className="flex items-center justify-between w-full py-3 text-[var(--text-main)] font-semibold text-base"
+                            className="flex items-center justify-between w-full py-3.5 text-[var(--text-main)] font-semibold text-sm sm:text-base"
                         >
                             {section.title}
                             <ChevronDown className={`w-5 h-5 text-[var(--text-muted)] transition-transform duration-200 ${openSection === section.title ? 'rotate-180' : ''}`} />
@@ -75,7 +75,7 @@ export default function MobileNav({ onClose }: MobileNavProps) {
                                         key={item.href}
                                         href={item.href}
                                         onClick={onClose}
-                                        className="flex items-center justify-between py-2 text-sm text-[var(--text-muted)] hover:text-[var(--deep-navy)] transition-colors"
+                                        className="flex items-center justify-between py-2.5 text-sm text-[var(--text-muted)] hover:text-[var(--deep-navy)] transition-colors"
                                     >
                                         {item.name}
                                         <ChevronRight className="w-4 h-4" />

@@ -45,7 +45,7 @@ const insights = [
 export default function InsightsCarousel() {
     return (
         <section className="bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
                 {/* Centered Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -69,7 +69,7 @@ export default function InsightsCarousel() {
                 </motion.div>
 
                 {/* 2x2 Grid of horizontal blog cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                     {insights.map((item, index) => (
                         <motion.div
                             key={item.title}

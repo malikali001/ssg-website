@@ -75,9 +75,9 @@ export default function GetAQuotePage() {
             <section className="py-16 md:py-20">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[var(--border-color)]">
-                        <div className="grid md:grid-cols-[300px_1fr]">
+                        <div className="grid lg:grid-cols-[300px_1fr]">
                             {/* Contact Sidebar */}
-                            <div className="bg-[var(--section-dark)] p-8 md:p-10 text-white self-start rounded-2xl">
+                            <div className="bg-[var(--section-dark)] p-6 sm:p-8 lg:p-10 text-white self-start rounded-2xl">
                                 <div>
                                     <p className="text-sm text-white/80 leading-relaxed mb-10">
                                         You can request a free no-obligation quotation from SSG below. If you are able to provide detailed information on your business and the services you need at this time it will greatly accelerate the quoting process.
@@ -115,7 +115,7 @@ export default function GetAQuotePage() {
                             </div>
 
                             {/* Form */}
-                            <div className="p-8 md:p-10 bg-[#f7f7f7]">
+                            <div className="p-5 sm:p-8 lg:p-10 bg-[#f7f7f7]">
                                 <h2 className="text-2xl font-bold text-[var(--deep-navy)] mb-8">Get A Quote</h2>
 
                                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -129,7 +129,7 @@ export default function GetAQuotePage() {
                                                         type="checkbox"
                                                         checked={selectedServices.includes(service)}
                                                         onChange={() => toggleService(service)}
-                                                        className="w-4 h-4 rounded border-gray-300 text-[var(--accent-amber)] focus:ring-[var(--accent-amber)]"
+                                                        className="w-4 h-4 rounded border-gray-300 text-[var(--signal-red)] focus:ring-[var(--signal-red)]"
                                                     />
                                                     <span className="text-sm text-[var(--text-main)] group-hover:text-[var(--deep-navy)]">
                                                         {service}

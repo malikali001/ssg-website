@@ -34,7 +34,7 @@ export default function CaseStudyCard({
             className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-2xl hover:shadow-signal-red/10 transition-all duration-300 flex flex-col h-full"
         >
             {/* Image Section */}
-            <div className="relative h-64 overflow-hidden">
+            <div className="relative h-48 sm:h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/0 transition-colors z-10" />
                 <img
                     src={imageSrc}
@@ -47,13 +47,13 @@ export default function CaseStudyCard({
             </div>
 
             {/* Content Section */}
-            <div className="p-8 flex flex-col flex-grow">
+            <div className="p-5 sm:p-8 flex flex-col flex-grow">
                 <div className="mb-4">
                     <div className="text-signal-red font-bold text-sm mb-1 flex items-center gap-2">
                         <ShieldCheck className="w-4 h-4" />
                         {client}
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 leading-tight group-hover:text-signal-red transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight group-hover:text-signal-red transition-colors">
                         {title}
                     </h3>
                 </div>

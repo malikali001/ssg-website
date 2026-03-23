@@ -15,7 +15,7 @@ export default function UtilityBar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-10">
                     {/* Left: Location + Phone */}
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-3 sm:gap-6">
                         {/* Location Dropdown */}
                         <div className="relative">
                             <button
@@ -48,7 +48,7 @@ export default function UtilityBar() {
                         >
                             <Phone className="w-3.5 h-3.5" />
                             <span className="hidden sm:inline">24/7 Control Room:</span>
-                            <span className="font-semibold">+44 20 1234 5678</span>
+                            <span className="font-semibold text-xs sm:text-sm">+44 20 1234 5678</span>
                         </a>
                     </div>
 
@@ -81,7 +81,7 @@ export default function UtilityBar() {
                             href="https://portal.thefmcloud.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white/80 hover:text-white transition-colors duration-200 text-xs font-medium uppercase tracking-wider"
+                            className="hidden sm:block text-white/80 hover:text-white transition-colors duration-200 text-xs font-medium uppercase tracking-wider"
                         >
                             Client Portal
                         </a>

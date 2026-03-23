@@ -56,9 +56,9 @@ export default function HeroSection() {
     const slide = heroSlides[current];
 
     return (
-        <section className="bg-white px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+        <section className="bg-white px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8">
             {/* Rounded image container with side margins */}
-            <div className="relative max-w-[1400px] mx-auto h-[500px] md:h-[580px] lg:h-[660px] rounded-2xl overflow-hidden">
+            <div className="relative max-w-[1400px] mx-auto h-[420px] sm:h-[500px] md:h-[580px] lg:h-[660px] rounded-xl sm:rounded-2xl overflow-hidden">
                 {/* Background Image */}
                 <AnimatePresence mode="popLayout">
                     <motion.div
@@ -78,9 +78,9 @@ export default function HeroSection() {
                 </AnimatePresence>
 
                 {/* White Content Card — pinned to the left side */}
-                <div className="absolute inset-y-0 left-0 z-10 flex items-center pl-6 sm:pl-10 lg:pl-14 py-8">
-                    <div className="relative w-[340px] sm:w-[420px] md:w-[480px] lg:w-[540px]">
-                        <div className="bg-white/[0.97] backdrop-blur-sm rounded-2xl p-7 sm:p-9 lg:p-11 shadow-xl">
+                <div className="absolute inset-y-0 left-0 right-0 sm:right-auto z-10 flex items-center px-4 sm:pl-10 sm:pr-0 lg:pl-14 py-6 sm:py-8">
+                    <div className="relative w-full sm:w-[420px] md:w-[480px] lg:w-[540px]">
+                        <div className="bg-white/[0.97] backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-9 lg:p-11 shadow-xl">
                             {/* Dotted pattern inside card */}
                             <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
                                 <div className="absolute inset-0 opacity-[0.04]" style={{
@@ -91,11 +91,11 @@ export default function HeroSection() {
 
                             <div className="relative z-10">
                                 {/* Badge */}
-                                <div className="flex flex-wrap items-center gap-3 mb-5">
-                                    <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#C83232] text-white text-xs font-bold tracking-wide">
+                                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+                                    <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#C83232] text-white text-[10px] sm:text-xs font-bold tracking-wide">
                                         SSG Security Services
                                     </span>
-                                    <Link href="/services/security" className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
+                                    <Link href="/services/security" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
                                         Find your solution <ChevronRight className="w-4 h-4" />
                                     </Link>
                                 </div>
@@ -122,17 +122,17 @@ export default function HeroSection() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -8 }}
                                         transition={{ duration: 0.35, delay: 0.08 }}
-                                        className="text-[var(--text-main)] mb-7"
+                                        className="text-[var(--text-main)] mb-5 sm:mb-7 text-sm sm:text-base"
                                     >
                                         {slide.description}
                                     </motion.p>
                                 </AnimatePresence>
 
                                 {/* CTA + Arrows Row */}
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between gap-3">
                                     <Link
                                         href={slide.cta.href}
-                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-6 py-3 rounded-full font-semibold text-sm hover:scale-110 transition-transform duration-300"
+                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
                                     >
                                         {slide.cta.label}
                                     </Link>

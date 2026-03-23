@@ -20,8 +20,8 @@ export default function ServiceHero({
     breadcrumbs = [],
 }: ServiceHeroProps) {
     return (
-        <section className="bg-white px-4 sm:px-6 lg:px-8 pt-4 pb-8">
-            <div className="relative max-w-[1400px] mx-auto h-[420px] md:h-[480px] lg:h-[540px] rounded-2xl overflow-hidden">
+        <section className="bg-white px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8">
+            <div className="relative max-w-[1400px] mx-auto h-[380px] sm:h-[420px] md:h-[480px] lg:h-[540px] rounded-xl sm:rounded-2xl overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
@@ -32,13 +32,13 @@ export default function ServiceHero({
                 </div>
 
                 {/* White Content Card — pinned left */}
-                <div className="absolute inset-y-0 left-0 z-10 flex items-center pl-6 sm:pl-10 lg:pl-14 py-8">
-                    <div className="relative w-[320px] sm:w-[400px] md:w-[460px] lg:w-[520px]">
+                <div className="absolute inset-y-0 left-0 right-0 sm:right-auto z-10 flex items-center px-4 sm:pl-10 sm:pr-0 lg:pl-14 py-6 sm:py-8">
+                    <div className="relative w-full sm:w-[400px] md:w-[460px] lg:w-[520px]">
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white/[0.97] backdrop-blur-sm rounded-2xl p-7 sm:p-9 lg:p-11 shadow-xl"
+                            className="bg-white/[0.97] backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-9 lg:p-11 shadow-xl"
                         >
                             {/* Dotted pattern */}
                             <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
@@ -65,21 +65,21 @@ export default function ServiceHero({
                                 </h2>
 
                                 {/* Description */}
-                                <p className="text-[var(--text-main)] mb-7">
+                                <p className="text-[var(--text-main)] mb-5 sm:mb-7 text-sm sm:text-base">
                                     {description}
                                 </p>
 
                                 {/* CTAs */}
-                                <div className="flex flex-wrap gap-3">
+                                <div className="flex flex-wrap gap-2 sm:gap-3">
                                     <Link
                                         href="/get-a-quote"
-                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-6 py-3 rounded-full font-semibold text-sm hover:scale-110 transition-transform duration-300"
+                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
                                     >
                                         Request a Quote
                                     </Link>
                                     <Link
                                         href="/contact-us"
-                                        className="inline-flex items-center gap-2 border border-gray-300 text-[var(--deep-navy)] px-5 py-2.5 rounded-full font-semibold text-sm hover:scale-110 transition-transform duration-300"
+                                        className="inline-flex items-center gap-2 border border-gray-300 text-[var(--deep-navy)] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
                                     >
                                         Contact Us
                                     </Link>

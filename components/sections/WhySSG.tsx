@@ -31,12 +31,12 @@ export default function WhySSG() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-4xl md:text-5xl font-black mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4">
                     Why Choose <span className="text-signal-red">SSG</span>
                 </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 {features.map((feature, index) => {
                     const Icon = feature.icon;
                     return (
@@ -49,11 +49,11 @@ export default function WhySSG() {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             className="text-center p-6 rounded-lg hover:bg-white/50 transition-colors duration-300"
                         >
-                            <div className="inline-flex items-center justify-center w-20 h-20 bg-signal-red/10 rounded-full mb-6 border-2 border-signal-red/30">
-                                <Icon className="w-10 h-10 text-signal-red" />
+                            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 bg-signal-red/10 rounded-full mb-4 sm:mb-6 border-2 border-signal-red/30">
+                                <Icon className="w-7 h-7 sm:w-10 sm:h-10 text-signal-red" />
                             </div>
 
-                            <h3 className="text-2xl font-bold mb-3">
+                            <h3 className="text-xl sm:text-2xl font-bold mb-3">
                                 {feature.title}
                             </h3>
 

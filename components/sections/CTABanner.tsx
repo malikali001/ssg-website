@@ -12,7 +12,7 @@ export default function CTABanner() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
-                    className="bg-[var(--section-dark)] rounded-2xl px-8 py-14 md:px-16 md:py-20 text-center"
+                    className="bg-[var(--section-dark)] rounded-xl sm:rounded-2xl px-6 py-10 sm:px-8 sm:py-14 md:px-16 md:py-20 text-center"
                 >
                     <h2 className="text-white mb-4">
                         Ready to secure what matters?

@@ -11,23 +11,23 @@ export default function AwardsPreview() {
     const featuredAwards = awards.filter(a => a.featured).slice(0, 3);
 
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <section className="py-12 sm:py-24 bg-slate-50 relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none" />
             <div className="absolute top-0 left-0 w-64 h-64 bg-slate-200/50 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--signal-red)]/5 rounded-full blur-3xl -mr-32 -mb-32 pointer-events-none" />
 
             <div className="section-container relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
                     <div>
                         <span className="text-[var(--signal-red)] font-bold tracking-wider uppercase text-sm">Excellence</span>
-                        <h2 className="text-3xl md:text-5xl font-black text-[var(--deep-navy)] mt-2">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-[var(--deep-navy)] mt-2">
                             Awards & <span className="text-[var(--signal-red)]">Recognition</span>
                         </h2>
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
                     {featuredAwards.map((award, idx) => (
                         <motion.div
                             key={award.id}

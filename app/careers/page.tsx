@@ -25,9 +25,9 @@ export default function CareersPage() {
             />
 
             {/* 2. Why Work at SSG */}
-            <section className="py-24 bg-white">
+            <section className="py-12 sm:py-24 bg-white">
                 <div className="section-container">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10 sm:mb-16">
                         <h2 className="font-black text-[--color-deep-navy] mb-6">
                             Why Choose <span className="text-[--color-signal-red]">SSG?</span>
                         </h2>
@@ -36,7 +36,7 @@ export default function CareersPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
                         {[
                             {
                                 icon: ShieldCheck,
@@ -63,7 +63,7 @@ export default function CareersPage() {
                                 color: "text-green-600", bg: "bg-green-50"
                             }
                         ].map((item, idx) => (
-                            <div key={idx} className="p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                            <div key={idx} className="p-5 sm:p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
                                 <div className={`w-14 h-14 rounded-xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                                     <item.icon className={`w-7 h-7 ${item.color}`} />
                                 </div>
@@ -76,7 +76,7 @@ export default function CareersPage() {
             </section>
 
             {/* 3. Roles We Hire For */}
-            <section id="open-roles" className="py-24 bg-[--color-gunmetal] relative">
+            <section id="open-roles" className="py-12 sm:py-24 bg-[--color-gunmetal] relative">
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
                 <div className="section-container">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -91,7 +91,7 @@ export default function CareersPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                         {[
                             {
                                 title: "Security Officer",
@@ -148,13 +148,13 @@ export default function CareersPage() {
             </section>
 
             {/* 4. Requirements */}
-            <section className="py-24 bg-[var(--section-dark)] text-white overflow-hidden relative">
+            <section className="py-12 sm:py-24 bg-[var(--section-dark)] text-white overflow-hidden relative">
                 {/* Decorative background elements */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--signal-red)]/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
 
                 <div className="section-container relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                         <div>
                             <h2 className="font-black mb-8 text-white">
                                 What We <span className="text-[--color-signal-red]">Look For</span>
@@ -183,7 +183,7 @@ export default function CareersPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-10 relative">
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 relative">
                             {/* Mock Card */}
                             <div className="absolute top-4 right-4 animate-pulse">
                                 <div className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full border border-green-500/30">
@@ -215,9 +215,9 @@ export default function CareersPage() {
             </section>
 
             {/* 5. Training & Process */}
-            <section className="py-24 bg-white">
+            <section className="py-12 sm:py-24 bg-white">
                 <div className="section-container">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-12 sm:mb-20">
                         <h2 className="font-black text-[--color-deep-navy] mb-6">
                             Your Journey to <span className="text-[--color-signal-red]">Employment</span>
                         </h2>
@@ -229,7 +229,7 @@ export default function CareersPage() {
                             <div className="h-full w-full bg-gradient-to-r from-transparent via-[--color-signal-red]/20 to-transparent" />
                         </div>
 
-                        <div className="grid md:grid-cols-4 gap-8 relative z-10">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 relative z-10">
                             {[
                                 { step: "01", title: "Apply Online", desc: "Complete the simple form below." },
                                 { step: "02", title: "Screening", desc: "We review your licence & experience." },
@@ -237,8 +237,8 @@ export default function CareersPage() {
                                 { step: "04", title: "Onboarding", desc: "Induction, uniform, and deployment." }
                             ].map((item, idx) => (
                                 <div key={idx} className="bg-white pt-8 text-center bg-white">
-                                    <div className="w-24 h-24 mx-auto bg-[--color-gunmetal] rounded-full flex items-center justify-center border-8 border-white shadow-xl mb-6 relative">
-                                        <span className="text-3xl font-black text-[--color-signal-red]">{item.step}</span>
+                                    <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto bg-[--color-gunmetal] rounded-full flex items-center justify-center border-4 sm:border-8 border-white shadow-xl mb-4 sm:mb-6 relative">
+                                        <span className="text-xl sm:text-3xl font-black text-[--color-signal-red]">{item.step}</span>
                                     </div>
                                     <h3 className="text-xl font-bold text-[--color-deep-navy] mb-2">{item.title}</h3>
                                     <p className="text-slate-600 text-sm max-w-[200px] mx-auto font-bold">{item.desc}</p>
@@ -248,7 +248,7 @@ export default function CareersPage() {
                     </div>
 
                     {/* Training Highlight Box */}
-                    <div className="mt-20 bg-[--color-gunmetal] rounded-2xl p-8 md:p-12 border border-slate-200 flex flex-col md:flex-row items-center gap-10">
+                    <div className="mt-12 sm:mt-20 bg-[--color-gunmetal] rounded-2xl p-6 sm:p-8 md:p-12 border border-slate-200 flex flex-col md:flex-row items-center gap-6 sm:gap-10">
                         <div className="w-16 h-16 bg-[--color-deep-navy] rounded-xl flex items-center justify-center shrink-0">
                             <GraduationCap className="w-8 h-8 text-white" />
                         </div>
@@ -263,7 +263,7 @@ export default function CareersPage() {
             </section>
 
             {/* 6. Application Form */}
-            <section id="application-form" className="py-24 bg-slate-50 relative">
+            <section id="application-form" className="py-12 sm:py-24 bg-slate-50 relative">
                 <div className="section-container max-w-4xl text-center">
                     <div className="inline-block p-3 rounded-full bg-[--color-deep-navy]/5 mb-6">
                         <FileText className="w-8 h-8 text-[--color-signal-red]" />
@@ -275,7 +275,7 @@ export default function CareersPage() {
                         Complete the form below to start your application. Please ensure you have your SIA licence details ready.
                     </p>
 
-                    <div className="bg-white rounded-3xl p-8 md:p-12 text-left shadow-2xl">
+                    <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 text-left shadow-2xl">
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>

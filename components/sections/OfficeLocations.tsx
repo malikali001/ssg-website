@@ -30,9 +30,9 @@ export default function OfficeLocations() {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 sm:py-24 bg-white relative overflow-hidden">
             <div className="section-container max-w-6xl">
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 sm:mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function OfficeLocations() {
                     </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+                <div className="grid md:grid-cols-2 gap-8 lg:gap-20">
                     {offices.map((office, idx) => (
                         <motion.div
                             key={idx}
@@ -76,7 +76,7 @@ export default function OfficeLocations() {
                             </div>
 
                             {/* Content Area */}
-                            <div className="p-8 md:p-10 flex flex-col flex-grow bg-slate-50/50">
+                            <div className="p-5 sm:p-8 md:p-10 flex flex-col flex-grow bg-slate-50/50">
                                 <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-6 min-h-[64px] flex items-center">
                                     {office.name}
                                 </h3>

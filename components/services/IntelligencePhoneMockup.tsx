@@ -16,9 +16,9 @@ export default function IntelligencePhoneMockup() {
             <div className="absolute inset-0 bg-red-500/5 blur-3xl rounded-full transform scale-110" />
 
             {/* Phone Frame */}
-            <div className="relative w-[300px] h-[600px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl border-8 border-slate-900">
+            <div className="relative w-[240px] h-[480px] sm:w-[300px] sm:h-[600px] bg-slate-900 rounded-[2.5rem] sm:rounded-[3rem] p-3 sm:p-4 shadow-2xl border-[6px] sm:border-8 border-slate-900">
                 {/* Screen */}
-                <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative flex flex-col">
+                <div className="w-full h-full bg-white rounded-[2rem] sm:rounded-[2rem] overflow-hidden relative flex flex-col">
                     {/* Status Bar */}
                     <div className="h-8 bg-slate-100 flex items-center justify-between px-6">
                         <span className="text-[10px] font-bold text-slate-400">9:41</span>

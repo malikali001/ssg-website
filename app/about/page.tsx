@@ -77,7 +77,7 @@ export default function AboutPage() {
 
             {/* Service Category Cards */}
             <section className="section-container bg-white">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
                     {serviceCategories.map((cat) => (
                         <Link
                             key={cat.href}
@@ -112,7 +112,7 @@ export default function AboutPage() {
                     <h2 className="font-bold text-white text-center mb-10">
                         Trusted Security. Proven Results.
                     </h2>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                         {stats.map((stat, idx) => {
                             const Icon = stat.icon;
                             return (
@@ -120,8 +120,8 @@ export default function AboutPage() {
                                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[var(--accent-amber)]/15 mb-3">
                                         <Icon className="w-5 h-5 text-[var(--accent-amber)]" />
                                     </div>
-                                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                                    <div className="text-sm text-white/60 font-medium uppercase tracking-wide">{stat.label}</div>
+                                    <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                                    <div className="text-xs sm:text-sm text-white/60 font-medium uppercase tracking-wide">{stat.label}</div>
                                 </div>
                             );
                         })}
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 return (
                     <section key={index} className={bgColor}>
                         <div className="section-container">
-                            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                                 <div className={isReversed ? 'lg:order-2' : ''}>
                                     <div className="aspect-[4/3] rounded-lg overflow-hidden">
                                         <img src={block.image} alt={block.title} className="w-full h-full object-cover" />
@@ -169,8 +169,8 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+                    <div className="bg-[var(--section-light)] rounded-lg p-5 sm:p-7 border border-[var(--border-color)]">
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-full mb-5">
                             <Leaf className="w-6 h-6 text-green-600" />
                         </div>
@@ -212,7 +212,7 @@ export default function AboutPage() {
                     <p className="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-6">
                         Accreditations & Certifications
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-10">
+                    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10">
                         {['SIA Approved', 'ISO 9001', 'ISO 14001', 'SafeContractor', 'Constructionline'].map((name, i) => (
                             <div key={i} className="h-12 px-4 flex items-center justify-center border border-[var(--border-color)] rounded bg-white text-xs font-bold text-[var(--text-muted)] grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
                                 {name}

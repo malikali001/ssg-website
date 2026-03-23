@@ -6,8 +6,8 @@ export default function Footer() {
     return (
         <footer className="bg-[#fbfbfc] text-[var(--text-main)] font-['Inter',sans-serif]">
             {/* Main Footer */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-10">
                     {/* Column 1: Logo & Tagline */}
                     <div className="col-span-2 md:col-span-3 lg:col-span-1">
                         <Link href="/" className="block mb-4">
@@ -26,8 +26,8 @@ export default function Footer() {
 
                     {/* Column 2: Security Services */}
                     <div>
-                        <h4 className="text-[var(--deep-navy)] font-semibold text-[15px] mb-4">Security Services</h4>
-                        <ul className="space-y-2.5 text-[14px]">
+                        <h4 className="text-[var(--deep-navy)] font-semibold text-[13px] sm:text-[15px] mb-3 sm:mb-4">Security Services</h4>
+                        <ul className="space-y-2 sm:space-y-2.5 text-[13px] sm:text-[14px]">
                             <li><Link href="/services/security/manned-guarding" className="hover:text-[var(--signal-red)] transition-colors">Manned Guarding</Link></li>
                             <li><Link href="/services/security/mobile-patrols" className="hover:text-[var(--signal-red)] transition-colors">Mobile Security Patrols</Link></li>
                             <li><Link href="/services/security/k9-units" className="hover:text-[var(--signal-red)] transition-colors">Guard Dogs Patrols</Link></li>
@@ -39,8 +39,8 @@ export default function Footer() {
 
                     {/* Column 3: Facilities Services */}
                     <div>
-                        <h4 className="text-[var(--deep-navy)] font-semibold text-[15px] mb-4">Facilities Services</h4>
-                        <ul className="space-y-2.5 text-[14px]">
+                        <h4 className="text-[var(--deep-navy)] font-semibold text-[13px] sm:text-[15px] mb-3 sm:mb-4">Facilities Services</h4>
+                        <ul className="space-y-2 sm:space-y-2.5 text-[13px] sm:text-[14px]">
                             <li><Link href="/services/facilities/commercial-cleaning" className="hover:text-[var(--signal-red)] transition-colors">Commercial Cleaning</Link></li>
                             <li><Link href="/services/facilities/waste-management" className="hover:text-[var(--signal-red)] transition-colors">Waste Management</Link></li>
                             <li><Link href="/services/facilities/property-maintenance" className="hover:text-[var(--signal-red)] transition-colors">Property Maintenance</Link></li>
@@ -50,8 +50,8 @@ export default function Footer() {
 
                     {/* Column 4: Sectors */}
                     <div>
-                        <h4 className="text-[var(--deep-navy)] font-semibold text-[15px] mb-4">Sectors</h4>
-                        <ul className="space-y-2.5 text-[14px]">
+                        <h4 className="text-[var(--deep-navy)] font-semibold text-[13px] sm:text-[15px] mb-3 sm:mb-4">Sectors</h4>
+                        <ul className="space-y-2 sm:space-y-2.5 text-[13px] sm:text-[14px]">
                             <li><Link href="/sectors/retail" className="hover:text-[var(--signal-red)] transition-colors">Retail Security</Link></li>
                             <li><Link href="/sectors/construction" className="hover:text-[var(--signal-red)] transition-colors">Construction Security</Link></li>
                             <li><Link href="/sectors/corporate" className="hover:text-[var(--signal-red)] transition-colors">Corporate & Office</Link></li>
@@ -63,8 +63,8 @@ export default function Footer() {
 
                     {/* Column 5: Company */}
                     <div>
-                        <h4 className="text-[var(--deep-navy)] font-semibold text-[15px] mb-4">Company</h4>
-                        <ul className="space-y-2.5 text-[14px]">
+                        <h4 className="text-[var(--deep-navy)] font-semibold text-[13px] sm:text-[15px] mb-3 sm:mb-4">Company</h4>
+                        <ul className="space-y-2 sm:space-y-2.5 text-[13px] sm:text-[14px]">
                             <li><Link href="/contact-us" className="hover:text-[var(--signal-red)] transition-colors">Contact Us</Link></li>
                             <li><Link href="/about" className="hover:text-[var(--signal-red)] transition-colors">About Us</Link></li>
                             <li><Link href="/esg" className="hover:text-[var(--signal-red)] transition-colors">ESG & Compliance</Link></li>
@@ -79,7 +79,7 @@ export default function Footer() {
             {/* Bottom Bar */}
             <div className="border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[var(--text-muted)]">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-[13px] text-[var(--text-muted)]">
                         <div className="text-center md:text-left">
                             &copy; 2026 SSG Support Services Group LTD. All rights reserved.
                         </div>

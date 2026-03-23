@@ -14,7 +14,7 @@ export default function TheEdge() {
 
     return (
         <section className="section-container bg-white">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Image Side */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -52,16 +52,16 @@ export default function TheEdge() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-black mb-6 text-deep-navy">
+                    <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 text-deep-navy">
                         Security, <span className="text-signal-red">Supercharged by Intelligence.</span>
                     </h2>
 
-                    <p className="text-xl text-text-muted mb-8 leading-relaxed">
+                    <p className="text-base sm:text-xl text-text-muted mb-6 sm:mb-8 leading-relaxed">
                         Standard support is reactive. <span className="font-semibold text-deep-navy">SSG is proactive.</span> Through our Intelligence Portal, we provide real-time data, transparent reporting, and predictive risk analysis, giving you total visibility over your estate.
                     </p>
 
                     {/* Features Grid */}
-                    <div className="grid sm:grid-cols-2 gap-6 mb-10">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10">
                         {features.map((feature, index) => {
                             const Icon = feature.icon;
                             return (
@@ -80,7 +80,7 @@ export default function TheEdge() {
 
                     <Link
                         href="/portals/intelligence"
-                        className="btn-primary inline-flex items-center gap-2 shadow-lg shadow-red-500/20 px-8 py-4 text-lg"
+                        className="btn-primary inline-flex items-center gap-2 shadow-lg shadow-red-500/20 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg"
                     >
                         <span>See the Portal in Action</span>
                         <ArrowRight className="w-5 h-5" />

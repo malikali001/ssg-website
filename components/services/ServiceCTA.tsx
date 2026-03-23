@@ -9,7 +9,7 @@ export default function ServiceCTA() {
         <section className="relative bg-[var(--section-dark)] overflow-hidden">
             <div className="absolute inset-0 dotted-bg opacity-30" />
 
-            <div className="max-w-4xl mx-auto px-4 relative z-10 text-center py-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center py-12 sm:py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
