@@ -92,7 +92,7 @@ export default function AboutPage() {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-lg font-montserrat font-bold mb-2 text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
+                                <h3 className="text-lg font-bold mb-2 text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
                                     {cat.title}
                                 </h3>
                                 <p className="text-[var(--text-muted)] text-sm mb-3">{cat.description}</p>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <section className="relative bg-[var(--section-dark)] overflow-hidden">
                 <div className="absolute inset-0 dotted-bg opacity-30" />
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <h2 className="text-3xl font-montserrat font-bold text-white text-center mb-10">
+                    <h2 className="font-bold text-white text-center mb-10">
                         Trusted Security. Proven Results.
                     </h2>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[var(--accent-amber)]/15 mb-3">
                                         <Icon className="w-5 h-5 text-[var(--accent-amber)]" />
                                     </div>
-                                    <div className="text-3xl font-montserrat font-bold text-white mb-1">{stat.value}</div>
+                                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                                     <div className="text-sm text-white/60 font-medium uppercase tracking-wide">{stat.label}</div>
                                 </div>
                             );
@@ -143,11 +143,11 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                 <div className={isReversed ? 'lg:order-1' : ''}>
-                                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6 text-[var(--deep-navy)]">
+                                    <h2 className="font-bold mb-6 text-[var(--deep-navy)]">
                                         {block.title}
                                     </h2>
-                                    <p className="text-[var(--text-muted)] text-base leading-relaxed mb-4">{block.description}</p>
-                                    <p className="text-[var(--text-muted)] text-base leading-relaxed mb-6">{block.secondParagraph}</p>
+                                    <p className="text-[var(--text-main)] leading-relaxed mb-4">{block.description}</p>
+                                    <p className="text-[var(--text-main)] leading-relaxed mb-6">{block.secondParagraph}</p>
                                     <Link href={block.href} className="arrow-link text-sm">
                                         Find out more <ChevronRight className="w-4 h-4" />
                                     </Link>
@@ -161,10 +161,10 @@ export default function AboutPage() {
             {/* ESG Section */}
             <section className="section-container bg-white">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
+                    <h2 className="font-bold mb-4">
                         Our <span className="text-[var(--accent-amber)]">ESG</span> Commitment
                     </h2>
-                    <p className="text-[var(--text-muted)] max-w-3xl mx-auto text-lg">
+                    <p className="text-[var(--text-main)] max-w-3xl mx-auto">
                         Environmental, Social, and Governance excellence at the heart of everything we do.
                     </p>
                 </div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-full mb-5">
                             <Leaf className="w-6 h-6 text-green-600" />
                         </div>
-                        <h3 className="text-xl font-montserrat font-bold mb-3">Environmental</h3>
+                        <h3 className="text-xl font-bold mb-3">Environmental</h3>
                         <ul className="space-y-2 text-[var(--text-muted)] text-sm">
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Net Zero commitment by 2040</span></li>
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Carbon reduction plans across all operations</span></li>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-full mb-5">
                             <Heart className="w-6 h-6 text-blue-600" />
                         </div>
-                        <h3 className="text-xl font-montserrat font-bold mb-3">Social</h3>
+                        <h3 className="text-xl font-bold mb-3">Social</h3>
                         <ul className="space-y-2 text-[var(--text-muted)] text-sm">
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Community support initiatives</span></li>
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Employee wellbeing and development</span></li>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-full mb-5">
                             <Scale className="w-6 h-6 text-purple-600" />
                         </div>
-                        <h3 className="text-xl font-montserrat font-bold mb-3">Governance</h3>
+                        <h3 className="text-xl font-bold mb-3">Governance</h3>
                         <ul className="space-y-2 text-[var(--text-muted)] text-sm">
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Ethical business practices and transparency</span></li>
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Robust compliance frameworks</span></li>

@@ -17,7 +17,7 @@ export function GuardsActiveChart() {
 
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Guards Active (24h)</h3>
+            <h3 className="text-xl font-bold mb-4">Guards Active (24h)</h3>
             <ResponsiveContainer width="100%" height={200}>
                 <AreaChart data={data}>
                     <defs>
@@ -51,7 +51,7 @@ export function IncidentHeatmap() {
 
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Incidents by Sector (Today)</h3>
+            <h3 className="text-xl font-bold mb-4">Incidents by Sector (Today)</h3>
             <ResponsiveContainer width="100%" height={200}>
                 <BarChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1A1D23" />
@@ -76,7 +76,7 @@ export function ComplianceGauge() {
 
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Compliance Status</h3>
+            <h3 className="text-xl font-bold mb-4">Compliance Status</h3>
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <ResponsiveContainer width={180} height={180}>
@@ -99,7 +99,7 @@ export function ComplianceGauge() {
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center">
-                            <div className="text-4xl font-montserrat font-black text-signal-red">98%</div>
+                            <div className="text-4xl font-black text-signal-red">98%</div>
                             <div className="text-xs text-text-muted">Compliant</div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export function StatCard({ title, value, subtitle, trend }: { title: string; val
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
             <div className="text-text-muted text-sm mb-2">{title}</div>
-            <div className="text-4xl font-montserrat font-black text-signal-red mb-1">{value}</div>
+            <div className="text-4xl font-black text-signal-red mb-1">{value}</div>
             <div className="text-text-muted text-xs">{subtitle}</div>
             {trend && (
                 <div className={`text-xs mt-2 ${trend === 'up' ? 'text-green-500' : 'text-red-500'}`}>
@@ -141,7 +141,7 @@ export function ActivityFeed() {
 
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Live Activity Feed</h3>
+            <h3 className="text-xl font-bold mb-4">Live Activity Feed</h3>
             <div className="space-y-3">
                 {activities.map((activity, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 bg-obsidian/50 rounded">

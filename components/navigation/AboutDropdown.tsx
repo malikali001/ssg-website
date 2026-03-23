@@ -19,7 +19,7 @@ export default function AboutDropdown() {
                 <div className="flex gap-10">
                     {/* Left Side */}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-2xl md:text-[1.7rem] font-montserrat font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
+                        <h3 className="text-2xl md:text-[1.7rem] font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
                             Get to know SSG UK Ltd.
                         </h3>
                         <p className="text-[var(--text-muted)] text-sm mb-6 max-w-lg">
@@ -60,7 +60,7 @@ export default function AboutDropdown() {
                                 </div>
                                 <div className="p-5">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h4 className="text-lg font-montserrat font-bold text-[var(--deep-navy)]">
+                                        <h4 className="text-lg font-bold text-[var(--deep-navy)]">
                                             About Us
                                         </h4>
                                         <div className="w-8 h-8 rounded-full bg-[var(--section-dark)] flex items-center justify-center group-hover:bg-[var(--signal-red)] transition-colors">

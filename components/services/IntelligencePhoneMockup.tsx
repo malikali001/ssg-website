@@ -37,7 +37,7 @@ export default function IntelligencePhoneMockup() {
                                 <span className="text-xs font-bold text-signal-red">LIVE</span>
                             </div>
                         </div>
-                        <h3 className="font-montserrat font-bold text-xl">Site Overview</h3>
+                        <h3 className="font-bold text-xl">Site Overview</h3>
                         <p className="text-slate-400 text-xs">Unit 4, Global Logistics Park</p>
                     </div>
 

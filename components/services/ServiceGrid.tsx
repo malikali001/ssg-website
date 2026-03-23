@@ -21,10 +21,10 @@ export default function ServiceGrid({ title, subtitle, description, services }: 
         <section id="capabilities" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-14">
-                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-[var(--deep-navy)] mb-4">
+                    <h2 className="mb-4">
                         {title} <span className="text-[var(--signal-red)]">{subtitle}</span>
                     </h2>
-                    <p className="text-lg text-[var(--text-muted)]">
+                    <p className="text-[var(--text-main)]">
                         {description}
                     </p>
                 </div>
@@ -47,7 +47,7 @@ export default function ServiceGrid({ title, subtitle, description, services }: 
                                 <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-2 group-hover:text-[var(--signal-red)] transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-4">
+                                <p className="text-[var(--text-main)] text-sm leading-relaxed mb-4">
                                     {service.desc}
                                 </p>
                                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--signal-red)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">

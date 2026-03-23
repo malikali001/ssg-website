@@ -28,10 +28,10 @@ export default function StatsBar() {
                     transition={{ duration: 0.4 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-montserrat font-bold text-[var(--deep-navy)] leading-tight mb-4">
+                    <h2 className="mb-4">
                         Trusted Security. Proven Results.
                     </h2>
-                    <p className="text-[var(--text-muted)] text-base md:text-[17px] max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-[var(--text-main)] max-w-2xl mx-auto">
                         Dedicated to safeguarding people, property, and progress with unmatched protection and professionalism.
                     </p>
                 </motion.div>
@@ -55,7 +55,7 @@ export default function StatsBar() {
                                 </div>
 
                                 {/* Stat number */}
-                                <div className="text-[2rem] md:text-[2.4rem] font-montserrat font-bold text-[#C83232] leading-none mb-3">
+                                <div className="text-[2rem] md:text-[2.4rem] font-bold text-[#C83232] leading-none mb-3">
                                     {stat.value}
                                 </div>
 

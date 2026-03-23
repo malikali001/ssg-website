@@ -46,7 +46,7 @@ export default function PrimaryFunnel() {
                                 <div className="relative z-10">
                                     <Icon className="w-16 h-16 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                                    <h3 className="text-3xl font-montserrat font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
+                                    <h3 className="text-3xl font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                         {service.title}
                                     </h3>
 

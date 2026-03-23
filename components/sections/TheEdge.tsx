@@ -52,7 +52,7 @@ export default function TheEdge() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-6 text-deep-navy">
+                    <h2 className="text-4xl md:text-5xl font-black mb-6 text-deep-navy">
                         Security, <span className="text-signal-red">Supercharged by Intelligence.</span>
                     </h2>
 

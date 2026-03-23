@@ -54,14 +54,14 @@ export default function ServiceShowcase() {
                                 {/* Content */}
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-lg font-montserrat font-bold text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
+                                        <h3 className="text-lg font-bold text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
                                             {cat.title}
                                         </h3>
                                         <div className="w-8 h-8 rounded-full bg-[var(--section-dark)] flex items-center justify-center group-hover:bg-[var(--signal-red)] transition-colors flex-shrink-0">
                                             <ArrowUpRight className="w-4 h-4 text-white" />
                                         </div>
                                     </div>
-                                    <p className="text-[var(--text-muted)] text-sm leading-relaxed">
+                                    <p className="text-[var(--text-main)] text-sm leading-relaxed">
                                         {cat.description}
                                     </p>
                                 </div>

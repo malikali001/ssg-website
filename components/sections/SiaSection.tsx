@@ -15,7 +15,7 @@ export default function SiaSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-2">
+                        <h2 className="text-3xl md:text-5xl font-black text-[--color-deep-navy] mb-2">
                             SSG Support Services Group LTD
                         </h2>
                         <div className="flex items-center gap-3 mb-8">

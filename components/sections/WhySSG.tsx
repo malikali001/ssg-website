@@ -31,7 +31,7 @@ export default function WhySSG() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-4">
+                <h2 className="text-4xl md:text-5xl font-black mb-4">
                     Why Choose <span className="text-signal-red">SSG</span>
                 </h2>
             </motion.div>
@@ -53,7 +53,7 @@ export default function WhySSG() {
                                 <Icon className="w-10 h-10 text-signal-red" />
                             </div>
 
-                            <h3 className="text-2xl font-montserrat font-bold mb-3">
+                            <h3 className="text-2xl font-bold mb-3">
                                 {feature.title}
                             </h3>
 

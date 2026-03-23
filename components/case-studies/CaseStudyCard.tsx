@@ -53,7 +53,7 @@ export default function CaseStudyCard({
                         <ShieldCheck className="w-4 h-4" />
                         {client}
                     </div>
-                    <h3 className="text-2xl font-montserrat font-black text-slate-900 leading-tight group-hover:text-signal-red transition-colors">
+                    <h3 className="text-2xl font-black text-slate-900 leading-tight group-hover:text-signal-red transition-colors">
                         {title}
                     </h3>
                 </div>

@@ -21,7 +21,7 @@ export default function AwardsPreview() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
                         <span className="text-[var(--signal-red)] font-bold tracking-wider uppercase text-sm">Excellence</span>
-                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[var(--deep-navy)] mt-2">
+                        <h2 className="text-3xl md:text-5xl font-black text-[var(--deep-navy)] mt-2">
                             Awards & <span className="text-[var(--signal-red)]">Recognition</span>
                         </h2>
                     </div>

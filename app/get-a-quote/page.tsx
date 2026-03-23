@@ -1,12 +1,31 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, CheckCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
 
+const services = [
+    'Fire Marshal Services',
+    'Guard Dogs Patrols',
+    'Lock & Unlock Services',
+    'Key-holding Alarm Response',
+    'Manned Security Guarding',
+    'Remote CCTV Monitoring Services',
+    'Security Reception Services',
+];
+
 export default function GetAQuotePage() {
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+    const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+    const toggleService = (service: string) => {
+        setSelectedServices(prev =>
+            prev.includes(service)
+                ? prev.filter(s => s !== service)
+                : [...prev, service]
+        );
+    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -46,129 +65,129 @@ export default function GetAQuotePage() {
             {/* Hero */}
             <PageHero
                 badge="Free Quote"
-                title="Get a"
-                subtitle="Quote"
+                title="Get a Quote"
+                subtitle=""
                 description="Tell us your security requirements and our team will get back to you with a tailored solution."
-                imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+                imageSrc="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80"
             />
 
             {/* Form Section */}
             <section className="py-16 md:py-20">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-[var(--border-color)]">
-                        <div className="grid md:grid-cols-3">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[var(--border-color)]">
+                        <div className="grid md:grid-cols-[300px_1fr]">
                             {/* Contact Sidebar */}
-                            <div className="bg-[var(--section-light)] p-8 md:p-10 hidden md:flex flex-col justify-between border-r border-[var(--border-color)]">
+                            <div className="bg-[var(--section-dark)] p-8 md:p-10 text-white self-start rounded-2xl">
                                 <div>
-                                    <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-6">Contact Information</h3>
-                                    <div className="space-y-5">
-                                        <div className="flex items-start gap-3">
-                                            <Phone className="w-4 h-4 text-[var(--signal-red)] mt-1 flex-shrink-0" />
-                                            <div>
-                                                <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-0.5">Phone</p>
-                                                <p className="text-[var(--text-main)] font-medium text-sm">0208 591 0330</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-start gap-3">
-                                            <Mail className="w-4 h-4 text-[var(--signal-red)] mt-1 flex-shrink-0" />
-                                            <div>
-                                                <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-0.5">Email</p>
-                                                <p className="text-[var(--text-main)] font-medium text-sm">info@ssgukltd.com</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-start gap-3">
-                                            <MapPin className="w-4 h-4 text-[var(--signal-red)] mt-1 flex-shrink-0" />
-                                            <div>
-                                                <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-0.5">Head Office</p>
-                                                <p className="text-[var(--text-main)] font-medium text-sm">SSG Head Office, Romford, Essex</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-10">
-                                    <div className="flex items-center gap-2 text-[var(--deep-navy)] font-semibold text-sm">
-                                        <ShieldCheck className="w-4 h-4 text-[var(--signal-red)]" />
-                                        Trusted Partner
-                                    </div>
-                                    <p className="text-xs text-[var(--text-muted)] mt-1">
-                                        Your data is secure and will only be used to process your enquiry.
+                                    <p className="text-sm text-white/80 leading-relaxed mb-10">
+                                        You can request a free no-obligation quotation from SSG below. If you are able to provide detailed information on your business and the services you need at this time it will greatly accelerate the quoting process.
                                     </p>
+
+                                    <div className="space-y-6">
+                                        <div className="flex items-start gap-3">
+                                            <MapPin className="w-5 h-5 text-[var(--accent-amber)] mt-0.5 flex-shrink-0" />
+                                            <div>
+                                                <p className="font-semibold text-sm text-white">Registered Office</p>
+                                                <p className="text-sm text-white/70 mt-0.5">
+                                                    SSG Head Office<br />
+                                                    Romford, Essex
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start gap-3">
+                                            <Mail className="w-5 h-5 text-[var(--accent-amber)] mt-0.5 flex-shrink-0" />
+                                            <div>
+                                                <p className="font-semibold text-sm text-white">Email</p>
+                                                <p className="text-sm text-white/70 mt-0.5">info@ssgukltd.com</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start gap-3">
+                                            <Phone className="w-5 h-5 text-[var(--accent-amber)] mt-0.5 flex-shrink-0" />
+                                            <div>
+                                                <p className="font-semibold text-sm text-white">Phone</p>
+                                                <p className="text-sm text-white/70 mt-0.5">0208 591 0330</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Form */}
-                            <div className="col-span-2 p-8 md:p-10">
-                                <h2 className="text-xl font-bold text-[var(--deep-navy)] mb-6">Enquiry Details</h2>
+                            <div className="p-8 md:p-10 bg-[#f7f7f7]">
+                                <h2 className="text-2xl font-bold text-[var(--deep-navy)] mb-8">Get A Quote</h2>
 
-                                <form onSubmit={handleSubmit} className="space-y-5">
+                                <form onSubmit={handleSubmit} className="space-y-6">
+                                    {/* Service Checkboxes */}
                                     <div>
-                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">Service Required</label>
-                                        <select className="input-tactical w-full">
-                                            <option>Manned Guarding</option>
-                                            <option>K9 Units</option>
-                                            <option>Mobile Patrols</option>
-                                            <option>Electronic Security</option>
-                                            <option>Concierge Services</option>
-                                            <option>Key Holding & Alarm Response</option>
-                                            <option>Commercial Cleaning</option>
-                                            <option>Waste Management</option>
-                                            <option>Property Maintenance</option>
-                                            <option>Reception Services</option>
-                                            <option>Other / Multiple Services</option>
-                                        </select>
-                                    </div>
-
-                                    <div className="grid md:grid-cols-2 gap-5">
-                                        <div>
-                                            <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">Full Name *</label>
-                                            <input type="text" required className="input-tactical w-full" placeholder="John Doe" />
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">Phone *</label>
-                                            <input type="tel" required className="input-tactical w-full" placeholder="07123 456789" />
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-3">Select Your Service</label>
+                                        <div className="space-y-2.5">
+                                            {services.map(service => (
+                                                <label key={service} className="flex items-center gap-3 cursor-pointer group">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={selectedServices.includes(service)}
+                                                        onChange={() => toggleService(service)}
+                                                        className="w-4 h-4 rounded border-gray-300 text-[var(--accent-amber)] focus:ring-[var(--accent-amber)]"
+                                                    />
+                                                    <span className="text-sm text-[var(--text-main)] group-hover:text-[var(--deep-navy)]">
+                                                        {service}
+                                                    </span>
+                                                </label>
+                                            ))}
                                         </div>
                                     </div>
 
-                                    <div className="grid md:grid-cols-2 gap-5">
-                                        <div>
-                                            <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">Email *</label>
-                                            <input type="email" required className="input-tactical w-full" placeholder="john@example.com" />
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">Company Name *</label>
-                                            <input type="text" required className="input-tactical w-full" placeholder="Company Ltd" />
-                                        </div>
-                                    </div>
-
+                                    {/* Full Name */}
                                     <div>
-                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">How can we help?</label>
-                                        <textarea className="input-tactical w-full min-h-[100px]" placeholder="Describe your requirements..." />
-                                    </div>
-
-                                    <div className="flex items-start gap-3 pt-1">
-                                        <input type="checkbox" id="consent" required className="mt-1 w-4 h-4 rounded border-[var(--border-color)]" />
-                                        <label htmlFor="consent" className="text-xs text-[var(--text-muted)]">
-                                            I consent to SSG collecting my details to contact me regarding this enquiry.
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
+                                            Full Name <span className="text-[var(--signal-red)]">*</span>
                                         </label>
+                                        <input type="text" required className="input-tactical w-full" />
                                     </div>
 
-                                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                    {/* Phone */}
+                                    <div>
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
+                                            Phone <span className="text-[var(--signal-red)]">*</span>
+                                        </label>
+                                        <input type="tel" required className="input-tactical w-full" />
+                                    </div>
+
+                                    {/* Email */}
+                                    <div>
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
+                                            Email <span className="text-[var(--signal-red)]">*</span>
+                                        </label>
+                                        <input type="email" required className="input-tactical w-full" />
+                                    </div>
+
+                                    {/* Company Name */}
+                                    <div>
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
+                                            Company Name <span className="text-[var(--signal-red)]">*</span>
+                                        </label>
+                                        <input type="text" required className="input-tactical w-full" />
+                                    </div>
+
+                                    {/* Message */}
+                                    <div>
+                                        <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
+                                            How can we help
+                                        </label>
+                                        <textarea className="input-tactical w-full min-h-[120px]" />
+                                    </div>
+
+                                    {/* Submit */}
+                                    <div className="pt-2">
                                         <button
                                             type="submit"
                                             disabled={formStatus === 'submitting'}
-                                            className="btn-primary flex-1 py-3 text-center flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                            className="bg-[var(--signal-red)] hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
-                                            {formStatus === 'submitting' ? 'Processing...' : (
-                                                <>Request a Quote <ArrowRight className="w-4 h-4" /></>
-                                            )}
+                                            {formStatus === 'submitting' ? 'Processing...' : 'Submit'}
                                         </button>
-                                        <a
-                                            href="tel:02085910330"
-                                            className="inline-flex items-center justify-center gap-2 border-2 border-[var(--border-color)] text-[var(--deep-navy)] px-6 py-3 rounded-full font-semibold text-sm hover:scale-110 transition-transform"
-                                        >
-                                            <Phone className="w-4 h-4" />
-                                            0208 591 0330
-                                        </a>
                                     </div>
                                 </form>
                             </div>

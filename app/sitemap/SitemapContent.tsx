@@ -88,7 +88,7 @@ export default function SitemapContent() {
                                         <div className="w-10 h-10 bg-signal-red/10 rounded-lg flex items-center justify-center">
                                             <Icon className="w-5 h-5 text-signal-red" />
                                         </div>
-                                        <h2 className="text-xl font-montserrat font-bold text-deep-navy">
+                                        <h2 className="text-xl font-bold text-deep-navy">
                                             {section.title}
                                         </h2>
                                     </div>
@@ -116,7 +116,7 @@ export default function SitemapContent() {
                     <div className="mt-16 bg-gradient-to-br from-deep-navy to-slate-900 text-white rounded-2xl p-8 md:p-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-2xl font-montserrat font-bold mb-4">
+                                <h3 className="text-2xl font-bold mb-4">
                                     Can't Find What You're Looking For?
                                 </h3>
                                 <p className="text-slate-200 mb-6">

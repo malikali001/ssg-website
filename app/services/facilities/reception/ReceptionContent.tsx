@@ -29,7 +29,7 @@ export default function ReceptionContent() {
                 <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative flex flex-col">
                     {/* Header */}
                     <div className="bg-deep-navy p-6 pt-10 text-white text-center">
-                        <div className="text-xl font-montserrat font-bold mb-1">Welcome</div>
+                        <div className="text-xl font-bold mb-1">Welcome</div>
                         <p className="text-xs text-slate-300">Please sign in to continue</p>
                     </div>
 

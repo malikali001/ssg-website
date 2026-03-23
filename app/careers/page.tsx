@@ -28,10 +28,10 @@ export default function CareersPage() {
             <section className="py-24 bg-white">
                 <div className="section-container">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6">
+                        <h2 className="font-black text-[--color-deep-navy] mb-6">
                             Why Choose <span className="text-[--color-signal-red]">SSG?</span>
                         </h2>
-                        <p className="text-slate-700 text-lg max-w-3xl mx-auto font-medium">
+                        <p className="text-slate-700 max-w-3xl mx-auto font-medium">
                             We don't just hire security; we build careers. We provide the stability, support, and training you need to succeed in the industry.
                         </p>
                     </div>
@@ -82,7 +82,7 @@ export default function CareersPage() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <div>
                             <span className="text-[--color-signal-red] font-bold tracking-wider uppercase text-sm">Opportunities</span>
-                            <h2 className="text-3xl md:text-5xl font-montserrat font-black text-white mt-2">
+                            <h2 className="font-black text-white mt-2">
                                 Roles We <span className="text-[--color-signal-red]">Hire For</span>
                             </h2>
                         </div>
@@ -156,10 +156,10 @@ export default function CareersPage() {
                 <div className="section-container relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-8 text-white">
+                            <h2 className="font-black mb-8 text-white">
                                 What We <span className="text-[--color-signal-red]">Look For</span>
                             </h2>
-                            <p className="text-slate-200 text-lg mb-10 leading-relaxed font-medium">
+                            <p className="text-slate-200 mb-10 leading-relaxed font-medium">
                                 We maintain high standards. To join the SSG team, you must meet our core requirements ensuring professionalism and compliance across strict industry regulations.
                             </p>
 
@@ -218,7 +218,7 @@ export default function CareersPage() {
             <section className="py-24 bg-white">
                 <div className="section-container">
                     <div className="text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6">
+                        <h2 className="font-black text-[--color-deep-navy] mb-6">
                             Your Journey to <span className="text-[--color-signal-red]">Employment</span>
                         </h2>
                     </div>
@@ -268,10 +268,10 @@ export default function CareersPage() {
                     <div className="inline-block p-3 rounded-full bg-[--color-deep-navy]/5 mb-6">
                         <FileText className="w-8 h-8 text-[--color-signal-red]" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6">
+                    <h2 className="font-black text-[--color-deep-navy] mb-6">
                         Ready to Join Us?
                     </h2>
-                    <p className="text-slate-600 text-lg mb-12 font-medium">
+                    <p className="text-slate-600 mb-12 font-medium">
                         Complete the form below to start your application. Please ensure you have your SIA licence details ready.
                     </p>
 

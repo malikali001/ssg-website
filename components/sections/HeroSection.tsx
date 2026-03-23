@@ -7,21 +7,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroSlides = [
     {
-        heading: "UK's trusted security\n& facilities partner",
+        heading: "UK's trusted\nsecurity partner",
         description:
             "We're on a mission to protect people, property, and peace of mind — because everyone deserves to feel safe, secure, and supported wherever they live, work, or visit.",
         cta: { label: 'Get in Touch to Learn', href: '/contact-us' },
         image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80',
     },
     {
-        heading: 'Expert security\nservices nationwide',
+        heading: 'Expert security\nnationwide',
         description:
             'SIA-approved manned guarding, mobile patrols, K9 units, and concierge services — delivering round-the-clock protection you can trust.',
         cta: { label: 'Explore Security Services', href: '/services/security' },
         image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
     },
     {
-        heading: 'Facilities management\nthat delivers results',
+        heading: 'Facilities that\ndeliver results',
         description:
             'From commercial cleaning to property maintenance, we keep your facilities running smoothly so you can focus on what matters most.',
         cta: { label: 'Explore Facilities Services', href: '/services/facilities' },
@@ -108,7 +108,7 @@ export default function HeroSection() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -8 }}
                                         transition={{ duration: 0.35 }}
-                                        className="text-[1.65rem] sm:text-[2rem] md:text-[2.3rem] lg:text-[2.6rem] font-montserrat font-bold text-[var(--deep-navy)] leading-[1.15] mb-4 whitespace-pre-line"
+                                        className="font-semibold leading-[1.2] mb-4 whitespace-pre-line"
                                     >
                                         {slide.heading}
                                     </motion.h1>
@@ -122,7 +122,7 @@ export default function HeroSection() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -8 }}
                                         transition={{ duration: 0.35, delay: 0.08 }}
-                                        className="text-[var(--text-muted)] text-sm sm:text-[15px] leading-relaxed mb-7"
+                                        className="text-[var(--text-main)] mb-7"
                                     >
                                         {slide.description}
                                     </motion.p>

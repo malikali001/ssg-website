@@ -54,10 +54,10 @@ export default function InsightsCarousel() {
                     transition={{ duration: 0.4 }}
                     className="text-center mb-10"
                 >
-                    <h2 className="text-2xl md:text-3xl lg:text-[2rem] font-montserrat font-bold text-[var(--deep-navy)] mb-3">
+                    <h2 className="mb-3">
                         SSG insights & expert blogs
                     </h2>
-                    <p className="text-[var(--text-muted)] text-sm md:text-base mb-6">
+                    <p className="text-[var(--text-main)] mb-6">
                         Learn more about our people, innovation and ESG actions.
                     </p>
                     <Link
@@ -96,7 +96,7 @@ export default function InsightsCarousel() {
                                     <span className="text-xs font-semibold text-[#C83232] uppercase tracking-wide">
                                         {item.category}
                                     </span>
-                                    <h3 className="font-montserrat font-bold text-[var(--deep-navy)] text-[15px] mt-1 mb-1 group-hover:text-[var(--signal-red)] transition-colors leading-snug">
+                                    <h3 className="font-bold text-[var(--deep-navy)] text-[15px] mt-1 mb-1 group-hover:text-[var(--signal-red)] transition-colors leading-snug">
                                         {item.title}
                                     </h3>
                                     <p className="text-[var(--text-muted)] text-xs leading-relaxed mb-2">

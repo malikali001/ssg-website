@@ -57,15 +57,15 @@ export default function ServiceHero({
                                 )}
 
                                 {/* Heading */}
-                                <h1 className="text-[1.5rem] sm:text-[1.85rem] md:text-[2.1rem] lg:text-[2.4rem] font-montserrat font-bold text-[var(--deep-navy)] leading-[1.15] mb-1">
+                                <h1 className="font-semibold leading-[1.2] mb-1">
                                     {title}
                                 </h1>
-                                <h2 className="text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] font-montserrat font-bold text-[var(--accent-amber)] leading-[1.15] mb-4">
+                                <h2 className="text-[var(--accent-amber)] font-semibold leading-[1.2] mb-4">
                                     {subtitle}
                                 </h2>
 
                                 {/* Description */}
-                                <p className="text-[var(--text-muted)] text-sm sm:text-[15px] leading-relaxed mb-7">
+                                <p className="text-[var(--text-main)] mb-7">
                                     {description}
                                 </p>
 

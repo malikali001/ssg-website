@@ -14,7 +14,7 @@ export default function IntelligenceCenterPage() {
             {/* Hero */}
             <section className="section-container pt-32 pb-12">
                 <div className="text-center max-w-4xl mx-auto mb-12">
-                    <h1 className="text-5xl md:text-6xl font-montserrat font-black mb-6">
+                    <h1 className="text-5xl md:text-6xl font-black mb-6">
                         SSG <span className="text-signal-red">Intelligence Center</span>
                     </h1>
                     <p className="text-xl text-text-muted">
@@ -79,7 +79,7 @@ export default function IntelligenceCenterPage() {
             {/* CTA Section */}
             <section className="section-container text-center">
                 <div className="bg-gunmetal rounded-lg p-12 border border-signal-red/30">
-                    <h2 className="text-3xl font-montserrat font-bold mb-4">
+                    <h2 className="text-3xl font-bold mb-4">
                         Ready to Experience <span className="text-signal-red">Total Visibility</span>?
                     </h2>
                     <p className="text-text-muted text-lg mb-8 max-w-2xl mx-auto">

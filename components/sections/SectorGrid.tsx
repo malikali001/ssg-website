@@ -47,10 +47,10 @@ export default function SectorGrid() {
                 transition={{ duration: 0.4 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
+                <h2 className="font-bold mb-4">
                     Tailored Protection for Every Sector
                 </h2>
-                <p className="text-[var(--text-muted)] max-w-2xl mx-auto text-lg">
+                <p className="text-[var(--text-main)] max-w-2xl mx-auto">
                     Our solutions address industry-specific challenges with specialist expertise.
                 </p>
             </motion.div>
@@ -80,7 +80,7 @@ export default function SectorGrid() {
 
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
-                                <h3 className="text-white font-montserrat font-bold text-lg">
+                                <h3 className="text-white font-bold text-lg">
                                     {sector.name}
                                 </h3>
                                 <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-[var(--accent-amber)] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />

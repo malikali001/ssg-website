@@ -34,7 +34,7 @@ export default function ServicesPage() {
                         <div className="relative z-10">
                             <Shield className="w-20 h-20 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                            <h2 className="text-4xl font-montserrat font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
+                            <h2 className="font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                 Security Solutions
                             </h2>
 
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                         <div className="relative z-10">
                             <Building2 className="w-20 h-20 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                            <h2 className="text-4xl font-montserrat font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
+                            <h2 className="font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                 Facilities Management
                             </h2>
 

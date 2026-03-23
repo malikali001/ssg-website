@@ -23,7 +23,7 @@ export default function SectorStats({ title, subtitle, stats }: SectorStatsProps
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
+                    <h2 className="text-white mb-2">
                         {title} <span className="text-[var(--accent-amber)]">{subtitle}</span>
                     </h2>
                 </div>
@@ -43,7 +43,7 @@ export default function SectorStats({ title, subtitle, stats }: SectorStatsProps
                                     <stat.icon className="w-5 h-5 text-[var(--accent-amber)]" />
                                 </div>
                             )}
-                            <div className="text-3xl md:text-4xl font-bold text-white mb-2 font-montserrat">{stat.value}</div>
+                            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                             <div className="text-sm font-semibold text-[var(--accent-amber)] uppercase tracking-wider mb-1">{stat.label}</div>
                             {stat.subtext && <div className="text-xs text-white/50">{stat.subtext}</div>}
                         </motion.div>

@@ -16,10 +16,10 @@ export default function ServiceCTA() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-white mb-4">
+                    <h2 className="text-white mb-4">
                         Connect with Your SSG Team
                     </h2>
-                    <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto">
+                    <p className="text-white/60 mb-10 max-w-2xl mx-auto">
                         Ready to discuss your security and facilities requirements? Our experienced team is here to help design the right solution for you.
                     </p>
 

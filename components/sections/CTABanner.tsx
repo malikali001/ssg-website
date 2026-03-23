@@ -14,10 +14,10 @@ export default function CTABanner() {
                     transition={{ duration: 0.4 }}
                     className="bg-[var(--section-dark)] rounded-2xl px-8 py-14 md:px-16 md:py-20 text-center"
                 >
-                    <h2 className="text-2xl md:text-3xl lg:text-[2rem] font-montserrat font-bold text-white mb-4">
+                    <h2 className="text-white mb-4">
                         Ready to secure what matters?
                     </h2>
-                    <p className="text-white/70 text-sm md:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+                    <p className="text-white/70 max-w-xl mx-auto mb-8">
                         We&apos;re ready to deliver the best experiences, productivity, practices, resilience and outcomes and we look forward to connecting with you and your team.
                     </p>
                     <Link

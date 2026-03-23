@@ -44,7 +44,7 @@ export default function IntelligenceFeature({
                                 {topicTag}
                             </span>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-montserrat font-black text-slate-900 mb-6">
+                        <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">
                             {title} <br />
                             <span className="text-signal-red">{subtitle}</span>
                         </h2>

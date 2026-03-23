@@ -23,13 +23,13 @@ export default function TrustBar() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-2xl md:text-3xl lg:text-[2rem] font-montserrat font-bold text-[var(--deep-navy)] leading-snug mb-5">
+                        <h2 className="mb-5">
                             Keeping your commercial premises looking the part
                         </h2>
-                        <p className="text-[var(--text-muted)] text-sm md:text-[15px] leading-relaxed mb-4">
+                        <p className="text-[var(--text-main)] mb-4">
                             When you&apos;re running a business, it&apos;s imperative that everything runs like clockwork. The environment needs to bring the best out of our employees, while visitors and customers should be instantly impressed.
                         </p>
-                        <p className="text-[var(--text-muted)] text-sm md:text-[15px] leading-relaxed">
+                        <p className="text-[var(--text-main)]">
                             Our integrated facilities management services for commercial customers help you deliver uninterrupted and hassle-free services while we keep everything in perfect working order behind the scenes.
                         </p>
                     </motion.div>

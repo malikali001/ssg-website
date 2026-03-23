@@ -49,7 +49,7 @@ export default function IndustriesGrid() {
                                         <item.icon className="w-8 h-8 text-deep-navy group-hover:text-[var(--signal-red)] transition-colors duration-300" strokeWidth={1.5} />
                                     </motion.div>
 
-                                    <h3 className="text-xl font-montserrat font-bold text-deep-navy mb-3 group-hover:text-[var(--signal-red)] transition-colors">
+                                    <h3 className="text-xl font-bold text-deep-navy mb-3 group-hover:text-[var(--signal-red)] transition-colors">
                                         {item.name}
                                     </h3>
 

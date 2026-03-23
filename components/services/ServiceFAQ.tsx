@@ -20,7 +20,7 @@ export default function ServiceFAQ({ title = 'Frequently Asked Questions', faqs 
     return (
         <section className="py-20 bg-[var(--section-light)]">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-[var(--deep-navy)] mb-10 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--deep-navy)] mb-10 text-center">
                     {title}
                 </h2>
 

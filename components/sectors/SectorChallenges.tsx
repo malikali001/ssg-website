@@ -25,7 +25,7 @@ export default function SectorChallenges({ title, subtitle, challenges, solution
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-14">
-                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-[var(--deep-navy)] mb-2">
+                    <h2 className="mb-2">
                         {title} <span className="text-[var(--accent-amber)]">{subtitle}</span>
                     </h2>
                 </div>

@@ -37,7 +37,7 @@ export default function OfficeLocations() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-montserrat font-black mb-4 text-[--color-deep-navy]"
+                        className="font-black mb-4 text-[--color-deep-navy]"
                     >
                         Our <span className="text-[--color-signal-red]">Offices</span>
                     </motion.h2>
@@ -46,7 +46,7 @@ export default function OfficeLocations() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-[--color-text-muted] max-w-2xl mx-auto"
+                        className="text-[--color-text-main] max-w-2xl mx-auto"
                     >
                         Nation-wide coverage with our strategically located regional offices.
                     </motion.p>
