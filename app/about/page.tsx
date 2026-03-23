@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Building2, Monitor, ChevronRight, Leaf, Heart, Scale, Award, Clock, MapPin } from 'lucide-react';
 import PageHero from '@/components/sections/PageHero';
 
@@ -85,9 +86,11 @@ export default function AboutPage() {
                             className="group block bg-white border border-[var(--border-color)] rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
                         >
                             <div className="aspect-[16/10] overflow-hidden">
-                                <img
+                                <Image
                                     src={cat.image}
                                     alt={cat.title}
+                                    width={800}
+                                    height={500}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
@@ -139,7 +142,7 @@ export default function AboutPage() {
                             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                                 <div className={isReversed ? 'lg:order-2' : ''}>
                                     <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                                        <img src={block.image} alt={block.title} className="w-full h-full object-cover" />
+                                        <Image src={block.image} alt={block.title} width={800} height={600} className="w-full h-full object-cover" />
                                     </div>
                                 </div>
                                 <div className={isReversed ? 'lg:order-1' : ''}>

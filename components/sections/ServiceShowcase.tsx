@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -44,9 +45,11 @@ export default function ServiceShowcase() {
                             >
                                 {/* Image */}
                                 <div className="aspect-[16/10] overflow-hidden">
-                                    <img
+                                    <Image
                                         src={cat.image}
                                         alt={cat.title}
+                                        width={800}
+                                        height={500}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>

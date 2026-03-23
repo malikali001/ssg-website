@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { PenLine, Phone } from 'lucide-react';
 

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface PageHeroProps {
@@ -27,10 +28,13 @@ export default function PageHero({
             <div className="relative max-w-[1400px] mx-auto h-[360px] sm:h-[400px] md:h-[460px] lg:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <Image
                         src={imageSrc}
                         alt={`${title} ${subtitle}`.trim()}
-                        className="w-full h-full object-cover"
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover"
                     />
                 </div>
 

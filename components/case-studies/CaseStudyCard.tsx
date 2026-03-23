@@ -36,9 +36,11 @@ export default function CaseStudyCard({
             {/* Image Section */}
             <div className="relative h-48 sm:h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/0 transition-colors z-10" />
-                <img
+                <Image
                     src={imageSrc}
                     alt={title}
+                    width={800}
+                    height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-widest border border-white">

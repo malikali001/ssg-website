@@ -1,6 +1,7 @@
 'use client';
 
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function OfficeLocations() {
@@ -68,9 +69,11 @@ export default function OfficeLocations() {
                                     {office.type}
                                 </span>
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img
+                                <Image
                                     src={office.images[0]}
                                     alt={office.name}
+                                    width={800}
+                                    height={256}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>

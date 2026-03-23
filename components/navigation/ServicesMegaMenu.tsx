@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Shield, Car, Camera, UserCheck, Key, Dog,
     Sparkles, Trash2, Wrench, Monitor, ArrowUpRight
@@ -95,9 +96,11 @@ export default function ServiceDropdown({ type }: ServiceDropdownProps) {
                         <Link href={card.href} className="block group">
                             <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
                                 <div className="aspect-[4/3] overflow-hidden">
-                                    <img
+                                    <Image
                                         src={card.image}
                                         alt={card.title}
+                                        width={600}
+                                        height={450}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>

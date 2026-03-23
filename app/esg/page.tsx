@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Leaf, Users, Scale, BarChart3, FileText,
     ShieldCheck, Globe, Heart, Recycle,
@@ -32,9 +33,11 @@ export default function ESGPage() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative group">
                         <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative transform transition-transform duration-500 hover:scale-[1.01] border border-slate-100">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
                                 alt="Sustainability features"
+                                width={2070}
+                                height={1380}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[--color-deep-navy]/80 to-transparent" />
@@ -140,9 +143,11 @@ export default function ESGPage() {
 
                         <div className="order-1 lg:order-2 relative group">
                             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-[1.01] relative">
-                                <img
+                                <Image
                                     src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop"
                                     alt="Diverse team working together"
+                                    width={2084}
+                                    height={1390}
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-[--color-deep-navy]/40 to-transparent" />

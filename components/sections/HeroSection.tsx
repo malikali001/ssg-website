@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -69,11 +70,13 @@ export default function HeroSection() {
                         transition={{ duration: 0.6 }}
                         className="absolute inset-0 z-0"
                     >
-                        <img
+                        <Image
                             src={slide.image}
                             alt="SSG security and facilities services"
-                            role="presentation"
-                            className="w-full h-full object-cover"
+                            fill
+                            priority
+                            sizes="100vw"
+                            className="object-cover"
                         />
                     </motion.div>
                 </AnimatePresence>

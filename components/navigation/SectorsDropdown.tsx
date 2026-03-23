@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     HardHat, ShoppingBag, Building2, Stethoscope,
     GraduationCap, Hotel, Truck, Landmark, ArrowUpRight
@@ -57,9 +58,11 @@ export default function SectorsDropdown() {
                         <Link href="/sectors/construction" className="block group">
                             <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
                                 <div className="aspect-[4/3] overflow-hidden">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
                                         alt="Sectors"
+                                        width={600}
+                                        height={450}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
