@@ -55,7 +55,7 @@ export default function SiaSection() {
                     >
                         <div className="bg-white p-12 rounded-3xl shadow-2xl border border-slate-100 relative group max-w-md w-full flex justify-center items-center">
                             {/* Decorative glow */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-blue-500/10 blur-3xl rounded-full group-hover:bg-blue-600/20 transition-all duration-700" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-red-500/10 blur-3xl rounded-full group-hover:bg-red-600/20 transition-all duration-700" />
 
                             {/* SIA Logo Placeholder / SVG */}
                             {/* Using a clear SVG representation since I don't have the exact image file, or using an img tag if URL is known.

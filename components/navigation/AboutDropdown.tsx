@@ -2,22 +2,17 @@
 
 import Link from 'next/link';
 import {
-    HardHat, ShoppingBag, Building2, Stethoscope,
-    GraduationCap, Hotel, Truck, Landmark, ArrowUpRight
+    Building, Leaf, Briefcase, Award, ArrowUpRight
 } from 'lucide-react';
 
-const sectors = [
-    { name: 'Construction', href: '/sectors/construction', icon: HardHat },
-    { name: 'Retail', href: '/sectors/retail', icon: ShoppingBag },
-    { name: 'Corporate & Office', href: '/sectors/corporate', icon: Building2 },
-    { name: 'Healthcare', href: '/sectors/healthcare', icon: Stethoscope },
-    { name: 'Education', href: '/sectors/education', icon: GraduationCap },
-    { name: 'Hospitality', href: '/sectors/hospitality', icon: Hotel },
-    { name: 'Logistics & Distribution', href: '/sectors/logistics', icon: Truck },
-    { name: 'Public Sector', href: '/sectors/public-sector', icon: Landmark },
+const items = [
+    { name: 'About SSG', href: '/about', icon: Building },
+    { name: 'ESG & Compliance', href: '/esg', icon: Leaf },
+    { name: 'Careers', href: '/careers', icon: Briefcase },
+    { name: 'Awards & Recognition', href: '/awards-recognition', icon: Award },
 ];
 
-export default function SectorsDropdown() {
+export default function AboutDropdown() {
     return (
         <div className="w-full bg-white border-b border-[var(--border-color)] shadow-lg animate-fade-in">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -25,26 +20,26 @@ export default function SectorsDropdown() {
                     {/* Left Side */}
                     <div className="flex-1 min-w-0">
                         <h3 className="text-2xl md:text-[1.7rem] font-montserrat font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
-                            Trusted protection across every sector.
+                            Get to know SSG UK Ltd.
                         </h3>
                         <p className="text-[var(--text-muted)] text-sm mb-6 max-w-lg">
-                            Tailored security and facilities solutions for the unique challenges of your industry.
+                            Our people, our values, and our commitment to excellence in security and facilities management.
                         </p>
 
                         <div className="border-t border-[var(--border-color)] mb-8" />
 
                         <div className="grid grid-cols-2 gap-x-10 gap-y-5">
-                            {sectors.map((sector) => {
-                                const Icon = sector.icon;
+                            {items.map((item) => {
+                                const Icon = item.icon;
                                 return (
                                     <Link
-                                        key={sector.href}
-                                        href={sector.href}
+                                        key={item.href}
+                                        href={item.href}
                                         className="flex items-center gap-3 group"
                                     >
                                         <Icon className="w-5 h-5 text-[var(--text-muted)] group-hover:text-[var(--signal-red)] transition-colors flex-shrink-0" />
                                         <span className="text-[15px] font-medium text-[var(--text-main)] group-hover:text-[var(--signal-red)] transition-colors">
-                                            {sector.name}
+                                            {item.name}
                                         </span>
                                     </Link>
                                 );
@@ -54,26 +49,26 @@ export default function SectorsDropdown() {
 
                     {/* Right Side - Image Card */}
                     <div className="hidden lg:block w-[320px] flex-shrink-0">
-                        <Link href="/sectors/construction" className="block group">
+                        <Link href="/about" className="block group">
                             <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
                                 <div className="aspect-[4/3] overflow-hidden">
                                     <img
-                                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
-                                        alt="Sectors"
+                                        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80"
+                                        alt="About SSG"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
                                 <div className="p-5">
                                     <div className="flex items-center justify-between mb-2">
                                         <h4 className="text-lg font-montserrat font-bold text-[var(--deep-navy)]">
-                                            Our Sectors
+                                            About Us
                                         </h4>
                                         <div className="w-8 h-8 rounded-full bg-[var(--section-dark)] flex items-center justify-center group-hover:bg-[var(--signal-red)] transition-colors">
                                             <ArrowUpRight className="w-4 h-4 text-white" />
                                         </div>
                                     </div>
                                     <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                                        Industry-specific security delivering measurable results across all sectors.
+                                        Learn about our mission, values, and the team behind SSG UK Ltd.
                                     </p>
                                 </div>
                             </div>

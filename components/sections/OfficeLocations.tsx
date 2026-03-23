@@ -115,7 +115,7 @@ export default function OfficeLocations() {
                                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-full py-3 bg-white border-2 border-[#0F172A] text-[#0F172A] font-bold rounded-xl hover:bg-[#E31E24] hover:border-[#E31E24] hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
+                                        className="w-full py-3 bg-white border-2 border-[var(--deep-navy)] text-[var(--deep-navy)] font-bold rounded-full hover:scale-110 transition-transform flex items-center justify-center gap-2 group/btn"
                                     >
                                         <Navigation className="w-4 h-4 group-hover/btn:-translate-y-0.5 transition-transform" />
                                         Get Directions

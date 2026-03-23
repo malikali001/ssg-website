@@ -2,79 +2,92 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Building2, ShoppingCart, Briefcase, Heart, GraduationCap, Hotel } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+
+const sectors = [
+    {
+        name: 'Corporate & Office',
+        href: '/sectors/corporate',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    },
+    {
+        name: 'Retail Security',
+        href: '/sectors/retail',
+        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
+    },
+    {
+        name: 'Construction',
+        href: '/sectors/construction',
+        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    },
+    {
+        name: 'Logistics & Distribution',
+        href: '/sectors/logistics',
+        image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80',
+    },
+    {
+        name: 'Healthcare',
+        href: '/sectors/healthcare',
+        image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
+    },
+    {
+        name: 'Education',
+        href: '/sectors/education',
+        image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80',
+    },
+];
 
 export default function SectorGrid() {
-    const sectors = [
-        { name: 'Corporate & Office', icon: Briefcase, href: '/sectors/corporate', description: 'Professional, suit-and-tie security.', color: 'from-blue-900/40' },
-        { name: 'Retail & Leisure', icon: ShoppingCart, href: '/sectors/retail', description: 'Loss prevention and public safety.', color: 'from-blue-800/40' },
-        { name: 'Construction & Infrastructure', icon: Building2, href: '/sectors/construction', description: 'CCTV, perimeter, and logistics.', color: 'from-blue-700/40' },
-        { name: 'Logistics & Distribution', icon: Hotel, href: '/sectors/logistics', description: 'Gatehouse and yard management.', color: 'from-blue-600/40' },
-        { name: 'Public Sector & Healthcare', icon: Heart, href: '/sectors/public-sector', description: 'Compliance and sensitive guarding.', color: 'from-blue-500/40' },
-        { name: 'Soft Services', icon: GraduationCap, href: '/services/soft-services', description: 'Professional cleaning and FM.', color: 'from-blue-400/40' },
-    ];
-
     return (
-        <section id="sectors" className="section-container bg-slate-50">
+        <section id="sectors" className="section-container bg-[var(--section-light)]">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-16"
+                transition={{ duration: 0.4 }}
+                className="text-center mb-12"
             >
-                <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-4 text-deep-navy">
-                    Tailored by <span className="text-signal-red">Sector</span>
+                <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
+                    Tailored Protection for Every Sector
                 </h2>
-                <p className="text-xl text-text-muted max-w-2xl mx-auto">
-                    Security is not one-size-fits-all. We understand the unique challenges of your industry.
+                <p className="text-[var(--text-muted)] max-w-2xl mx-auto text-lg">
+                    Our solutions address industry-specific challenges with specialist expertise.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {sectors.map((sector, index) => {
-                    const Icon = sector.icon;
-                    return (
-                        <motion.div
-                            key={sector.href}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -10, scale: 1.02 }}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {sectors.map((sector, index) => (
+                    <motion.div
+                        key={sector.href}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.08 }}
+                    >
+                        <Link
+                            href={sector.href}
+                            className="group relative block aspect-[4/3] rounded-lg overflow-hidden"
                         >
-                            <Link
-                                href={sector.href}
-                                className="group relative block h-full bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-signal-red/30 transition-all duration-300 hover:shadow-2xl hover:shadow-signal-red/10"
-                            >
-                                {/* Gradient Background on Hover */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                            {/* Background Image */}
+                            <img
+                                src={sector.image}
+                                alt={sector.name}
+                                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            />
 
-                                <div className="relative p-8 flex flex-col items-center text-center h-full">
-                                    <motion.div
-                                        className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-white transition-all duration-300 shadow-sm"
-                                        whileHover={{ rotate: 360, scale: 1.2 }}
-                                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                                    >
-                                        <Icon className="w-8 h-8 text-deep-navy group-hover:text-signal-red transition-colors duration-300" />
-                                    </motion.div>
+                            {/* Dark Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                                    <h3 className="text-xl font-montserrat font-bold text-deep-navy mb-3">
-                                        {sector.name}
-                                    </h3>
-
-                                    <p className="text-gray-500 text-sm group-hover:text-deep-navy/80 transition-colors">
-                                        {sector.description}
-                                    </p>
-
-                                    <div className="mt-6 text-signal-red font-semibold text-sm opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
-                                        View Solutions <span className="text-lg">→</span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </motion.div>
-                    );
-                })}
+                            {/* Content */}
+                            <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                                <h3 className="text-white font-montserrat font-bold text-lg">
+                                    {sector.name}
+                                </h3>
+                                <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-[var(--accent-amber)] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
+                            </div>
+                        </Link>
+                    </motion.div>
+                ))}
             </div>
         </section>
     );

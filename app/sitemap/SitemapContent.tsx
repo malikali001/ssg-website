@@ -124,7 +124,7 @@ export default function SitemapContent() {
                                 </p>
                                 <Link
                                     href="/contact-us"
-                                    className="inline-block bg-signal-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
+                                    className="btn-primary inline-block"
                                 >
                                     Contact Us
                                 </Link>

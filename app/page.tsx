@@ -1,25 +1,21 @@
 import HeroSection from "@/components/sections/HeroSection";
+import ServiceShowcase from "@/components/sections/ServiceShowcase";
+import StatsBar from "@/components/sections/StatsBar";
+import ValuePropositions from "@/components/sections/ValuePropositions";
+import CTABanner from "@/components/sections/CTABanner";
+import InsightsCarousel from "@/components/sections/InsightsCarousel";
 import TrustBar from "@/components/sections/TrustBar";
-import IndustriesGrid from "@/components/sections/IndustriesGrid";
-import PrimaryFunnel from "@/components/sections/PrimaryFunnel";
-import TheEdge from "@/components/sections/TheEdge";
-import SectorGrid from "@/components/sections/SectorGrid";
-import WhySSG from "@/components/sections/WhySSG";
-import AwardsPreview from "@/components/sections/AwardsPreview";
-import SiaSection from "@/components/sections/SiaSection";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <ServiceShowcase />
+      <StatsBar />
+      <ValuePropositions />
+      <CTABanner />
+      <InsightsCarousel />
       <TrustBar />
-      <IndustriesGrid />
-      <PrimaryFunnel />
-      <TheEdge />
-      <SectorGrid />
-      <SiaSection />
-      <AwardsPreview />
-      <WhySSG />
     </main>
   );
 }

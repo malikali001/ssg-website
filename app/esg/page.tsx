@@ -5,6 +5,7 @@ import {
     ShieldCheck, Globe, Heart, Recycle,
     Zap, Award, CheckCircle2
 } from 'lucide-react';
+import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
     title: 'ESG & Compliance | SSG UK Ltd',
@@ -16,29 +17,15 @@ export default function ESGPage() {
     return (
         <main className="min-h-screen bg-[--color-obsidian]">
             {/* 1. Introduction: What ESG Means for SSG */}
-            <section className="relative bg-black py-32 overflow-hidden">
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                        alt="Global ESG Connection"
-                        className="w-full h-full object-cover opacity-80"
-                    />
-                    <div className="absolute inset-0 bg-black/40" />
-                </div>
-
-                <div className="relative z-10 section-container text-center">
-                    <div className="inline-block px-5 py-2 rounded-full bg-[--color-signal-red]/10 border border-[--color-signal-red]/30 text-[--color-signal-red] font-bold text-sm tracking-wider mb-8 animate-slide-up">
-                        ENVIRONMENTAL • SOCIAL • GOVERNANCE
-                    </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white mb-8 animate-slide-up animation-delay-200 drop-shadow-lg leading-tight">
-                        What ESG Means <br /> for <span className="text-[--color-signal-red]">SSG</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto animate-slide-up animation-delay-400 font-medium leading-relaxed">
-                        ESG stands for Environmental, Social, and Governance — key areas that show how responsibly a business operates beyond financial performance. At SSG, ESG reflects how we protect people, treat our workforce and communities, and run our business with integrity.
-                    </p>
-                </div>
-            </section>
+            <PageHero
+                badge="Environmental · Social · Governance"
+                title="What ESG Means"
+                subtitle="for SSG"
+                description="ESG reflects how we protect people, treat our workforce and communities, and run our business with integrity — key areas that show how responsibly we operate beyond financial performance."
+                imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                ctaLabel="Learn More"
+                ctaHref="/contact-us"
+            />
 
             {/* 2. Environmental Commitment */}
             <section className="section-container">
@@ -346,7 +333,7 @@ export default function ESGPage() {
                         ].map((policy, index) => (
                             <div key={index} className="group bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-[--color-signal-red] transition-all duration-300 flex items-center justify-between cursor-pointer hover:shadow-md transform hover:-translate-y-1">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-lg bg-[--color-gunmetal] group-hover:bg-red-50 flex items-center justify-center transition-colors border border-slate-100">
+                                    <div className="w-12 h-12 rounded-lg bg-[--color-gunmetal] group-hover:bg-[var(--section-light)] flex items-center justify-center transition-colors border border-slate-100">
                                         <FileText className="w-6 h-6 text-slate-400 group-hover:text-[--color-signal-red] transition-colors" />
                                     </div>
                                     <span className="font-bold text-[--color-deep-navy] group-hover:text-[--color-signal-red] transition-colors text-lg">{policy}</span>
@@ -362,7 +349,7 @@ export default function ESGPage() {
                         <p className="text-slate-500 mb-8 text-lg font-medium">
                             These documents represent our formal commitment to ESG standards. Verification of certifications and detailed audit reports are available upon request.
                         </p>
-                        <Link href="/quote" className="btn-primary inline-flex items-center gap-2 shadow-xl shadow-red-500/20 px-8 py-4 text-lg">
+                        <Link href="/quote" className="btn-primary inline-flex items-center gap-2 shadow-lg px-8 py-4 text-lg">
                             Request Full Compliance Pack
                         </Link>
                     </div>

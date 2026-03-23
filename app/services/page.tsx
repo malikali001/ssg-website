@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Building2, ArrowRight } from 'lucide-react';
+import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
     title: 'Our Services | SSG UK Ltd',
@@ -12,15 +13,14 @@ export default function ServicesPage() {
     return (
         <main className="min-h-screen">
             {/* Hero */}
-            <section className="section-container pt-32">
-                <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-5xl md:text-6xl font-montserrat font-black mb-6">
-                        Our <span className="text-signal-red">Services</span>
-                    </h1>
-                    <p className="text-xl text-text-muted">
-                        Choose your path to comprehensive protection and operational excellence
-                    </p>
-                </div>
+            <PageHero
+                badge="Our Services"
+                title="Our"
+                subtitle="Services"
+                description="Choose your path to comprehensive protection and operational excellence."
+                imageSrc="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
+            />
+            <section className="section-container">
 
                 {/* Two Main Service Categories */}
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">

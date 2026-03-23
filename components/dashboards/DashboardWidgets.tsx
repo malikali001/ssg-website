@@ -2,7 +2,7 @@
 
 import { AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-const COLORS = ['#E31E24', '#F3F4F6', '#9CA3AF', '#1A1D23'];
+const COLORS = ['#1B3A5C', '#F3F4F6', '#9CA3AF', '#1A1D23'];
 
 export function GuardsActiveChart() {
     const data = [
@@ -22,18 +22,18 @@ export function GuardsActiveChart() {
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="colorGuards" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#E31E24" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="#E31E24" stopOpacity={0} />
+                            <stop offset="5%" stopColor="#1B3A5C" stopOpacity={0.8} />
+                            <stop offset="95%" stopColor="#1B3A5C" stopOpacity={0} />
                         </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1A1D23" />
                     <XAxis dataKey="time" stroke="#9CA3AF" />
                     <YAxis stroke="#9CA3AF" />
                     <Tooltip
-                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #E31E24' }}
+                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #1B3A5C' }}
                         labelStyle={{ color: '#F3F4F6' }}
                     />
-                    <Area type="monotone" dataKey="guards" stroke="#E31E24" fillOpacity={1} fill="url(#colorGuards)" />
+                    <Area type="monotone" dataKey="guards" stroke="#1B3A5C" fillOpacity={1} fill="url(#colorGuards)" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
@@ -58,10 +58,10 @@ export function IncidentHeatmap() {
                     <XAxis dataKey="sector" stroke="#9CA3AF" angle={-45} textAnchor="end" height={80} />
                     <YAxis stroke="#9CA3AF" />
                     <Tooltip
-                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #E31E24' }}
+                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #1B3A5C' }}
                         labelStyle={{ color: '#F3F4F6' }}
                     />
-                    <Bar dataKey="incidents" fill="#E31E24" />
+                    <Bar dataKey="incidents" fill="#1B3A5C" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
@@ -92,7 +92,7 @@ export function ComplianceGauge() {
                                 dataKey="value"
                             >
                                 {data.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#E31E24' : '#1A1D23'} />
+                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#1B3A5C' : '#1A1D23'} />
                                 ))}
                             </Pie>
                         </PieChart>

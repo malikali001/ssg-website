@@ -8,58 +8,21 @@ import {
     Award, Heart, ShieldCheck, Star
 } from 'lucide-react';
 import Link from 'next/link';
+import PageHero from '@/components/sections/PageHero';
 
 export default function CareersPage() {
     return (
         <main className="min-h-screen bg-[--color-obsidian]">
             {/* 1. Hero Section */}
-            <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
-                {/* Background Image/Video Placeholder */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop"
-                        alt="Security professional on duty"
-                        className="w-full h-full object-cover opacity-50"
-                    />
-                    <div className="absolute inset-0 bg-black/40" />
-                </div>
-
-                <div className="relative z-10 section-container text-center pt-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[--color-signal-red]/20 border border-[--color-signal-red]/40 text-[--color-signal-red] font-bold text-sm tracking-wide mb-6 backdrop-blur-sm">
-                            <Briefcase className="w-4 h-4" /> WE ARE HIRING
-                        </div>
-                        <h1 className="text-5xl md:text-7xl font-montserrat font-black text-white mb-8 leading-tight drop-shadow-2xl">
-                            Build Your Career in <br />
-                            <span className="text-[--color-signal-red]">
-                                Professional Security
-                            </span>
-                        </h1>
-                        <p className="text-xl text-slate-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-                            Join a stable, professional employer that values integrity and invests in your growth.
-                            Secure your future with SSG.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a
-                                href="#open-roles"
-                                className="px-8 py-4 bg-[--color-signal-red] hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-[--color-signal-red]/40 hover:-translate-y-1 flex items-center gap-2"
-                            >
-                                <Users className="w-5 h-5" /> View Open Roles
-                            </a>
-                            <a
-                                href="#application-form"
-                                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 transition-all flex items-center gap-2"
-                            >
-                                Apply Now <ArrowRight className="w-5 h-5" />
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <PageHero
+                badge="We Are Hiring"
+                title="Build Your Career in"
+                subtitle="Professional Security"
+                description="Join a stable, professional employer that values integrity and invests in your growth. Secure your future with SSG."
+                imageSrc="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop"
+                ctaLabel="View Open Roles"
+                ctaHref="#open-roles"
+            />
 
             {/* 2. Why Work at SSG */}
             <section className="py-24 bg-white">
@@ -91,7 +54,7 @@ export default function CareersPage() {
                                 icon: GraduationCap,
                                 title: "Career Progression",
                                 desc: "Clear pathways from Officer to Supervisor and Management roles.",
-                                color: "text-[--color-signal-red]", bg: "bg-red-50"
+                                color: "text-[--color-signal-red]", bg: "bg-[var(--section-light)]"
                             },
                             {
                                 icon: Heart,
@@ -163,7 +126,7 @@ export default function CareersPage() {
                         ].map((role, idx) => (
                             <div key={idx} className="bg-white rounded-xl p-6 shadow-md border border-slate-200 hover:border-[--color-signal-red] transition-all group flex flex-col h-full">
                                 <div className="flex justify-between items-start mb-4">
-                                    <div className="p-3 bg-slate-50 rounded-lg group-hover:bg-red-50 transition-colors">
+                                    <div className="p-3 bg-slate-50 rounded-lg group-hover:bg-[var(--section-light)] transition-colors">
                                         <Briefcase className="w-6 h-6 text-slate-400 group-hover:text-[--color-signal-red]" />
                                     </div>
                                     <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded uppercase tracking-wide">
@@ -175,7 +138,7 @@ export default function CareersPage() {
                                     <MapPin className="w-4 h-4" /> {role.loc}
                                 </div>
                                 <p className="text-slate-700 text-sm mb-6 flex-grow font-medium">{role.desc}</p>
-                                <a href="#application-form" className="w-full py-3 rounded-lg border-2 border-slate-100 hover:border-[--color-signal-red] hover:text-[--color-signal-red] text-slate-700 font-bold text-center transition-all">
+                                <a href="#application-form" className="w-full py-3 rounded-full border-2 border-slate-100 text-slate-700 font-bold text-center hover:scale-110 transition-transform">
                                     Apply Now
                                 </a>
                             </div>
@@ -185,9 +148,9 @@ export default function CareersPage() {
             </section>
 
             {/* 4. Requirements */}
-            <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+            <section className="py-24 bg-[var(--section-dark)] text-white overflow-hidden relative">
                 {/* Decorative background elements */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--signal-red)]/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
 
                 <div className="section-container relative z-10">
@@ -353,7 +316,7 @@ export default function CareersPage() {
                                 <div className="mt-2 text-xs text-slate-500">* Please email your full CV to jobs@ssg-net.com after submitting this form.</div>
                             </div>
 
-                            <button type="button" className="w-full py-4 bg-[#E31E24] hover:bg-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
+                            <button type="button" className="w-full py-4 btn-primary shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
                                 Submit Application
                             </button>
 

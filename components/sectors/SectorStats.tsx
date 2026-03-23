@@ -18,35 +18,34 @@ interface SectorStatsProps {
 
 export default function SectorStats({ title, subtitle, stats }: SectorStatsProps) {
     return (
-        <section className="py-20 bg-slate-900 text-white overflow-hidden relative">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <section className="relative bg-[var(--section-dark)] overflow-hidden">
+            <div className="absolute inset-0 dotted-bg opacity-30" />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-4xl font-montserrat font-black mb-4">
-                        {title} <span className="text-signal-red">{subtitle}</span>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
+                        {title} <span className="text-[var(--accent-amber)]">{subtitle}</span>
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                     {stats.map((stat, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl text-center group hover:border-signal-red/50 transition-colors"
+                            transition={{ delay: idx * 0.1, duration: 0.4 }}
+                            className="text-center p-6 bg-white/5 backdrop-blur border border-white/10 rounded-lg"
                         >
                             {stat.icon && (
-                                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-800 text-signal-red mb-6 mb-6 group-hover:scale-110 transition-transform">
-                                    <stat.icon className="w-6 h-6" />
+                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-amber)]/15 mb-4">
+                                    <stat.icon className="w-5 h-5 text-[var(--accent-amber)]" />
                                 </div>
                             )}
-                            <div className="text-4xl font-black text-white mb-2">{stat.value}</div>
-                            <div className="text-sm font-bold text-signal-red uppercase tracking-wider mb-2">{stat.label}</div>
-                            {stat.subtext && <div className="text-xs text-slate-400">{stat.subtext}</div>}
+                            <div className="text-3xl md:text-4xl font-bold text-white mb-2 font-montserrat">{stat.value}</div>
+                            <div className="text-sm font-semibold text-[var(--accent-amber)] uppercase tracking-wider mb-1">{stat.label}</div>
+                            {stat.subtext && <div className="text-xs text-white/50">{stat.subtext}</div>}
                         </motion.div>
                     ))}
                 </div>

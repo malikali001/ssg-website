@@ -1,120 +1,123 @@
 'use client';
 
 import Link from 'next/link';
-import { Shield, Eye, Car, Key, Camera, UserCheck, Smartphone } from 'lucide-react';
-import { Sparkles, Trash2, Wrench, Users, Monitor } from 'lucide-react';
+import {
+    Shield, Car, Camera, UserCheck, Key, Dog,
+    Sparkles, Trash2, Wrench, Monitor, ArrowUpRight
+} from 'lucide-react';
 
-export default function ServicesMegaMenu() {
-    const securityServices = [
-        { name: 'Manned Guarding', href: '/services/security/manned-guarding', icon: Shield },
-        { name: 'K9 Units', href: '/services/security/k9-units', icon: Shield },
-        { name: 'Mobile Patrols', href: '/services/security/mobile-patrols', icon: Car },
-        { name: 'Electronic Security', href: '/services/security/electronic-security', icon: Camera },
-        { name: 'Concierge Security', href: '/services/security/concierge', icon: UserCheck },
-        { name: 'Key Holding', href: '/services/security/key-holding', icon: Key },
-    ];
+interface ServiceDropdownProps {
+    type: 'security' | 'facilities';
+}
 
-    const facilitiesServices = [
-        { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning', icon: Sparkles },
-        { name: 'Waste Management', href: '/services/facilities/waste-management', icon: Trash2 },
-        { name: 'Property Maintenance', href: '/services/facilities/property-maintenance', icon: Wrench },
-        { name: 'Reception Services', href: '/services/facilities/reception', icon: Monitor },
-    ];
+const securityServices = [
+    { name: 'Manned Guarding', href: '/services/security/manned-guarding', icon: Shield },
+    { name: 'K9 Units', href: '/services/security/k9-units', icon: Dog },
+    { name: 'Mobile Patrols', href: '/services/security/mobile-patrols', icon: Car },
+    { name: 'Electronic Security', href: '/services/security/electronic-security', icon: Camera },
+    { name: 'Concierge Security', href: '/services/security/concierge', icon: UserCheck },
+    { name: 'Key Holding & Alarm Response', href: '/services/security/key-holding', icon: Key },
+];
 
-    const sectorServices = [
-        { name: 'Logistics & Distribution', href: '/sectors/logistics', icon: Car }, // Using Car/Truck proxy
-        { name: 'Public Sector & Healthcare', href: '/sectors/public-sector', icon: Shield },
-        { name: 'Soft Services', href: '/services/soft-services', icon: Sparkles },
-    ];
+const facilitiesServices = [
+    { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning', icon: Sparkles },
+    { name: 'Waste Management', href: '/services/facilities/waste-management', icon: Trash2 },
+    { name: 'Property Maintenance', href: '/services/facilities/property-maintenance', icon: Wrench },
+    { name: 'Reception Services', href: '/services/facilities/reception', icon: Monitor },
+];
+
+const config = {
+    security: {
+        heading: 'Expert security services delivering outstanding protection outcomes.',
+        description: 'Our mission is to make people and places safer, smarter, and stronger every day.',
+        services: securityServices,
+        card: {
+            image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
+            title: 'Security Services',
+            description: 'Comprehensive security services protect businesses, assets, and people effectively.',
+            href: '/services/security',
+        },
+    },
+    facilities: {
+        heading: 'Professional facilities management for immaculate, efficient spaces.',
+        description: 'Integrated facility services that maintain your environment to the highest standards.',
+        services: facilitiesServices,
+        card: {
+            image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+            title: 'Facilities Services',
+            description: 'End-to-end facilities management keeping your premises in peak condition.',
+            href: '/services/facilities',
+        },
+    },
+};
+
+export default function ServiceDropdown({ type }: ServiceDropdownProps) {
+    const { heading, description, services, card } = config[type];
 
     return (
-        <div className="w-[1000px] bg-white border border-slate-200 rounded-xl shadow-2xl p-8 animate-fade-in z-50">
-            <div className="grid grid-cols-3 gap-10">
-                {/* Security Solutions */}
-                <div>
-                    <h3 className="text-signal-red font-montserrat font-bold text-lg mb-4 flex items-center gap-2">
-                        <Shield className="w-5 h-5" />
-                        Security Solutions
-                    </h3>
-                    <div className="space-y-2">
-                        {securityServices.map((service) => {
-                            const Icon = service.icon;
-                            return (
-                                <Link
-                                    key={service.href}
-                                    href={service.href}
-                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200 group border border-transparent hover:border-slate-100"
-                                >
-                                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-signal-red transition-colors" />
-                                    <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
-                                        {service.name}
-                                    </span>
-                                </Link>
-                            );
-                        })}
+        <div className="w-full bg-white border-b border-[var(--border-color)] shadow-lg animate-fade-in">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div className="flex gap-10">
+                    {/* Left Side - Heading + Services Grid */}
+                    <div className="flex-1 min-w-0">
+                        <h3 className="text-2xl md:text-[1.7rem] font-montserrat font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
+                            {heading}
+                        </h3>
+                        <p className="text-[var(--text-muted)] text-sm mb-6 max-w-lg">
+                            {description}
+                        </p>
+
+                        {/* Divider */}
+                        <div className="border-t border-[var(--border-color)] mb-8" />
+
+                        {/* 2-Column Services Grid */}
+                        <div className="grid grid-cols-2 gap-x-10 gap-y-5">
+                            {services.map((service) => {
+                                const Icon = service.icon;
+                                return (
+                                    <Link
+                                        key={service.href}
+                                        href={service.href}
+                                        className="flex items-center gap-3 group"
+                                    >
+                                        <Icon className="w-5 h-5 text-[var(--text-muted)] group-hover:text-[var(--signal-red)] transition-colors flex-shrink-0" />
+                                        <span className="text-[15px] font-medium text-[var(--text-main)] group-hover:text-[var(--signal-red)] transition-colors">
+                                            {service.name}
+                                        </span>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Right Side - Image Card */}
+                    <div className="hidden lg:block w-[320px] flex-shrink-0">
+                        <Link href={card.href} className="block group">
+                            <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div className="aspect-[4/3] overflow-hidden">
+                                    <img
+                                        src={card.image}
+                                        alt={card.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-5">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h4 className="text-lg font-montserrat font-bold text-[var(--deep-navy)]">
+                                            {card.title}
+                                        </h4>
+                                        <div className="w-8 h-8 rounded-full bg-[var(--section-dark)] flex items-center justify-center group-hover:bg-[var(--signal-red)] transition-colors">
+                                            <ArrowUpRight className="w-4 h-4 text-white" />
+                                        </div>
+                                    </div>
+                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                                        {card.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
-
-                {/* Facilities Management */}
-                <div>
-                    <h3 className="text-deep-navy font-montserrat font-bold text-lg mb-4 flex items-center gap-2">
-                        <Users className="w-5 h-5" />
-                        Facilities Management
-                    </h3>
-                    <div className="space-y-2">
-                        {facilitiesServices.map((service) => {
-                            const Icon = service.icon;
-                            return (
-                                <Link
-                                    key={service.href}
-                                    href={service.href}
-                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200 group border border-transparent hover:border-slate-100"
-                                >
-                                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-deep-navy transition-colors" />
-                                    <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
-                                        {service.name}
-                                    </span>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Specialist Sectors */}
-                <div>
-                    <h3 className="text-slate-900 font-montserrat font-bold text-lg mb-4 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5" />
-                        Specialist Sectors
-                    </h3>
-                    <div className="space-y-2">
-                        {sectorServices.map((service) => {
-                            const Icon = service.icon;
-                            return (
-                                <Link
-                                    key={service.href}
-                                    href={service.href}
-                                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200 group border border-transparent hover:border-slate-100"
-                                >
-                                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-colors" />
-                                    <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
-                                        {service.name}
-                                    </span>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </div>
-            </div>
-
-            {/* Bottom highlight */}
-            <div className="mt-8 pt-6 border-t border-slate-100 flex justify-between items-center text-sm text-slate-500">
-                <span className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    24/7 Control Room Active
-                </span>
-                <Link href="/contact-us" className="text-signal-red font-bold hover:underline">
-                    Book a Free Site Audit →
-                </Link>
             </div>
         </div>
     );

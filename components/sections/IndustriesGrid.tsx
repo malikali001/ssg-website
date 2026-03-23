@@ -40,16 +40,16 @@ export default function IndustriesGrid() {
                             whileHover={{ y: -8 }}
                         >
                             <Link href={item.href} className="block group h-full">
-                                <div className="bg-white rounded-2xl p-10 shadow-sm border border-slate-100 group-hover:shadow-2xl group-hover:shadow-blue-500/10 group-hover:border-blue-200 transition-all duration-500 h-full flex flex-col items-center text-center">
+                                <div className="bg-white rounded-2xl p-10 shadow-sm border border-slate-100 group-hover:shadow-2xl group-hover:shadow-red-500/10 group-hover:border-red-200 transition-all duration-500 h-full flex flex-col items-center text-center">
                                     <motion.div
-                                        className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-50 transition-colors duration-300"
+                                        className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-50 transition-colors duration-300"
                                         whileHover={{ rotate: 360, scale: 1.1 }}
                                         transition={{ duration: 0.6, ease: "easeInOut" }}
                                     >
-                                        <item.icon className="w-8 h-8 text-deep-navy group-hover:text-blue-600 transition-colors duration-300" strokeWidth={1.5} />
+                                        <item.icon className="w-8 h-8 text-deep-navy group-hover:text-[var(--signal-red)] transition-colors duration-300" strokeWidth={1.5} />
                                     </motion.div>
 
-                                    <h3 className="text-xl font-montserrat font-bold text-deep-navy mb-3 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="text-xl font-montserrat font-bold text-deep-navy mb-3 group-hover:text-[var(--signal-red)] transition-colors">
                                         {item.name}
                                     </h3>
 

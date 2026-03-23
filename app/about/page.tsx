@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
-import { Shield, Award, Leaf, Users, Scale, Heart } from 'lucide-react';
+import Link from 'next/link';
+import { Shield, Building2, Monitor, ChevronRight, Leaf, Heart, Scale, Award, Clock, MapPin } from 'lucide-react';
+import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
     title: 'About Us | SSG UK Ltd',
@@ -7,183 +9,216 @@ export const metadata: Metadata = {
     keywords: ['About SSG', 'Security Company UK', 'ESG', 'Compliance', 'SIA Approved'],
 };
 
-export default function AboutPage() {
-    const accreditations = [
-        { name: 'SIA Approved Contractor', description: 'Security Industry Authority accreditation', logo: '/certifications/sia.png' },
-        { name: 'ISO 9001', description: 'Quality Management System', logo: '/certifications/iso9001.png' },
-        { name: 'ISO 14001', description: 'Environmental Management System', logo: '/certifications/iso14001.png' },
-        { name: 'SafeContractor', description: 'Health & Safety compliance', logo: '/certifications/safecontractor.png' },
-        { name: 'Constructionline', description: 'Pre-qualification service', logo: '/certifications/constructionline.png' },
-        { name: 'CHAS', description: 'Contractors Health and Safety Assessment', logo: '/certifications/chas.png' },
-    ];
+const serviceCategories = [
+    {
+        title: 'Security Services',
+        description: 'SIA-approved manned guarding, mobile patrols, K9 units, and electronic security.',
+        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
+        href: '/services/security',
+    },
+    {
+        title: 'Facilities Services',
+        description: 'Commercial cleaning, waste management, property maintenance, and reception.',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+        href: '/services/facilities',
+    },
+    {
+        title: 'Intelligence & Technology',
+        description: 'Real-time guard tracking, incident reporting, and predictive risk analytics.',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+        href: '/portals/intelligence',
+    },
+];
 
+const stats = [
+    { value: '150+', label: 'Sites Secured', icon: Shield },
+    { value: '15+', label: 'Years Excellence', icon: Clock },
+    { value: '24/7', label: 'National Coverage', icon: MapPin },
+    { value: '100%', label: 'SIA Approved', icon: Award },
+];
+
+const narrativeBlocks = [
+    {
+        title: 'Security with Purpose',
+        description: 'Founded with a vision to revolutionize the security and facilities management industry, SSG UK Ltd has grown from a regional security provider to a national leader in integrated protection services.',
+        secondParagraph: 'Our journey has been defined by continuous innovation, from implementing the SSG Intelligence Center to pioneering sustainable facilities management practices. We\'ve built our reputation on precision, reliability, and an unwavering commitment to our clients\' success.',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+        href: '/portals/intelligence',
+    },
+    {
+        title: 'People at the Heart',
+        description: 'Our 150+ highly trained professionals are the foundation of everything we do. Every team member is SIA-licensed, thoroughly vetted, and continuously trained to the highest industry standards.',
+        secondParagraph: 'We are a proud Living Wage employer, investing in our people because we know that motivated, well-supported staff deliver exceptional service. Our employee development programs ensure continuous growth and career progression.',
+        image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
+        href: '/careers',
+    },
+    {
+        title: 'Built on Trust and Integrity',
+        description: 'SSG operates with full transparency and accountability. Our ISO 9001 and ISO 14001 certifications, combined with SIA ACS Approved Contractor status, demonstrate our commitment to quality and compliance.',
+        secondParagraph: 'Our ESG initiatives ensure we deliver social value alongside operational excellence — from reducing environmental impact to supporting local communities across the UK.',
+        image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80',
+        href: '/esg',
+    },
+];
+
+export default function AboutPage() {
     return (
         <main className="min-h-screen">
             {/* Hero */}
-            <section className="section-container pt-32">
-                <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-5xl md:text-6xl font-montserrat font-black mb-6">
-                        About <span className="text-[--color-signal-red]">SSG UK Ltd</span>
-                    </h1>
-                    <p className="text-xl text-[--color-text-muted]">
-                        Elite security and facilities management powered by technology and driven by excellence
-                    </p>
+            <PageHero
+                badge="About Us"
+                title="About"
+                subtitle="SSG UK Ltd"
+                description="Our mission is to make people and places safer, smarter, and stronger every day."
+                imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
+                ctaLabel="Get in Touch"
+                ctaHref="/contact-us"
+            />
+
+            {/* Service Category Cards */}
+            <section className="section-container bg-white">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {serviceCategories.map((cat) => (
+                        <Link
+                            key={cat.href}
+                            href={cat.href}
+                            className="group block bg-white border border-[var(--border-color)] rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
+                        >
+                            <div className="aspect-[16/10] overflow-hidden">
+                                <img
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-lg font-montserrat font-bold mb-2 text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
+                                    {cat.title}
+                                </h3>
+                                <p className="text-[var(--text-muted)] text-sm mb-3">{cat.description}</p>
+                                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--signal-red)] group-hover:gap-2 transition-all">
+                                    Learn More <ChevronRight className="w-4 h-4" />
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </section>
 
-            {/* Our History */}
-            <section className="section-container bg-[--color-gunmetal]/30">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-montserrat font-bold mb-8">Our History</h2>
-                    <div className="space-y-6 text-[--color-text-muted] text-lg">
-                        <p>
-                            Founded with a vision to revolutionize the security and facilities management industry,
-                            SSG UK Ltd has grown from a regional security provider to a national leader in integrated
-                            protection services.
-                        </p>
-                        <p>
-                            Our journey has been defined by continuous innovation, from implementing the SSG Intelligence
-                            Center to pioneering sustainable facilities management practices. We've built our reputation
-                            on precision, reliability, and an unwavering commitment to our clients' success.
-                        </p>
-                        <p>
-                            Today, we protect over 150 sites across the UK, employing cutting-edge technology and
-                            highly-trained personnel to deliver unparalleled service quality.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* ESG Section */}
-            <section className="section-container">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-4">
-                        Our <span className="text-[--color-signal-red]">ESG</span> Commitment
+            {/* Stats */}
+            <section className="relative bg-[var(--section-dark)] overflow-hidden">
+                <div className="absolute inset-0 dotted-bg opacity-30" />
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <h2 className="text-3xl font-montserrat font-bold text-white text-center mb-10">
+                        Trusted Security. Proven Results.
                     </h2>
-                    <p className="text-xl text-[--color-text-muted] max-w-3xl mx-auto">
-                        Environmental, Social, and Governance excellence is at the heart of everything we do
-                    </p>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {/* Environmental */}
-                    <div className="bg-[--color-gunmetal] rounded-lg p-8 border border-[--color-text-muted]/10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-full mb-6 border-2 border-green-500/30">
-                            <Leaf className="w-8 h-8 text-green-500" />
-                        </div>
-                        <h3 className="text-2xl font-montserrat font-bold mb-4">Environmental</h3>
-                        <ul className="space-y-3 text-[--color-text-muted]">
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Commitment to Net Zero by 2040</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Carbon reduction plans across all operations</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Eco-friendly cleaning chemicals and sustainable practices</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Waste reduction and recycling programs</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Social */}
-                    <div className="bg-[--color-gunmetal] rounded-lg p-8 border border-[--color-text-muted]/10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/10 rounded-full mb-6 border-2 border-blue-500/30">
-                            <Heart className="w-8 h-8 text-blue-500" />
-                        </div>
-                        <h3 className="text-2xl font-montserrat font-bold mb-4">Social</h3>
-                        <ul className="space-y-3 text-[--color-text-muted]">
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Social Value initiatives supporting local communities</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Employee wellbeing and development programs</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Diversity and inclusion commitment</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Living wage employer</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Governance */}
-                    <div className="bg-[--color-gunmetal] rounded-lg p-8 border border-[--color-text-muted]/10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/10 rounded-full mb-6 border-2 border-purple-500/30">
-                            <Scale className="w-8 h-8 text-purple-500" />
-                        </div>
-                        <h3 className="text-2xl font-montserrat font-bold mb-4">Governance</h3>
-                        <ul className="space-y-3 text-[--color-text-muted]">
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Ethical business practices and transparency</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Robust compliance frameworks</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Anti-corruption and modern slavery policies</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-[--color-signal-red] rounded-full mt-2" />
-                                <span>Regular audits and certifications</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            {/* Compliance & Accreditations */}
-            <section className="section-container bg-[--color-gunmetal]/30">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-4">
-                        Compliance & <span className="text-[--color-signal-red]">Accreditations</span>
-                    </h2>
-                    <p className="text-xl text-[--color-text-muted] max-w-3xl mx-auto">
-                        Certified excellence across every aspect of our operations
-                    </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    {accreditations.map((accred, index) => (
-                        <div key={index} className="bg-[--color-obsidian] rounded-lg p-8 border border-[--color-signal-red]/20 hover:border-[--color-signal-red]/40 transition-all duration-300 hover:scale-105">
-                            <div className="flex flex-col items-center text-center gap-4">
-                                <div className="w-32 h-32 flex items-center justify-center bg-white rounded-lg p-4">
-                                    <img
-                                        src={accred.logo}
-                                        alt={accred.name}
-                                        className="w-full h-full object-contain"
-                                    />
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                        {stats.map((stat, idx) => {
+                            const Icon = stat.icon;
+                            return (
+                                <div key={idx} className="text-center">
+                                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[var(--accent-amber)]/15 mb-3">
+                                        <Icon className="w-5 h-5 text-[var(--accent-amber)]" />
+                                    </div>
+                                    <div className="text-3xl font-montserrat font-bold text-white mb-1">{stat.value}</div>
+                                    <div className="text-sm text-white/60 font-medium uppercase tracking-wide">{stat.label}</div>
                                 </div>
-                                <div>
-                                    <h3 className="font-montserrat font-bold text-lg mb-2">{accred.name}</h3>
-                                    <p className="text-[--color-text-muted] text-sm">{accred.description}</p>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* Narrative Blocks */}
+            {narrativeBlocks.map((block, index) => {
+                const isReversed = index % 2 !== 0;
+                const bgColor = index % 2 === 0 ? 'bg-white' : 'bg-[var(--section-light)]';
+                return (
+                    <section key={index} className={bgColor}>
+                        <div className="section-container">
+                            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                <div className={isReversed ? 'lg:order-2' : ''}>
+                                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                                        <img src={block.image} alt={block.title} className="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+                                <div className={isReversed ? 'lg:order-1' : ''}>
+                                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6 text-[var(--deep-navy)]">
+                                        {block.title}
+                                    </h2>
+                                    <p className="text-[var(--text-muted)] text-base leading-relaxed mb-4">{block.description}</p>
+                                    <p className="text-[var(--text-muted)] text-base leading-relaxed mb-6">{block.secondParagraph}</p>
+                                    <Link href={block.href} className="arrow-link text-sm">
+                                        Find out more <ChevronRight className="w-4 h-4" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </section>
+                );
+            })}
+
+            {/* ESG Section */}
+            <section className="section-container bg-white">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
+                        Our <span className="text-[var(--accent-amber)]">ESG</span> Commitment
+                    </h2>
+                    <p className="text-[var(--text-muted)] max-w-3xl mx-auto text-lg">
+                        Environmental, Social, and Governance excellence at the heart of everything we do.
+                    </p>
                 </div>
 
-                <div className="text-center mt-12">
-                    <p className="text-[--color-text-muted] mb-6">
-                        All certificates available for download upon request
+                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-full mb-5">
+                            <Leaf className="w-6 h-6 text-green-600" />
+                        </div>
+                        <h3 className="text-xl font-montserrat font-bold mb-3">Environmental</h3>
+                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Net Zero commitment by 2040</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Carbon reduction plans across all operations</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Eco-friendly practices and waste reduction</span></li>
+                        </ul>
+                    </div>
+                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-full mb-5">
+                            <Heart className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <h3 className="text-xl font-montserrat font-bold mb-3">Social</h3>
+                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Community support initiatives</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Employee wellbeing and development</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Living Wage employer, diversity commitment</span></li>
+                        </ul>
+                    </div>
+                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-full mb-5">
+                            <Scale className="w-6 h-6 text-purple-600" />
+                        </div>
+                        <h3 className="text-xl font-montserrat font-bold mb-3">Governance</h3>
+                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Ethical business practices and transparency</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Robust compliance frameworks</span></li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Anti-corruption and modern slavery policies</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/* Accreditations */}
+            <section className="bg-[var(--section-light)] border-y border-[var(--border-color)] py-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-6">
+                        Accreditations & Certifications
                     </p>
-                    <a href="/quote" className="btn-primary">
-                        Request Compliance Documentation
-                    </a>
+                    <div className="flex flex-wrap items-center justify-center gap-10">
+                        {['SIA Approved', 'ISO 9001', 'ISO 14001', 'SafeContractor', 'Constructionline'].map((name, i) => (
+                            <div key={i} className="h-12 px-4 flex items-center justify-center border border-[var(--border-color)] rounded bg-white text-xs font-bold text-[var(--text-muted)] grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+                                {name}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </main>

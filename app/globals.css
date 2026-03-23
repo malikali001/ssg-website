@@ -2,33 +2,31 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
+  /* Colors - Navy/White/Amber Corporate Theme (Intraguard style) */
   --color-obsidian: #FFFFFF;
-  /* White */
   --color-obsidian-light: #F8FAFC;
-  /* Slate-50 */
-  --color-gunmetal: #F1F5F9;
-  /* Slate-100 */
+  --color-gunmetal: #F5F7FA;
   --color-gunmetal-dark: #E2E8F0;
-  /* Slate-200 */
-  --color-deep-navy: #0F172A;
-  /* Slate-900 */
-  --color-electric-blue: #E31E24;
-  /* Mapped to SSG Red for safety */
+  --color-deep-navy: #0C1E33;
+  --color-electric-blue: #E8A838;
   --color-silver: #CBD5E1;
-  /* Slate-300 */
-  --color-signal-red: #E31E24;
-  --color-signal-red-glow: rgba(227, 30, 36, 0.2);
-  --color-text-main: #0F172A;
-  /* Slate-900 */
-  --color-text-muted: #64748B;
-  /* Slate-500 */
+  --color-signal-red: #C83232;
+  --color-signal-red-glow: rgba(200, 50, 50, 0.15);
+  --color-text-main: #1A2B3D;
+  --color-text-muted: #6B7B8D;
 
-  /* ... Font Families & Animations remain ... */
+  /* Extended palette */
+  --color-accent-amber: #E8A838;
+  --color-accent-amber-hover: #D49730;
+  --color-navy-light: #2A4F72;
+  --color-section-dark: #0C1E33;
+  --color-section-light: #F5F7FA;
+  --color-border: #E2E8F0;
+
   /* Animations */
-  --animate-fade-in: fade-in 0.6s ease-out;
-  --animate-slide-up: slide-up 0.6s ease-out;
-  --animate-slide-down: slide-down 0.6s ease-out;
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-slide-down: slide-down 0.5s ease-out;
   --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
   --animate-scroll-left: scroll-left 30s linear infinite;
   --animate-move-grid: move-grid 20s linear infinite;
@@ -82,11 +80,11 @@
 
     0%,
     100% {
-      box-shadow: 0 0 20px rgba(227, 30, 36, 0.1);
+      box-shadow: 0 0 20px rgba(200, 50, 50, 0.1);
     }
 
     50% {
-      box-shadow: 0 0 30px rgba(227, 30, 36, 0.3);
+      box-shadow: 0 0 30px rgba(200, 50, 50, 0.25);
     }
   }
 
@@ -103,13 +101,19 @@
 
 :root {
   --obsidian: #FFFFFF;
-  --gunmetal: #F8FAFC;
-  --deep-navy: #0F172A;
-  --electric-blue: #E31E24;
+  --gunmetal: #F5F7FA;
+  --deep-navy: #0C1E33;
+  --electric-blue: #E8A838;
   --silver: #CBD5E1;
-  --signal-red: #E31E24;
-  --text-main: #0F172A;
-  --text-muted: #64748B;
+  --signal-red: #C83232;
+  --text-main: #1A2B3D;
+  --text-muted: #6B7B8D;
+  --accent-amber: #E8A838;
+  --accent-amber-hover: #D49730;
+  --navy-light: #2A4F72;
+  --section-dark: #0C1E33;
+  --section-light: #F5F7FA;
+  --border-color: #E2E8F0;
 }
 
 @layer base {
@@ -129,7 +133,7 @@
   h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.015em;
     color: var(--deep-navy);
   }
 
@@ -176,83 +180,102 @@
 
 @layer components {
 
-  /* Tactical Button Styles */
+  /* Primary Button - Amber accent */
   .btn-primary {
-    background-color: var(--signal-red);
+    background-color: var(--accent-amber);
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.25rem;
+    border-radius: 9999px;
     font-weight: 600;
     transition: all 0.3s;
-    border: 1px solid var(--signal-red);
+    border: 1px solid var(--accent-amber);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 4px 12px rgba(227, 30, 36, 0.3);
-    background-color: #c91a1f;
-    transform: translateY(-1px);
+    transform: scale(1.1);
   }
 
   .btn-primary:active {
     transform: translateY(0);
   }
 
+  /* Secondary Button - Navy outlined */
   .btn-secondary {
     border: 2px solid var(--signal-red);
     color: var(--signal-red);
     background-color: transparent;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.25rem;
+    border-radius: 9999px;
     font-weight: 600;
     transition: all 0.3s;
   }
 
   .btn-secondary:hover {
-    background-color: var(--signal-red);
-    color: #FFFFFF;
-    transform: translateY(-1px);
+    transform: scale(1.1);
   }
 
   .btn-secondary:active {
     transform: translateY(0);
   }
 
-  /* Card Styles */
+  /* Card Styles - Corporate clean */
   .card-tactical {
     background-color: #FFFFFF;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     padding: 1.5rem;
     transition: all 0.3s;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .card-tactical:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-color: #E31E24;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-left: 3px solid var(--signal-red);
   }
 
   /* Grid Background */
   .grid-bg {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     background-color: var(--obsidian);
   }
 
-  /* Glow Effect */
-  .glow-red {
-    box-shadow: 0 0 20px rgba(227, 30, 36, 0.2);
+  /* Dotted Pattern Background (Intraguard style) */
+  .dotted-bg {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Navy accent bar (replaces glow-red) */
+  .accent-bar {
+    border-left: 3px solid var(--signal-red);
+    padding-left: 1rem;
+  }
+
+  /* Arrow link pattern (Intraguard style) */
+  .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--signal-red);
+    transition: all 0.3s;
+  }
+
+  .arrow-link:hover {
+    gap: 0.75rem;
+    color: var(--navy-light);
   }
 
   /* Backdrop Blur Header */
   .header-blur {
     backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(12, 30, 51, 0.08);
   }
 
-  /* Tactical Input */
+  /* Input Styles */
   .input-tactical {
     background-color: #F9FAFB;
     border: 1px solid #D1D5DB;
@@ -264,8 +287,8 @@
 
   .input-tactical:focus {
     outline: none;
-    border-color: #E31E24;
-    box-shadow: 0 0 0 1px #E31E24;
+    border-color: var(--accent-amber);
+    box-shadow: 0 0 0 1px var(--accent-amber);
   }
 
   /* Section Container */
@@ -319,23 +342,24 @@
     scroll-behavior: smooth;
   }
 
-  /* Hover Lift Effect */
+  /* Hover Lift Effect - Subtle */
   .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   }
 
-  /* Hover Glow Effect */
+  /* Hover border accent */
   .hover-glow {
-    transition: box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(227, 30, 36, 0.3);
+    border-color: var(--signal-red);
+    box-shadow: 0 4px 12px rgba(200, 50, 50, 0.12);
   }
 }
 

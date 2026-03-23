@@ -1,14 +1,26 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { ChevronDown } from 'lucide-react';
-import ServicesMegaMenu from './ServicesMegaMenu';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import ServiceDropdown from './ServicesMegaMenu';
 import SectorsDropdown from './SectorsDropdown';
+import AboutDropdown from './AboutDropdown';
+import MobileNav from './MobileNav';
+
+const navItems = [
+    { key: 'security', label: 'Security Services' },
+    { key: 'facilities', label: 'Facilities Services' },
+    { key: 'sectors', label: 'Sectors' },
+    { key: 'about', label: 'About Us' },
+] as const;
+
+type DropdownKey = (typeof navItems)[number]['key'];
 
 export default function MainNav() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [activeDropdown, setActiveDropdown] = useState<DropdownKey | null>(null);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,89 +30,81 @@ export default function MainNav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const closeDropdown = useCallback(() => setActiveDropdown(null), []);
+
     return (
-        <nav
-            className={`sticky top-0 z-40 transition-all duration-300 bg-white border-b border-slate-100 ${isScrolled ? 'shadow-sm' : ''
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center group">
-                        <div className="relative h-16 w-38 overflow-hidden rounded-sm">
-                            <img
-                                src="/ssg-logo.jpg"
-                                alt="SSG UK LTD"
-                                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                            />
-                        </div>
-                    </Link>
+        <>
+            <nav
+                className={`sticky top-0 z-40 transition-all duration-300 bg-white border-b border-[var(--border-color)] ${isScrolled ? 'shadow-md' : ''}`}
+                onMouseLeave={closeDropdown}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-20">
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center group">
+                            <div className="relative h-16 w-38 overflow-hidden rounded-sm">
+                                <img
+                                    src="/ssg-logo.jpg"
+                                    alt="SSG UK LTD"
+                                    className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+                                />
+                            </div>
+                        </Link>
 
-                    {/* Center Menu */}
-                    <div className="hidden lg:flex items-center gap-8">
-                        {/* Services Dropdown */}
-                        <div
-                            className="relative group h-20 flex items-center"
-                            onMouseEnter={() => setActiveDropdown('services')}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <button className="flex items-center gap-1 text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium py-2">
-                                Services
-                                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-                            </button>
-                            {activeDropdown === 'services' && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                                    <ServicesMegaMenu />
+                        {/* Center Menu - Desktop */}
+                        <div className="hidden lg:flex items-center gap-1">
+                            {navItems.map((item) => (
+                                <div
+                                    key={item.key}
+                                    className="relative h-20 flex items-center"
+                                    onMouseEnter={() => setActiveDropdown(item.key)}
+                                >
+                                    <button className={`flex items-center gap-1 px-4 transition-colors duration-200 font-medium py-2 ${activeDropdown === item.key ? 'text-[var(--signal-red)]' : 'text-[var(--text-main)] hover:text-[var(--signal-red)]'}`}>
+                                        {item.label}
+                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.key ? 'rotate-180' : ''}`} />
+                                    </button>
                                 </div>
-                            )}
+                            ))}
+
+                            {/* Case Studies - no dropdown */}
+                            <Link
+                                href="/case-studies"
+                                className="px-4 text-[var(--text-main)] hover:text-[var(--signal-red)] transition-colors duration-200 font-medium"
+                                onMouseEnter={closeDropdown}
+                            >
+                                Case Studies
+                            </Link>
                         </div>
 
-                        {/* Sectors Dropdown */}
-                        <div
-                            className="relative group h-20 flex items-center"
-                            onMouseEnter={() => setActiveDropdown('sectors')}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <button className="flex items-center gap-1 text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium py-2">
-                                Sectors
-                                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                        {/* Right: CTA + Mobile Toggle */}
+                        <div className="flex items-center gap-4">
+                            <Link
+                                href="/contact-us"
+                                className="hidden sm:inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-7 py-3 rounded-full font-semibold text-sm hover:scale-110 transition-transform duration-200"
+                            >
+                                Contact Us
+                            </Link>
+
+                            {/* Mobile menu toggle */}
+                            <button
+                                onClick={() => setMobileOpen(!mobileOpen)}
+                                className="lg:hidden p-2 text-[var(--text-main)] hover:text-[var(--signal-red)] transition-colors"
+                            >
+                                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
-                            {activeDropdown === 'sectors' && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                                    <SectorsDropdown />
-                                </div>
-                            )}
                         </div>
-
-                        <Link
-                            href="/esg"
-                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
-                        >
-                            ESG & Compliance
-                        </Link>
-
-
-                        <Link
-                            href="/careers"
-                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
-                        >
-                            Careers
-                        </Link>
-
-                        <Link
-                            href="/contact-us"
-                            className="text-slate-900 hover:text-signal-red transition-colors duration-200 font-medium"
-                        >
-                            Contact
-                        </Link>
                     </div>
-
-                    {/* CTA Button */}
-                    <Link href="/get-a-quote" className="btn-primary flex items-center gap-2 shadow-lg shadow-red-500/20">
-                        Get a Quote
-                    </Link>
                 </div>
-            </div>
-        </nav>
+
+                {/* Full-width Mega Menu Dropdowns */}
+                {activeDropdown === 'security' && <ServiceDropdown type="security" />}
+                {activeDropdown === 'facilities' && <ServiceDropdown type="facilities" />}
+                {activeDropdown === 'sectors' && <SectorsDropdown />}
+                {activeDropdown === 'about' && <AboutDropdown />}
+            </nav>
+
+            {/* Mobile Navigation */}
+            {mobileOpen && <MobileNav onClose={() => setMobileOpen(false)} />}
+        </>
     );
 }
