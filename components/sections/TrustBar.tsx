@@ -1,59 +1,72 @@
 'use client';
 
-import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const accreditations = [
+    { name: 'SIA Approved Contractor', logo: '/certifications/sia.png' },
+    { name: 'ISO 9001', logo: '/certifications/iso9001.png' },
+    { name: 'ISO 14001', logo: '/certifications/iso14001.png' },
+    { name: 'SafeContractor', logo: '/certifications/safecontractor.png' },
+    { name: 'Constructionline', logo: '/certifications/constructionline.png' },
+    { name: 'CHAS', logo: '/certifications/chas.png' },
+];
 
 export default function TrustBar() {
-    // Placeholder for accreditation logos
-    const accreditations = [
-        { name: 'SIA Approved Contractor', logo: '/logos/sia.svg' },
-        { name: 'ISO 9001', logo: '/logos/iso-9001.svg' },
-        { name: 'ISO 14001', logo: '/logos/iso-14001.svg' },
-        { name: 'SafeContractor', logo: '/logos/safecontractor.svg' },
-        { name: 'Constructionline', logo: '/logos/constructionline.svg' },
-        { name: 'CHAS', logo: '/logos/chas.svg' },
-    ];
-
     return (
-        <section id="trust-bar" className="relative -mt-20 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white/90 backdrop-blur-md shadow-2xl rounded-lg border border-white/20 p-6 md:p-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+        <section className="bg-white border-t border-[var(--border-color)]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Left — Text */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -15 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <h2 className="mb-5">
+                            Keeping your commercial premises looking the part
+                        </h2>
+                        <p className="text-[var(--text-main)] mb-4">
+                            When you&apos;re running a business, it&apos;s imperative that everything runs like clockwork. The environment needs to bring the best out of our employees, while visitors and customers should be instantly impressed.
+                        </p>
+                        <p className="text-[var(--text-main)]">
+                            Our integrated facilities management services for commercial customers help you deliver uninterrupted and hassle-free services while we keep everything in perfect working order behind the scenes.
+                        </p>
+                    </motion.div>
 
-                    {/* Power Numbers */}
-                    <div className="grid grid-cols-2 gap-6 pr-0 lg:pr-8">
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-deep-navy font-montserrat">24/7</div>
-                            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">National Coverage</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-deep-navy font-montserrat">15+</div>
-                            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">Years Excellence</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-deep-navy font-montserrat">100%</div>
-                            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">SIA ACS Approved</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-deep-navy font-montserrat">ISO</div>
-                            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">9001 & 14001</div>
-                        </div>
-                    </div>
-
-                    {/* Accreditations */}
-                    <div className="flex flex-wrap justify-center items-center gap-8 pl-0 lg:pl-8 pt-8 lg:pt-0">
-                        {accreditations.slice(0, 4).map((accred, index) => (
+                    {/* Right — Certification Logos Grid */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 15 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4"
+                    >
+                        {accreditations.map((accred, index) => (
                             <div
                                 key={index}
-                                className="w-24 h-12 relative grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                                className="aspect-square bg-[#F7F7F7] rounded-xl sm:rounded-2xl border border-gray-200/80 flex items-center justify-center p-3 sm:p-5 hover:shadow-md transition-shadow duration-300"
                                 title={accred.name}
                             >
-                                {/* Using text for now as logos might not exist in correct paths yet, or use placeholders */}
-                                {/* In a real scenario, use Image component. For now, text representation or simple div if images missing */}
-                                <div className="w-full h-full flex items-center justify-center border border-gray-200 rounded bg-gray-50 text-xs text-center font-bold text-gray-400">
+                                <img
+                                    src={accred.logo}
+                                    alt={accred.name}
+                                    className="w-full h-full object-contain"
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const fallback = target.nextElementSibling as HTMLElement;
+                                        if (fallback) fallback.style.display = 'flex';
+                                    }}
+                                />
+                                <div
+                                    className="hidden w-full h-full items-center justify-center text-center text-xs font-bold text-[var(--text-muted)]"
+                                >
                                     {accred.name}
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

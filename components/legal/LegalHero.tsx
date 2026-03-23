@@ -17,7 +17,7 @@ export default function LegalHero({ title, lastUpdated, description }: LegalHero
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h1 className="text-4xl md:text-5xl font-montserrat font-black text-deep-navy mb-4">
+                    <h1 className="text-4xl md:text-5xl font-black text-deep-navy mb-4">
                         {title}
                     </h1>
                     <p className="text-slate-500 text-sm mb-2">

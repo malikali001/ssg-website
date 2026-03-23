@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Building2, ArrowRight } from 'lucide-react';
+import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
     title: 'Our Services | SSG UK Ltd',
@@ -12,21 +13,20 @@ export default function ServicesPage() {
     return (
         <main className="min-h-screen">
             {/* Hero */}
-            <section className="section-container pt-32">
-                <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-5xl md:text-6xl font-montserrat font-black mb-6">
-                        Our <span className="text-signal-red">Services</span>
-                    </h1>
-                    <p className="text-xl text-text-muted">
-                        Choose your path to comprehensive protection and operational excellence
-                    </p>
-                </div>
+            <PageHero
+                badge="Our Services"
+                title="Our"
+                subtitle="Services"
+                description="Choose your path to comprehensive protection and operational excellence."
+                imageSrc="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
+            />
+            <section className="section-container">
 
                 {/* Two Main Service Categories */}
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Security Solutions */}
                     <Link
-                        href="/services/security"
+                        href="/services/security/manned-guarding"
                         className="group relative bg-gunmetal rounded-lg p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-signal-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -34,7 +34,7 @@ export default function ServicesPage() {
                         <div className="relative z-10">
                             <Shield className="w-20 h-20 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                            <h2 className="text-4xl font-montserrat font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
+                            <h2 className="font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                 Security Solutions
                             </h2>
 
@@ -74,7 +74,7 @@ export default function ServicesPage() {
 
                     {/* Facilities Management */}
                     <Link
-                        href="/services/facilities"
+                        href="/services/facilities/commercial-cleaning"
                         className="group relative bg-gunmetal rounded-lg p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-signal-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                         <div className="relative z-10">
                             <Building2 className="w-20 h-20 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                            <h2 className="text-4xl font-montserrat font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
+                            <h2 className="font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                 Facilities Management
                             </h2>
 

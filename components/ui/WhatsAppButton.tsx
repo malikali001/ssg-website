@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
                 onClick={handleClick}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="fixed bottom-6 right-6 md:bottom-6 md:right-6 bottom-4 right-4 z-50 group"
+                className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
                 aria-label="Chat with us on WhatsApp"
             >
                 {/* Tooltip */}
@@ -52,13 +52,13 @@ export default function WhatsAppButton() {
 
                     {/* Main Button */}
                     <div
-                        className={`relative w-16 h-16 md:w-16 md:h-16 w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-green-600
+                        className={`relative w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600
               shadow-lg flex items-center justify-center transition-all duration-300
               hover:shadow-2xl hover:scale-110 active:scale-95
               ${isHovered ? 'shadow-green-500/50' : ''}`}
                     >
                         <MessageCircle
-                            className="w-8 h-8 md:w-8 md:h-8 w-7 h-7 text-white transition-transform duration-300"
+                            className="w-6 h-6 sm:w-8 sm:h-8 text-white transition-transform duration-300"
                             style={{ transform: isHovered ? 'rotate(12deg)' : 'rotate(0deg)' }}
                         />
                     </div>

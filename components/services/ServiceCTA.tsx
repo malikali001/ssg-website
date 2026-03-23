@@ -2,50 +2,42 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export default function ServiceCTA() {
     return (
-        <section id="audit" className="py-24 bg-slate-900 relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-            </div>
+        <section className="relative bg-[var(--section-dark)] overflow-hidden">
+            <div className="absolute inset-0 dotted-bg opacity-30" />
 
-            <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center py-12 sm:py-20">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-black text-white mb-6">
-                        Is your current security <br />
-                        <span className="text-signal-red">leaving you exposed?</span>
+                    <h2 className="text-white mb-4">
+                        Connect with Your SSG Team
                     </h2>
-                    <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                        Don't wait for an incident to reveal your vulnerabilities. Book a complimentary, no-obligation site risk assessment with our senior security consultants.
+                    <p className="text-white/60 mb-10 max-w-2xl mx-auto">
+                        Ready to discuss your security and facilities requirements? Our experienced team is here to help design the right solution for you.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
-                            href="/contact-us"
-                            className="w-full sm:w-auto bg-signal-red hover:bg-red-600 text-white font-bold py-5 px-10 rounded-lg shadow-lg shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
+                            href="/get-a-quote"
+                            className="btn-primary px-8 py-3.5 text-base"
                         >
-                            Request Free Site Audit
-                            <ArrowRight className="w-5 h-5" />
+                            Request a Quote
                         </Link>
                         <a
-                            href="tel:08001234567"
-                            className="w-full sm:w-auto text-white font-bold py-5 px-10 rounded-lg border border-slate-700 hover:border-white hover:bg-white/5 transition-all duration-300 text-lg flex items-center justify-center"
+                            href="tel:+442012345678"
+                            className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-3.5 rounded-full font-semibold text-base hover:scale-110 transition-transform duration-300"
                         >
-                            Call 0800 123 4567
+                            <Phone className="w-4 h-4" />
+                            +44 20 1234 5678
                         </a>
                     </div>
-
-                    <p className="mt-8 text-sm text-slate-500">
-                        Compliance Assured: ISO 9001 • ACS Approved • SafeContractor
-                    </p>
                 </motion.div>
             </div>
         </section>

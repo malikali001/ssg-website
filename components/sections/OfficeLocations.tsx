@@ -1,6 +1,7 @@
 'use client';
 
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function OfficeLocations() {
@@ -30,14 +31,14 @@ export default function OfficeLocations() {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 sm:py-24 bg-white relative overflow-hidden">
             <div className="section-container max-w-6xl">
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 sm:mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-montserrat font-black mb-4 text-[--color-deep-navy]"
+                        className="font-black mb-4 text-[--color-deep-navy]"
                     >
                         Our <span className="text-[--color-signal-red]">Offices</span>
                     </motion.h2>
@@ -46,13 +47,13 @@ export default function OfficeLocations() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-[--color-text-muted] max-w-2xl mx-auto"
+                        className="text-[--color-text-main] max-w-2xl mx-auto"
                     >
                         Nation-wide coverage with our strategically located regional offices.
                     </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+                <div className="grid md:grid-cols-2 gap-8 lg:gap-20">
                     {offices.map((office, idx) => (
                         <motion.div
                             key={idx}
@@ -68,15 +69,17 @@ export default function OfficeLocations() {
                                     {office.type}
                                 </span>
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img
+                                <Image
                                     src={office.images[0]}
                                     alt={office.name}
+                                    width={800}
+                                    height={256}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>
 
                             {/* Content Area */}
-                            <div className="p-8 md:p-10 flex flex-col flex-grow bg-slate-50/50">
+                            <div className="p-5 sm:p-8 md:p-10 flex flex-col flex-grow bg-slate-50/50">
                                 <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-6 min-h-[64px] flex items-center">
                                     {office.name}
                                 </h3>
@@ -115,7 +118,7 @@ export default function OfficeLocations() {
                                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-full py-3 bg-white border-2 border-[#0F172A] text-[#0F172A] font-bold rounded-xl hover:bg-[#E31E24] hover:border-[#E31E24] hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
+                                        className="w-full py-3 bg-white border-2 border-[var(--deep-navy)] text-[var(--deep-navy)] font-bold rounded-full hover:scale-110 transition-transform flex items-center justify-center gap-2 group/btn"
                                     >
                                         <Navigation className="w-4 h-4 group-hover/btn:-translate-y-0.5 transition-transform" />
                                         Get Directions

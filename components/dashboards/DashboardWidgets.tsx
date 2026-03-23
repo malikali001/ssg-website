@@ -2,7 +2,7 @@
 
 import { AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-const COLORS = ['#E31E24', '#F3F4F6', '#9CA3AF', '#1A1D23'];
+const COLORS = ['#1B3A5C', '#F3F4F6', '#9CA3AF', '#1A1D23'];
 
 export function GuardsActiveChart() {
     const data = [
@@ -16,24 +16,24 @@ export function GuardsActiveChart() {
     ];
 
     return (
-        <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Guards Active (24h)</h3>
-            <ResponsiveContainer width="100%" height={200}>
+        <div className="bg-gunmetal rounded-lg p-4 sm:p-6 border border-text-muted/10">
+            <h3 className="text-lg sm:text-xl font-bold mb-4">Guards Active (24h)</h3>
+            <ResponsiveContainer width="100%" height={180}>
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="colorGuards" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#E31E24" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="#E31E24" stopOpacity={0} />
+                            <stop offset="5%" stopColor="#1B3A5C" stopOpacity={0.8} />
+                            <stop offset="95%" stopColor="#1B3A5C" stopOpacity={0} />
                         </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1A1D23" />
                     <XAxis dataKey="time" stroke="#9CA3AF" />
                     <YAxis stroke="#9CA3AF" />
                     <Tooltip
-                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #E31E24' }}
+                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #1B3A5C' }}
                         labelStyle={{ color: '#F3F4F6' }}
                     />
-                    <Area type="monotone" dataKey="guards" stroke="#E31E24" fillOpacity={1} fill="url(#colorGuards)" />
+                    <Area type="monotone" dataKey="guards" stroke="#1B3A5C" fillOpacity={1} fill="url(#colorGuards)" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
@@ -50,18 +50,18 @@ export function IncidentHeatmap() {
     ];
 
     return (
-        <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Incidents by Sector (Today)</h3>
-            <ResponsiveContainer width="100%" height={200}>
+        <div className="bg-gunmetal rounded-lg p-4 sm:p-6 border border-text-muted/10">
+            <h3 className="text-lg sm:text-xl font-bold mb-4">Incidents by Sector (Today)</h3>
+            <ResponsiveContainer width="100%" height={180}>
                 <BarChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1A1D23" />
                     <XAxis dataKey="sector" stroke="#9CA3AF" angle={-45} textAnchor="end" height={80} />
                     <YAxis stroke="#9CA3AF" />
                     <Tooltip
-                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #E31E24' }}
+                        contentStyle={{ backgroundColor: '#1A1D23', border: '1px solid #1B3A5C' }}
                         labelStyle={{ color: '#F3F4F6' }}
                     />
-                    <Bar dataKey="incidents" fill="#E31E24" />
+                    <Bar dataKey="incidents" fill="#1B3A5C" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
@@ -75,11 +75,11 @@ export function ComplianceGauge() {
     ];
 
     return (
-        <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Compliance Status</h3>
+        <div className="bg-gunmetal rounded-lg p-4 sm:p-6 border border-text-muted/10">
+            <h3 className="text-lg sm:text-xl font-bold mb-4">Compliance Status</h3>
             <div className="flex items-center justify-center">
-                <div className="relative">
-                    <ResponsiveContainer width={180} height={180}>
+                <div className="relative w-[150px] h-[150px] sm:w-[180px] sm:h-[180px]">
+                    <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
                             <Pie
                                 data={data}
@@ -92,14 +92,14 @@ export function ComplianceGauge() {
                                 dataKey="value"
                             >
                                 {data.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#E31E24' : '#1A1D23'} />
+                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#1B3A5C' : '#1A1D23'} />
                                 ))}
                             </Pie>
                         </PieChart>
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center">
-                            <div className="text-4xl font-montserrat font-black text-signal-red">98%</div>
+                            <div className="text-4xl font-black text-signal-red">98%</div>
                             <div className="text-xs text-text-muted">Compliant</div>
                         </div>
                     </div>
@@ -111,9 +111,9 @@ export function ComplianceGauge() {
 
 export function StatCard({ title, value, subtitle, trend }: { title: string; value: string; subtitle: string; trend?: 'up' | 'down' }) {
     return (
-        <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
+        <div className="bg-gunmetal rounded-lg p-4 sm:p-6 border border-text-muted/10">
             <div className="text-text-muted text-sm mb-2">{title}</div>
-            <div className="text-4xl font-montserrat font-black text-signal-red mb-1">{value}</div>
+            <div className="text-2xl sm:text-4xl font-black text-signal-red mb-1">{value}</div>
             <div className="text-text-muted text-xs">{subtitle}</div>
             {trend && (
                 <div className={`text-xs mt-2 ${trend === 'up' ? 'text-green-500' : 'text-red-500'}`}>
@@ -141,7 +141,7 @@ export function ActivityFeed() {
 
     return (
         <div className="bg-gunmetal rounded-lg p-6 border border-text-muted/10">
-            <h3 className="text-xl font-montserrat font-bold mb-4">Live Activity Feed</h3>
+            <h3 className="text-xl font-bold mb-4">Live Activity Feed</h3>
             <div className="space-y-3">
                 {activities.map((activity, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 bg-obsidian/50 rounded">

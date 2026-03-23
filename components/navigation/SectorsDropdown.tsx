@@ -1,42 +1,88 @@
 'use client';
 
 import Link from 'next/link';
-import { Building2, ShoppingCart, Briefcase, Heart, GraduationCap, Hotel } from 'lucide-react';
+import Image from 'next/image';
+import {
+    HardHat, ShoppingBag, Building2, Stethoscope,
+    GraduationCap, Hotel, Truck, Landmark, ArrowUpRight
+} from 'lucide-react';
+
+const sectors = [
+    { name: 'Construction', href: '/sectors/construction', icon: HardHat },
+    { name: 'Retail', href: '/sectors/retail', icon: ShoppingBag },
+    { name: 'Corporate & Office', href: '/sectors/corporate', icon: Building2 },
+    { name: 'Healthcare', href: '/sectors/healthcare', icon: Stethoscope },
+    { name: 'Education', href: '/sectors/education', icon: GraduationCap },
+    { name: 'Hospitality', href: '/sectors/hospitality', icon: Hotel },
+    { name: 'Logistics & Distribution', href: '/sectors/logistics', icon: Truck },
+    { name: 'Public Sector', href: '/sectors/public-sector', icon: Landmark },
+];
 
 export default function SectorsDropdown() {
-    const sectors = [
-        { name: 'Construction', href: '/sectors/construction', icon: Building2 },
-        { name: 'Retail', href: '/sectors/retail', icon: ShoppingCart },
-        { name: 'Corporate', href: '/sectors/corporate', icon: Briefcase },
-        { name: 'Healthcare', href: '/sectors/healthcare', icon: Heart },
-        { name: 'Education', href: '/sectors/education', icon: GraduationCap },
-        { name: 'Hospitality', href: '/sectors/hospitality', icon: Hotel },
-    ];
-
     return (
-        <div className="w-[350px] bg-white border border-slate-200 rounded-xl shadow-2xl p-4 animate-fade-in z-50">
-            <div className="grid grid-cols-2 gap-2">
-                {sectors.map((sector) => {
-                    const Icon = sector.icon;
-                    return (
-                        <Link
-                            key={sector.href}
-                            href={sector.href}
-                            className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all duration-200 group"
-                        >
-                            <Icon className="w-8 h-8 text-slate-400 group-hover:text-signal-red transition-colors" />
-                            <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors text-center">
-                                {sector.name}
-                            </span>
-                        </Link>
-                    );
-                })}
-            </div>
+        <div className="w-full bg-white border-b border-[var(--border-color)] shadow-lg animate-fade-in">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div className="flex gap-10">
+                    {/* Left Side */}
+                    <div className="flex-1 min-w-0">
+                        <h3 className="text-2xl md:text-[1.7rem] font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
+                            Trusted protection across every sector.
+                        </h3>
+                        <p className="text-[var(--text-muted)] text-sm mb-6 max-w-lg">
+                            Tailored security and facilities solutions for the unique challenges of your industry.
+                        </p>
 
-            <div className="mt-4 pt-4 border-t border-slate-100 text-center">
-                <Link href="/case-studies" className="text-xs font-bold text-signal-red hover:underline uppercase tracking-wide">
-                    View Case Studies →
-                </Link>
+                        <div className="border-t border-[var(--border-color)] mb-8" />
+
+                        <div className="grid grid-cols-2 gap-x-10 gap-y-5">
+                            {sectors.map((sector) => {
+                                const Icon = sector.icon;
+                                return (
+                                    <Link
+                                        key={sector.href}
+                                        href={sector.href}
+                                        className="flex items-center gap-3 group"
+                                    >
+                                        <Icon className="w-5 h-5 text-[var(--text-muted)] group-hover:text-[var(--signal-red)] transition-colors flex-shrink-0" />
+                                        <span className="text-[15px] font-medium text-[var(--text-main)] group-hover:text-[var(--signal-red)] transition-colors">
+                                            {sector.name}
+                                        </span>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Right Side - Image Card */}
+                    <div className="hidden lg:block w-[320px] flex-shrink-0">
+                        <Link href="/sectors/construction" className="block group">
+                            <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div className="aspect-[4/3] overflow-hidden">
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+                                        alt="Sectors"
+                                        width={600}
+                                        height={450}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-5">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h4 className="text-lg font-bold text-[var(--deep-navy)]">
+                                            Our Sectors
+                                        </h4>
+                                        <div className="w-8 h-8 rounded-full bg-[var(--section-dark)] flex items-center justify-center group-hover:bg-[var(--signal-red)] transition-colors">
+                                            <ArrowUpRight className="w-4 h-4 text-white" />
+                                        </div>
+                                    </div>
+                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                                        Industry-specific security delivering measurable results across all sectors.
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     );

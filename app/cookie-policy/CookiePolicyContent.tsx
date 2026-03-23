@@ -1,5 +1,6 @@
 'use client';
 
+
 import LegalHero from '@/components/legal/LegalHero';
 import TableOfContents from '@/components/legal/TableOfContents';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -33,7 +34,7 @@ export default function CookiePolicyContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* What Are Cookies */}
                             <AnimatedSection id="what-are-cookies">
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
                                     What Are Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -46,7 +47,7 @@ export default function CookiePolicyContent() {
 
                             {/* How We Use Cookies */}
                             <AnimatedSection id="how-we-use" delay={0.1}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     How We Use Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -63,7 +64,7 @@ export default function CookiePolicyContent() {
 
                             {/* Types of Cookies */}
                             <AnimatedSection id="types-of-cookies" delay={0.2}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Types of Cookies We Use
                                 </h2>
 
@@ -81,34 +82,9 @@ export default function CookiePolicyContent() {
                                 <p className="text-slate-600 leading-relaxed mb-4">
                                     These cookies help us understand how visitors interact with our website:
                                 </p>
-                                <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-4">
-                                    <table className="w-full text-sm">
-                                        <thead>
-                                            <tr className="border-b border-slate-200">
-                                                <th className="text-left py-2 font-bold text-slate-900">Cookie Name</th>
-                                                <th className="text-left py-2 font-bold text-slate-900">Purpose</th>
-                                                <th className="text-left py-2 font-bold text-slate-900">Duration</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="text-slate-600">
-                                            <tr className="border-b border-slate-100">
-                                                <td className="py-2">_ga</td>
-                                                <td className="py-2">Google Analytics - User identification</td>
-                                                <td className="py-2">2 years</td>
-                                            </tr>
-                                            <tr className="border-b border-slate-100">
-                                                <td className="py-2">_gid</td>
-                                                <td className="py-2">Google Analytics - Session identification</td>
-                                                <td className="py-2">24 hours</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="py-2">_gat</td>
-                                                <td className="py-2">Google Analytics - Throttle request rate</td>
-                                                <td className="py-2">1 minute</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <p className="text-slate-600 leading-relaxed mb-4">
+                                    At present, this website does not use analytics cookies. Should we introduce analytics tools in the future, this policy will be updated accordingly.
+                                </p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mb-3 mt-6">Functional Cookies</h3>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -133,7 +109,7 @@ export default function CookiePolicyContent() {
 
                             {/* Managing Cookies */}
                             <AnimatedSection id="managing-cookies" delay={0.3}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Managing Cookie Preferences
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -169,28 +145,20 @@ export default function CookiePolicyContent() {
 
                             {/* Third-Party Cookies */}
                             <AnimatedSection id="third-party" delay={0.4}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Third-Party Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
                                     We use the following third-party services that may set cookies:
                                 </p>
-                                <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
-                                    <li><strong>Google Analytics:</strong> Website analytics and performance monitoring</li>
-                                    <li><strong>Google Maps:</strong> Location services and mapping</li>
-                                    <li><strong>Social Media Platforms:</strong> Social sharing and embedded content</li>
-                                </ul>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    These third parties have their own privacy policies. We recommend reviewing them:
+                                    This website does not currently use third-party cookies. If third-party services are introduced in the future, this section will be updated with details of the cookies they set and links to their privacy policies.
                                 </p>
-                                <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
-                                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-signal-red hover:underline">Google Privacy Policy</a></li>
-                                </ul>
                             </AnimatedSection>
 
                             {/* Updates */}
                             <AnimatedSection id="updates" delay={0.5}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Updates to This Policy
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">

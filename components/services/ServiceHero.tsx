@@ -1,88 +1,97 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 interface ServiceHeroProps {
     title: string;
     subtitle: string;
     description: string;
     imageSrc?: string;
+    breadcrumbs?: { label: string; href?: string }[];
 }
 
 export default function ServiceHero({
-    title = "Elite Manned Guarding.",
-    subtitle = "Intelligent Protection.",
-    description = "Deploying highly trained security specialists integrated with real-time intelligence for complete peace of mind.",
-    imageSrc = "/images/guard-hero.jpg" // Placeholder
+    title,
+    subtitle,
+    description,
+    imageSrc = 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
+    breadcrumbs = [],
 }: ServiceHeroProps) {
     return (
-        <section className="relative min-h-[90vh] bg-white flex items-center overflow-hidden">
-            <div className="flex flex-col lg:flex-row w-full h-full">
-
-                {/* Content Side */}
-                <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-20 z-10 bg-white">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="max-w-xl"
-                    >
-                        <h1 className="text-5xl lg:text-7xl font-montserrat font-black text-slate-900 leading-tight mb-6">
-                            {title}
-                            <br />
-                            <span className="text-signal-red">{subtitle}</span>
-                        </h1>
-                        <p className="text-xl text-slate-500 mb-10 leading-relaxed font-medium">
-                            {description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-4">
-                            <motion.div
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <Link
-                                    href="#audit"
-                                    className="bg-signal-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 inline-block"
-                                >
-                                    Request Site Audit
-                                </Link>
-                            </motion.div>
-                            <motion.div
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <Link
-                                    href="#capabilities"
-                                    className="border-2 border-slate-200 hover:border-signal-red text-slate-900 hover:text-signal-red font-bold py-4 px-8 rounded transition-all duration-300 inline-block"
-                                >
-                                    View Capabilities
-                                </Link>
-                            </motion.div>
-                        </div>
-                    </motion.div>
+        <section className="bg-white px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8">
+            <div className="relative max-w-[1400px] mx-auto h-[380px] sm:h-[420px] md:h-[480px] lg:h-[540px] rounded-xl sm:rounded-2xl overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src={imageSrc}
+                        alt={`${title} - ${subtitle}`}
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover"
+                    />
                 </div>
 
-                {/* Image Side */}
-                <motion.div
-                    className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-screen bg-slate-100 overflow-hidden"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent z-10 lg:w-32" />
-                    {/* Placeholder for actual image */}
-                    <motion.img
-                        src={imageSrc}
-                        alt="Security Professional"
-                        className="absolute inset-0 w-full h-full object-cover"
-                        initial={{ scale: 1.2 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 1.5, ease: "easeOut" }}
-                    />
-                </motion.div>
+                {/* White Content Card — pinned left */}
+                <div className="absolute inset-y-0 left-0 right-0 sm:right-auto z-10 flex items-center px-4 sm:pl-10 sm:pr-0 lg:pl-14 py-6 sm:py-8">
+                    <div className="relative w-full sm:w-[400px] md:w-[460px] lg:w-[520px]">
+                        <motion.div
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="bg-white/[0.97] backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-9 lg:p-11 shadow-xl"
+                        >
+                            {/* Dotted pattern */}
+                            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                                <div className="absolute inset-0 opacity-[0.04]" style={{
+                                    backgroundImage: 'radial-gradient(circle, #0C1E33 1px, transparent 1px)',
+                                    backgroundSize: '16px 16px',
+                                }} />
+                            </div>
+
+                            <div className="relative z-10">
+                                {/* Breadcrumbs */}
+                                {breadcrumbs.length > 0 && (
+                                    <div className="mb-4">
+                                        <Breadcrumbs items={breadcrumbs} dark={false} />
+                                    </div>
+                                )}
+
+                                {/* Heading */}
+                                <h1 className="font-semibold leading-[1.2] mb-1">
+                                    {title}
+                                </h1>
+                                <h2 className="text-[var(--accent-amber)] font-semibold leading-[1.2] mb-4">
+                                    {subtitle}
+                                </h2>
+
+                                {/* Description */}
+                                <p className="text-[var(--text-main)] mb-5 sm:mb-7 text-sm sm:text-base">
+                                    {description}
+                                </p>
+
+                                {/* CTAs */}
+                                <div className="flex flex-wrap gap-2 sm:gap-3">
+                                    <Link
+                                        href="/get-a-quote"
+                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
+                                    >
+                                        Request a Quote
+                                    </Link>
+                                    <Link
+                                        href="/contact-us"
+                                        className="inline-flex items-center gap-2 border border-gray-300 text-[var(--deep-navy)] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
+                                    >
+                                        Contact Us
+                                    </Link>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     );

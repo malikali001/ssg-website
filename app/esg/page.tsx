@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Leaf, Users, Scale, BarChart3, FileText,
     ShieldCheck, Globe, Heart, Recycle,
     Zap, Award, CheckCircle2
 } from 'lucide-react';
+import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
     title: 'ESG & Compliance | SSG UK Ltd',
@@ -16,38 +18,26 @@ export default function ESGPage() {
     return (
         <main className="min-h-screen bg-[--color-obsidian]">
             {/* 1. Introduction: What ESG Means for SSG */}
-            <section className="relative bg-black py-32 overflow-hidden">
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                        alt="Global ESG Connection"
-                        className="w-full h-full object-cover opacity-80"
-                    />
-                    <div className="absolute inset-0 bg-black/40" />
-                </div>
-
-                <div className="relative z-10 section-container text-center">
-                    <div className="inline-block px-5 py-2 rounded-full bg-[--color-signal-red]/10 border border-[--color-signal-red]/30 text-[--color-signal-red] font-bold text-sm tracking-wider mb-8 animate-slide-up">
-                        ENVIRONMENTAL • SOCIAL • GOVERNANCE
-                    </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-white mb-8 animate-slide-up animation-delay-200 drop-shadow-lg leading-tight">
-                        What ESG Means <br /> for <span className="text-[--color-signal-red]">SSG</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto animate-slide-up animation-delay-400 font-medium leading-relaxed">
-                        ESG stands for Environmental, Social, and Governance — key areas that show how responsibly a business operates beyond financial performance. At SSG, ESG reflects how we protect people, treat our workforce and communities, and run our business with integrity.
-                    </p>
-                </div>
-            </section>
+            <PageHero
+                badge="Environmental · Social · Governance"
+                title="What ESG Means"
+                subtitle="for SSG"
+                description="ESG reflects how we protect people, treat our workforce and communities, and run our business with integrity — key areas that show how responsibly we operate beyond financial performance."
+                imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                ctaLabel="Learn More"
+                ctaHref="/contact-us"
+            />
 
             {/* 2. Environmental Commitment */}
             <section className="section-container">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative group">
                         <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative transform transition-transform duration-500 hover:scale-[1.01] border border-slate-100">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop"
                                 alt="Sustainability features"
+                                width={2070}
+                                height={1380}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[--color-deep-navy]/80 to-transparent" />
@@ -55,7 +45,7 @@ export default function ESGPage() {
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-600 text-white text-xs font-bold mb-3 uppercase tracking-wide">
                                     TARGET 2040
                                 </div>
-                                <div className="font-montserrat font-bold text-3xl mb-2">Net Zero Commitment</div>
+                                <div className="font-bold text-3xl mb-2">Net Zero Commitment</div>
                                 <p className="text-slate-200">Accelerating our journey to a sustainable future.</p>
                             </div>
                         </div>
@@ -78,10 +68,10 @@ export default function ESGPage() {
                         <div className="inline-flex items-center gap-2 text-green-600 font-bold mb-4 tracking-wide uppercase text-sm">
                             <Globe className="w-5 h-5" /> Environmental Stewardship
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6 leading-tight">
+                        <h2 className="font-black text-[--color-deep-navy] mb-6 leading-tight">
                             Minimizing Our <span className="text-green-600">Footprint</span>
                         </h2>
-                        <p className="text-[--color-text-main] text-lg mb-8 leading-relaxed font-medium">
+                        <p className="text-[--color-text-main] mb-8 leading-relaxed font-medium">
                             We recognize our responsibility to the planet. Our environmental strategy focuses on tangible, measurable actions that reduce impact across all operations, from our vehicle fleet to our office supplies.
                         </p>
 
@@ -126,10 +116,10 @@ export default function ESGPage() {
                             <div className="inline-flex items-center gap-2 text-blue-600 font-bold mb-4 tracking-wide uppercase text-sm">
                                 <Users className="w-5 h-5" /> Social Responsibility
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6 leading-tight">
+                            <h2 className="font-black text-[--color-deep-navy] mb-6 leading-tight">
                                 People First, <span className="text-blue-600">Always</span>
                             </h2>
-                            <p className="text-[--color-text-main] text-lg mb-10 leading-relaxed font-medium">
+                            <p className="text-[--color-text-main] mb-10 leading-relaxed font-medium">
                                 Our business is built on people. We are dedicated to creating a supportive, inclusive environment where our team and communities thrive. We invest in potential.
                             </p>
 
@@ -153,9 +143,11 @@ export default function ESGPage() {
 
                         <div className="order-1 lg:order-2 relative group">
                             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-[1.01] relative">
-                                <img
+                                <Image
                                     src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop"
                                     alt="Diverse team working together"
+                                    width={2084}
+                                    height={1390}
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-[--color-deep-navy]/40 to-transparent" />
@@ -174,10 +166,10 @@ export default function ESGPage() {
                     <div className="inline-flex items-center gap-2 text-[--color-signal-red] font-bold mb-6 tracking-wide uppercase text-sm">
                         <Scale className="w-5 h-5" /> Governance & Compliance
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-black text-white mb-8">
+                    <h2 className="font-black text-white mb-8">
                         Integrity in Action
                     </h2>
-                    <p className="text-slate-200 text-xl max-w-3xl mx-auto leading-relaxed mb-16">
+                    <p className="text-slate-200 max-w-3xl mx-auto leading-relaxed mb-16">
                         Strong governance is the backbone of our trust. We operate with full transparency, accountability, and adherence to the highest regulatory standards.
                     </p>
 
@@ -187,7 +179,7 @@ export default function ESGPage() {
                             <div className="w-14 h-14 rounded-xl bg-[--color-signal-red]/10 flex items-center justify-center mb-6 group-hover:bg-[--color-signal-red] transition-colors duration-300 border border-[--color-signal-red]/20">
                                 <ShieldCheck className="w-7 h-7 text-[--color-signal-red] group-hover:text-white transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4 font-montserrat">Code of Ethics</h3>
+                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4">Code of Ethics</h3>
                             <p className="text-slate-600 leading-relaxed mb-6 font-medium">
                                 Zero-tolerance policy for corruption and bribery. We maintain strict anti-corruption measures and clear reporting channels.
                             </p>
@@ -212,7 +204,7 @@ export default function ESGPage() {
                             <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 border border-blue-100">
                                 <Award className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4 font-montserrat">Certifications</h3>
+                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4">Certifications</h3>
                             <p className="text-slate-600 leading-relaxed mb-6 font-medium">
                                 Recognized excellence through industry-leading accreditations and standards.
                             </p>
@@ -237,7 +229,7 @@ export default function ESGPage() {
                             <div className="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300 border border-purple-100">
                                 <FileText className="w-7 h-7 text-purple-600 group-hover:text-white transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4 font-montserrat">Legal Compliance</h3>
+                            <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4">Legal Compliance</h3>
                             <p className="text-slate-600 leading-relaxed mb-6 font-medium">
                                 Full adherence to all relevant laws, ensuring secure and responsible operations.
                             </p>
@@ -268,10 +260,10 @@ export default function ESGPage() {
                             <div className="inline-flex items-center gap-2 text-purple-600 font-bold mb-4 tracking-wide uppercase text-sm">
                                 <BarChart3 className="w-5 h-5" /> Performance & Metrics
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-6 leading-tight">
+                            <h2 className="font-black text-[--color-deep-navy] mb-6 leading-tight">
                                 Measuring Our <span className="text-purple-600">Impact</span>
                             </h2>
-                            <p className="text-[--color-text-main] text-lg mb-10 leading-relaxed font-medium">
+                            <p className="text-[--color-text-main] mb-10 leading-relaxed font-medium">
                                 We believe in transparency. We track and monitor Key Performance Indicators (KPIs) to ensure we are meeting our ESG goals and continuously improving.
                             </p>
 
@@ -302,7 +294,7 @@ export default function ESGPage() {
                         <div className="bg-[--color-deep-navy] rounded-3xl p-10 md:p-12 text-white shadow-2xl flex flex-col justify-center relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
 
-                            <h3 className="text-3xl font-bold mb-8 font-montserrat relative z-10">Annual Highlights</h3>
+                            <h3 className="text-3xl font-bold mb-8 relative z-10">Annual Highlights</h3>
                             <ul className="space-y-6 relative z-10">
                                 {[
                                     "Launched new Electric Vehicle fleet transition plan",
@@ -329,7 +321,7 @@ export default function ESGPage() {
                     <div className="inline-flex items-center gap-2 text-slate-500 font-bold mb-4 tracking-wide uppercase text-sm">
                         <FileText className="w-5 h-5" /> Documentation
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-montserrat font-black text-[--color-deep-navy] mb-12">
+                    <h2 className="font-black text-[--color-deep-navy] mb-12">
                         Policy & Compliance <span className="text-[--color-signal-red]">Documents</span>
                     </h2>
 
@@ -346,7 +338,7 @@ export default function ESGPage() {
                         ].map((policy, index) => (
                             <div key={index} className="group bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-[--color-signal-red] transition-all duration-300 flex items-center justify-between cursor-pointer hover:shadow-md transform hover:-translate-y-1">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-lg bg-[--color-gunmetal] group-hover:bg-red-50 flex items-center justify-center transition-colors border border-slate-100">
+                                    <div className="w-12 h-12 rounded-lg bg-[--color-gunmetal] group-hover:bg-[var(--section-light)] flex items-center justify-center transition-colors border border-slate-100">
                                         <FileText className="w-6 h-6 text-slate-400 group-hover:text-[--color-signal-red] transition-colors" />
                                     </div>
                                     <span className="font-bold text-[--color-deep-navy] group-hover:text-[--color-signal-red] transition-colors text-lg">{policy}</span>
@@ -362,7 +354,7 @@ export default function ESGPage() {
                         <p className="text-slate-500 mb-8 text-lg font-medium">
                             These documents represent our formal commitment to ESG standards. Verification of certifications and detailed audit reports are available upon request.
                         </p>
-                        <Link href="/quote" className="btn-primary inline-flex items-center gap-2 shadow-xl shadow-red-500/20 px-8 py-4 text-lg">
+                        <Link href="/get-a-quote" className="btn-primary inline-flex items-center gap-2 shadow-lg px-8 py-4 text-lg">
                             Request Full Compliance Pack
                         </Link>
                     </div>

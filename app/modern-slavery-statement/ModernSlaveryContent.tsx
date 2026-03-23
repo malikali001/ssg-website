@@ -1,5 +1,6 @@
 'use client';
 
+
 import LegalHero from '@/components/legal/LegalHero';
 import TableOfContents from '@/components/legal/TableOfContents';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -36,7 +37,7 @@ export default function ModernSlaveryContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* Introduction */}
                             <AnimatedSection id="introduction">
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
                                     Introduction
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -49,7 +50,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Our Business & Supply Chains */}
                             <AnimatedSection id="our-business" delay={0.1}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Our Business & Supply Chains
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -70,7 +71,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Policies & Due Diligence */}
                             <AnimatedSection id="policies" delay={0.2}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Policies & Due Diligence
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -98,7 +99,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Risk Assessment */}
                             <AnimatedSection id="risk-assessment" delay={0.3}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Risk Assessment
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -114,7 +115,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Training & Awareness */}
                             <AnimatedSection id="training" delay={0.4}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Training & Awareness
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -131,7 +132,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Effectiveness Measurement */}
                             <AnimatedSection id="effectiveness" delay={0.5}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Effectiveness Measurement
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -148,7 +149,7 @@ export default function ModernSlaveryContent() {
 
                             {/* Approval & Sign-off */}
                             <AnimatedSection id="approval" delay={0.6}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Approval & Sign-off
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">

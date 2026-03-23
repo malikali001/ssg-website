@@ -1,5 +1,6 @@
 'use client';
 
+
 import LegalHero from '@/components/legal/LegalHero';
 import TableOfContents from '@/components/legal/TableOfContents';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -35,7 +36,7 @@ export default function TermsContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* Acceptance of Terms */}
                             <AnimatedSection id="acceptance">
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
                                     Acceptance of Terms
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -48,7 +49,7 @@ export default function TermsContent() {
 
                             {/* Use of Website */}
                             <AnimatedSection id="use-of-website" delay={0.1}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Use of Website
                                 </h2>
 
@@ -77,7 +78,7 @@ export default function TermsContent() {
 
                             {/* Intellectual Property */}
                             <AnimatedSection id="intellectual-property" delay={0.2}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Intellectual Property
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -96,7 +97,7 @@ export default function TermsContent() {
 
                             {/* User Responsibilities */}
                             <AnimatedSection id="user-responsibilities" delay={0.3}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     User Responsibilities
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -113,7 +114,7 @@ export default function TermsContent() {
 
                             {/* Limitation of Liability */}
                             <AnimatedSection id="limitation-liability" delay={0.4}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Limitation of Liability
                                 </h2>
 
@@ -152,7 +153,7 @@ export default function TermsContent() {
 
                             {/* Governing Law */}
                             <AnimatedSection id="governing-law" delay={0.5}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Governing Law
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -165,7 +166,7 @@ export default function TermsContent() {
 
                             {/* Changes to Terms */}
                             <AnimatedSection id="changes" delay={0.6}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Changes to Terms
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -181,7 +182,7 @@ export default function TermsContent() {
 
                             {/* Contact Information */}
                             <AnimatedSection id="contact" delay={0.7}>
-                                <h2 className="text-3xl font-montserrat font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
                                     Contact Information
                                 </h2>
                                 <div className="bg-deep-navy text-white rounded-xl p-8">

@@ -1,112 +1,180 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const heroSlides = [
+    {
+        heading: "UK's trusted\nsecurity partner",
+        description:
+            "We're on a mission to protect people, property, and peace of mind — because everyone deserves to feel safe, secure, and supported wherever they live, work, or visit.",
+        cta: { label: 'Get in Touch to Learn', href: '/contact-us' },
+        image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80',
+    },
+    {
+        heading: 'Expert security\nnationwide',
+        description:
+            'SIA-approved manned guarding, mobile patrols, K9 units, and concierge services — delivering round-the-clock protection you can trust.',
+        cta: { label: 'Explore Security Services', href: '/services/security/manned-guarding' },
+        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
+    },
+    {
+        heading: 'Facilities that\ndeliver results',
+        description:
+            'From commercial cleaning to property maintenance, we keep your facilities running smoothly so you can focus on what matters most.',
+        cta: { label: 'Explore Facilities Services', href: '/services/facilities/commercial-cleaning' },
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+    },
+];
 
 export default function HeroSection() {
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const [current, setCurrent] = useState(0);
 
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.playbackRate = 0.5;
-        }
+    const goTo = useCallback(
+        (index: number) => {
+            setCurrent(index);
+        },
+        [],
+    );
+
+    const next = useCallback(() => {
+        setCurrent((prev) => (prev + 1) % heroSlides.length);
     }, []);
 
+    const prev = useCallback(() => {
+        setCurrent((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    }, []);
+
+    // Auto-advance every 6 seconds
+    useEffect(() => {
+        const timer = setInterval(next, 6000);
+        return () => clearInterval(timer);
+    }, [next]);
+
+    const slide = heroSlides[current];
+
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Animated Background */}
-            <div className="absolute inset-0 w-full h-full z-0 bg-black">
-                {/* Hero Video */}
-                <video
-                    ref={videoRef}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover opacity-80"
-                >
-                    <source src="/hero-video.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10 section-container text-center pt-32 pb-20">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-black mb-6 text-balance text-white leading-tight">
-                        Smarter Security.
-                        <br />
-                        <span className="text-white">Seamless Facilities.</span>
-                        <br />
-                        <motion.span
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                            className="text-signal-red inline-block mt-2"
-                        >
-                            Total Support.
-                        </motion.span>
-                    </h1>
-                </motion.div>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 font-medium"
-                >
-                    Integrating elite personnel with real-time intelligence to protect your assets and elevate your environment across the UK.
-                </motion.p>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
-                >
-                    <Link href="#sectors" className="btn-primary text-lg px-8 py-4 shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300">
-                        Explore Our Solutions
-                    </Link>
-                    <button
-                        onClick={() => window.open('https://www.youtube.com/watch?v=Z4F3AXvrLKo', '_blank')}
-                        className="btn-secondary text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-deep-navy flex items-center gap-3 group"
+        <section className="bg-white px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8">
+            {/* Rounded image container with side margins */}
+            <div className="relative max-w-[1400px] mx-auto h-[420px] sm:h-[500px] md:h-[580px] lg:h-[660px] rounded-xl sm:rounded-2xl overflow-hidden">
+                {/* Background Image */}
+                <AnimatePresence mode="popLayout">
+                    <motion.div
+                        key={current}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="absolute inset-0 z-0"
                     >
-                        <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-deep-navy/10 group-hover:text-deep-navy transition-colors">
-                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                        </span>
-                        Watch Our Story
-                    </button>
-                </motion.div>
+                        <Image
+                            src={slide.image}
+                            alt="SSG security and facilities services"
+                            fill
+                            priority
+                            sizes="100vw"
+                            className="object-cover"
+                        />
+                    </motion.div>
+                </AnimatePresence>
 
-                {/* Scroll indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer hover:opacity-80 transition-opacity"
-                    onClick={() => {
-                        const nextSection = document.getElementById('trust-bar');
-                        if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                >
-                    <div className="flex flex-col items-center gap-2">
-                        <span className="text-xs uppercase tracking-widest text-gray-400">Scroll</span>
-                        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-                            <motion.div
-                                animate={{ y: [0, 12, 0] }}
-                                transition={{ duration: 1.5, repeat: Infinity }}
-                                className="w-1.5 h-1.5 bg-electric-blue rounded-full"
-                            />
+                {/* White Content Card — pinned to the left side */}
+                <div className="absolute inset-y-0 left-0 right-0 sm:right-auto z-10 flex items-center px-4 sm:pl-10 sm:pr-0 lg:pl-14 py-6 sm:py-8">
+                    <div className="relative w-full sm:w-[420px] md:w-[480px] lg:w-[540px]">
+                        <div className="bg-white/[0.97] backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-9 lg:p-11 shadow-xl">
+                            {/* Dotted pattern inside card */}
+                            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                                <div className="absolute inset-0 opacity-[0.04]" style={{
+                                    backgroundImage: 'radial-gradient(circle, #0C1E33 1px, transparent 1px)',
+                                    backgroundSize: '16px 16px',
+                                }} />
+                            </div>
+
+                            <div className="relative z-10">
+                                {/* Badge */}
+                                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+                                    <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#C83232] text-white text-[10px] sm:text-xs font-bold tracking-wide">
+                                        SSG Security Services
+                                    </span>
+                                    <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
+                                        Find your solution <ChevronRight className="w-4 h-4" />
+                                    </Link>
+                                </div>
+
+                                {/* Heading */}
+                                <AnimatePresence mode="wait">
+                                    <motion.h1
+                                        key={`heading-${current}`}
+                                        initial={{ opacity: 0, y: 12 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -8 }}
+                                        transition={{ duration: 0.35 }}
+                                        className="font-semibold leading-[1.2] mb-4 whitespace-pre-line"
+                                    >
+                                        {slide.heading}
+                                    </motion.h1>
+                                </AnimatePresence>
+
+                                {/* Description */}
+                                <AnimatePresence mode="wait">
+                                    <motion.p
+                                        key={`desc-${current}`}
+                                        initial={{ opacity: 0, y: 8 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -8 }}
+                                        transition={{ duration: 0.35, delay: 0.08 }}
+                                        className="text-[var(--text-main)] mb-5 sm:mb-7 text-sm sm:text-base"
+                                    >
+                                        {slide.description}
+                                    </motion.p>
+                                </AnimatePresence>
+
+                                {/* CTA + Arrows Row */}
+                                <div className="flex items-center justify-between gap-3">
+                                    <Link
+                                        href={slide.cta.href}
+                                        className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-300"
+                                    >
+                                        {slide.cta.label}
+                                    </Link>
+
+                                    {/* Slider Navigation */}
+                                    <div className="flex items-center gap-2">
+                                        <button
+                                            onClick={prev}
+                                            className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[var(--text-muted)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)] transition-colors"
+                                            aria-label="Previous slide"
+                                        >
+                                            <ChevronLeft className="w-4 h-4" />
+                                        </button>
+                                        <button
+                                            onClick={next}
+                                            className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[var(--text-muted)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)] transition-colors"
+                                            aria-label="Next slide"
+                                        >
+                                            <ChevronRight className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
+
+                {/* Slide Indicator Dots */}
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+                    {heroSlides.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => goTo(i)}
+                            className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'w-7 bg-[#C83232]' : 'w-2 bg-white/60 hover:bg-white'}`}
+                            aria-label={`Go to slide ${i + 1}`}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );

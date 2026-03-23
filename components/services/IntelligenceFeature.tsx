@@ -28,9 +28,9 @@ export default function IntelligenceFeature({
     rightContent
 }: IntelligenceFeatureProps) {
     return (
-        <section className="py-24 bg-slate-50 overflow-hidden">
+        <section className="py-12 sm:py-24 bg-slate-50 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                     {/* Feature Text */}
                     <motion.div
@@ -44,11 +44,11 @@ export default function IntelligenceFeature({
                                 {topicTag}
                             </span>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-montserrat font-black text-slate-900 mb-6">
+                        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-4 sm:mb-6">
                             {title} <br />
                             <span className="text-signal-red">{subtitle}</span>
                         </h2>
-                        <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                        <p className="text-base sm:text-xl text-slate-500 mb-6 sm:mb-8 leading-relaxed">
                             {description}
                         </p>
 

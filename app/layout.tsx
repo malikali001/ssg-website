@@ -5,6 +5,7 @@ import UtilityBar from "@/components/navigation/UtilityBar";
 import MainNav from "@/components/navigation/MainNav";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import FloatingCTA from "@/components/ui/FloatingCTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <MainNav />
         {children}
         <Footer />
+        <FloatingCTA />
         <WhatsAppButton />
       </body>
     </html>

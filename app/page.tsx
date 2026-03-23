@@ -1,25 +1,32 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
+import ServiceShowcase from "@/components/sections/ServiceShowcase";
+import StatsBar from "@/components/sections/StatsBar";
+import ValuePropositions from "@/components/sections/ValuePropositions";
+import CTABanner from "@/components/sections/CTABanner";
+
 import TrustBar from "@/components/sections/TrustBar";
-import IndustriesGrid from "@/components/sections/IndustriesGrid";
-import PrimaryFunnel from "@/components/sections/PrimaryFunnel";
-import TheEdge from "@/components/sections/TheEdge";
-import SectorGrid from "@/components/sections/SectorGrid";
-import WhySSG from "@/components/sections/WhySSG";
-import AwardsPreview from "@/components/sections/AwardsPreview";
-import SiaSection from "@/components/sections/SiaSection";
+
+export const metadata: Metadata = {
+  title: "SSG UK Ltd | Elite Security & Facilities Management",
+  description: "SSG UK Ltd provides elite, technology-driven security and facilities management across the UK. SIA Approved Contractor offering manned guarding, CCTV, cleaning and more.",
+  openGraph: {
+    title: "SSG UK Ltd | Elite Security & Facilities Management",
+    description: "Precision protection and integrated intelligence. Elite security and FM services across the UK.",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <ServiceShowcase />
+      <StatsBar />
+      <ValuePropositions />
+      <CTABanner />
+
       <TrustBar />
-      <IndustriesGrid />
-      <PrimaryFunnel />
-      <TheEdge />
-      <SectorGrid />
-      <SiaSection />
-      <AwardsPreview />
-      <WhySSG />
     </main>
   );
 }
