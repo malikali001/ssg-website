@@ -26,7 +26,7 @@ export default function ServicesPage() {
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Security Solutions */}
                     <Link
-                        href="/services/security"
+                        href="/services/security/manned-guarding"
                         className="group relative bg-gunmetal rounded-lg p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-signal-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -74,7 +74,7 @@ export default function ServicesPage() {
 
                     {/* Facilities Management */}
                     <Link
-                        href="/services/facilities"
+                        href="/services/facilities/commercial-cleaning"
                         className="group relative bg-gunmetal rounded-lg p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-signal-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

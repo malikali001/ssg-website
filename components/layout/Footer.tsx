@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -12,9 +13,11 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-3 lg:col-span-1">
                         <Link href="/" className="block mb-4">
                             <div className="relative h-12 w-32 overflow-hidden rounded-sm">
-                                <img
+                                <Image
                                     src="/ssg-logo.jpg"
                                     alt="SSG UK LTD"
+                                    width={128}
+                                    height={48}
                                     className="h-full w-full object-contain"
                                 />
                             </div>

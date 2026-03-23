@@ -349,7 +349,7 @@ export default function ESGPage() {
                         <p className="text-slate-500 mb-8 text-lg font-medium">
                             These documents represent our formal commitment to ESG standards. Verification of certifications and detailed audit reports are available upon request.
                         </p>
-                        <Link href="/quote" className="btn-primary inline-flex items-center gap-2 shadow-lg px-8 py-4 text-lg">
+                        <Link href="/get-a-quote" className="btn-primary inline-flex items-center gap-2 shadow-lg px-8 py-4 text-lg">
                             Request Full Compliance Pack
                         </Link>
                     </div>

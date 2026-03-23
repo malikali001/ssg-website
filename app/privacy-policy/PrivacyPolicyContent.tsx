@@ -1,5 +1,6 @@
 'use client';
 
+
 import LegalHero from '@/components/legal/LegalHero';
 import TableOfContents from '@/components/legal/TableOfContents';
 import AnimatedSection from '@/components/ui/AnimatedSection';

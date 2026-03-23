@@ -17,14 +17,14 @@ const heroSlides = [
         heading: 'Expert security\nnationwide',
         description:
             'SIA-approved manned guarding, mobile patrols, K9 units, and concierge services — delivering round-the-clock protection you can trust.',
-        cta: { label: 'Explore Security Services', href: '/services/security' },
+        cta: { label: 'Explore Security Services', href: '/services/security/manned-guarding' },
         image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
     },
     {
         heading: 'Facilities that\ndeliver results',
         description:
             'From commercial cleaning to property maintenance, we keep your facilities running smoothly so you can focus on what matters most.',
-        cta: { label: 'Explore Facilities Services', href: '/services/facilities' },
+        cta: { label: 'Explore Facilities Services', href: '/services/facilities/commercial-cleaning' },
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
     },
 ];
@@ -71,7 +71,8 @@ export default function HeroSection() {
                     >
                         <img
                             src={slide.image}
-                            alt=""
+                            alt="SSG security and facilities services"
+                            role="presentation"
                             className="w-full h-full object-cover"
                         />
                     </motion.div>
@@ -95,7 +96,7 @@ export default function HeroSection() {
                                     <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#C83232] text-white text-[10px] sm:text-xs font-bold tracking-wide">
                                         SSG Security Services
                                     </span>
-                                    <Link href="/services/security" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
+                                    <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
                                         Find your solution <ChevronRight className="w-4 h-4" />
                                     </Link>
                                 </div>

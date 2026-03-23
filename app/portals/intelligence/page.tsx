@@ -85,7 +85,7 @@ export default function IntelligenceCenterPage() {
                     <p className="text-text-muted text-lg mb-8 max-w-2xl mx-auto">
                         Request a demo of the SSG Intelligence Center and see how we power elite security operations.
                     </p>
-                    <a href="/quote" className="btn-primary text-lg px-8 py-4 inline-block">
+                    <a href="/get-a-quote" className="btn-primary text-lg px-8 py-4 inline-block">
                         Request a Demo
                     </a>
                 </div>

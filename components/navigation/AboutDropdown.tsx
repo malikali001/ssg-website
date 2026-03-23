@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Building, Leaf, Briefcase, Award, ArrowUpRight
 } from 'lucide-react';
@@ -52,9 +53,11 @@ export default function AboutDropdown() {
                         <Link href="/about" className="block group">
                             <div className="rounded-2xl overflow-hidden border border-[var(--border-color)] bg-white shadow-sm hover:shadow-md transition-shadow">
                                 <div className="aspect-[4/3] overflow-hidden">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80"
                                         alt="About SSG"
+                                        width={600}
+                                        height={450}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import ServiceDropdown from './ServicesMegaMenu';
 import SectorsDropdown from './SectorsDropdown';
@@ -43,9 +44,12 @@ export default function MainNav() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center group">
                             <div className="relative h-12 w-28 sm:h-16 sm:w-38 overflow-hidden rounded-sm">
-                                <img
+                                <Image
                                     src="/ssg-logo.jpg"
                                     alt="SSG UK LTD"
+                                    width={152}
+                                    height={64}
+                                    priority
                                     className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>

@@ -15,9 +15,25 @@ const services = [
     'Security Reception Services',
 ];
 
+interface FormData {
+    fullName: string;
+    phone: string;
+    email: string;
+    company: string;
+    message: string;
+}
+
 export default function GetAQuotePage() {
-    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
     const [selectedServices, setSelectedServices] = useState<string[]>([]);
+    const [formData, setFormData] = useState<FormData>({
+        fullName: '',
+        phone: '',
+        email: '',
+        company: '',
+        message: '',
+    });
 
     const toggleService = (service: string) => {
         setSelectedServices(prev =>
@@ -27,13 +43,37 @@ export default function GetAQuotePage() {
         );
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setFormStatus('submitting');
-        setTimeout(() => {
+        setErrorMessage('');
+
+        try {
+            const res = await fetch('/api/quote', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formData,
+                    services: selectedServices,
+                }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || 'Something went wrong.');
+            }
+
             setFormStatus('success');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 1500);
+        } catch (err) {
+            setFormStatus('error');
+            setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+        }
     };
 
     if (formStatus === 'success') {
@@ -118,6 +158,12 @@ export default function GetAQuotePage() {
                             <div className="p-5 sm:p-8 lg:p-10 bg-[#f7f7f7]">
                                 <h2 className="text-2xl font-bold text-[var(--deep-navy)] mb-8">Get A Quote</h2>
 
+                                {formStatus === 'error' && (
+                                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                                        {errorMessage}
+                                    </div>
+                                )}
+
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     {/* Service Checkboxes */}
                                     <div>
@@ -144,7 +190,14 @@ export default function GetAQuotePage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
                                             Full Name <span className="text-[var(--signal-red)]">*</span>
                                         </label>
-                                        <input type="text" required className="input-tactical w-full" />
+                                        <input
+                                            type="text"
+                                            name="fullName"
+                                            value={formData.fullName}
+                                            onChange={handleChange}
+                                            required
+                                            className="input-tactical w-full"
+                                        />
                                     </div>
 
                                     {/* Phone */}
@@ -152,7 +205,14 @@ export default function GetAQuotePage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
                                             Phone <span className="text-[var(--signal-red)]">*</span>
                                         </label>
-                                        <input type="tel" required className="input-tactical w-full" />
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
+                                            className="input-tactical w-full"
+                                        />
                                     </div>
 
                                     {/* Email */}
@@ -160,7 +220,14 @@ export default function GetAQuotePage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
                                             Email <span className="text-[var(--signal-red)]">*</span>
                                         </label>
-                                        <input type="email" required className="input-tactical w-full" />
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            className="input-tactical w-full"
+                                        />
                                     </div>
 
                                     {/* Company Name */}
@@ -168,7 +235,14 @@ export default function GetAQuotePage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
                                             Company Name <span className="text-[var(--signal-red)]">*</span>
                                         </label>
-                                        <input type="text" required className="input-tactical w-full" />
+                                        <input
+                                            type="text"
+                                            name="company"
+                                            value={formData.company}
+                                            onChange={handleChange}
+                                            required
+                                            className="input-tactical w-full"
+                                        />
                                     </div>
 
                                     {/* Message */}
@@ -176,7 +250,12 @@ export default function GetAQuotePage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-1.5">
                                             How can we help
                                         </label>
-                                        <textarea className="input-tactical w-full min-h-[120px]" />
+                                        <textarea
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            className="input-tactical w-full min-h-[120px]"
+                                        />
                                     </div>
 
                                     {/* Submit */}

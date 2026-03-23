@@ -29,7 +29,7 @@ export default function PageHero({
                 <div className="absolute inset-0 z-0">
                     <img
                         src={imageSrc}
-                        alt=""
+                        alt={`${title} ${subtitle}`.trim()}
                         className="w-full h-full object-cover"
                     />
                 </div>
