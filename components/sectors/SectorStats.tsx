@@ -21,7 +21,7 @@ export default function SectorStats({ title, subtitle, stats }: SectorStatsProps
         <section className="relative bg-[var(--section-dark)] overflow-hidden">
             <div className="absolute inset-0 dotted-bg opacity-30" />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 relative z-10 py-16 lg:py-20">
                 <div className="text-center mb-12">
                     <h2 className="text-white mb-2">
                         {title} <span className="text-[var(--accent-amber)]">{subtitle}</span>

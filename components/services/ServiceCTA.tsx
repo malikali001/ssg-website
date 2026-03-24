@@ -19,7 +19,7 @@ export default function ServiceCTA() {
                     <h2 className="text-white mb-4">
                         Connect with Your SSG Team
                     </h2>
-                    <p className="text-white/60 mb-10 max-w-2xl mx-auto">
+                    <p className="text-white/60 mb-10 max-w-2xl mx-auto text-base sm:text-lg">
                         Ready to discuss your security and facilities requirements? Our experienced team is here to help design the right solution for you.
                     </p>
 

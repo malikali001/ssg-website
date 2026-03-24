@@ -111,7 +111,7 @@ export default function AboutPage() {
             {/* Stats */}
             <section className="relative bg-[var(--section-dark)] overflow-hidden">
                 <div className="absolute inset-0 dotted-bg opacity-30" />
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16">
                     <h2 className="font-bold text-white text-center mb-10">
                         Trusted Security. Proven Results.
                     </h2>
@@ -211,7 +211,7 @@ export default function AboutPage() {
 
             {/* Accreditations */}
             <section className="bg-[var(--section-light)] border-y border-[var(--border-color)] py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 text-center">
                     <p className="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-6">
                         Accreditations & Certifications
                     </p>

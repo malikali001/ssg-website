@@ -39,7 +39,7 @@ export default function MainNav() {
                 className={`sticky top-0 z-40 transition-all duration-300 bg-white border-b border-[var(--border-color)] ${isScrolled ? 'shadow-md' : ''}`}
                 onMouseLeave={closeDropdown}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
                     <div className="flex items-center justify-between h-16 sm:h-20">
                         {/* Logo */}
                         <Link href="/" className="flex items-center group">
@@ -63,7 +63,7 @@ export default function MainNav() {
                                     className="relative h-16 sm:h-20 flex items-center"
                                     onMouseEnter={() => setActiveDropdown(item.key)}
                                 >
-                                    <button className={`flex items-center gap-1 px-4 transition-colors duration-200 font-medium py-2 ${activeDropdown === item.key ? 'text-[var(--signal-red)]' : 'text-[var(--text-main)] hover:text-[var(--signal-red)]'}`}>
+                                    <button className={`flex items-center gap-1 px-4 transition-colors duration-200 font-semibold text-[15px] py-2 ${activeDropdown === item.key ? 'text-[var(--signal-red)]' : 'text-[var(--text-main)] hover:text-[var(--signal-red)]'}`}>
                                         {item.label}
                                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.key ? 'rotate-180' : ''}`} />
                                     </button>
@@ -73,7 +73,7 @@ export default function MainNav() {
                             {/* Case Studies - no dropdown */}
                             <Link
                                 href="/case-studies"
-                                className="px-4 text-[var(--text-main)] hover:text-[var(--signal-red)] transition-colors duration-200 font-medium"
+                                className="px-4 text-[var(--text-main)] hover:text-[var(--signal-red)] transition-colors duration-200 font-semibold text-[15px]"
                                 onMouseEnter={closeDropdown}
                             >
                                 Case Studies
@@ -84,7 +84,7 @@ export default function MainNav() {
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/contact-us"
-                                className="hidden sm:inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold text-xs sm:text-sm hover:scale-110 transition-transform duration-200"
+                                className="hidden sm:inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:scale-110 transition-transform duration-200"
                             >
                                 Contact Us
                             </Link>

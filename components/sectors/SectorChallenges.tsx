@@ -23,7 +23,7 @@ interface SectorChallengesProps {
 export default function SectorChallenges({ title, subtitle, challenges, solutions }: SectorChallengesProps) {
     return (
         <section className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
                 <div className="text-center mb-14">
                     <h2 className="mb-2">
                         {title} <span className="text-[var(--accent-amber)]">{subtitle}</span>

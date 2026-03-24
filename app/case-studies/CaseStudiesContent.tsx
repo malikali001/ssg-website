@@ -70,7 +70,7 @@ export default function CaseStudiesContent() {
                 <TrustBar />
             </div>
 
-            <section className="py-12 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="py-12 sm:py-24 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
                 <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                     {cases.map((study, idx) => (
                         <CaseStudyCard key={idx} {...study} />

@@ -31,9 +31,9 @@ export default function ValuePropositions() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
-                <div className="bg-[#F7F7F7] rounded-xl sm:rounded-2xl border border-gray-200/80 p-5 sm:p-8 md:p-12 lg:p-14">
+        <section className="bg-white px-5 md:px-10 lg:px-16">
+            <div className="max-w-[1280px] mx-auto py-10 sm:py-16 lg:py-20">
+                <div className="bg-[#F7F7F7] rounded-[24px] border border-gray-200/80 p-5 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14">
                     {/* Centered Heading */}
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
@@ -95,14 +95,14 @@ export default function ValuePropositions() {
                                             : 'border-l-gray-300'
                                     }`}
                                 >
-                                    <h3 className={`text-lg md:text-xl font-bold transition-colors duration-300 ${
+                                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
                                         activeIndex === index
                                             ? 'text-[var(--deep-navy)]'
                                             : 'text-[var(--text-muted)]'
                                     }`}>
                                         {item.title}
                                     </h3>
-                                    <p className={`mt-3 text-sm md:text-base leading-relaxed transition-colors duration-300 ${
+                                    <p className={`mt-3 text-base md:text-[17px] leading-relaxed transition-colors duration-300 ${
                                         activeIndex === index
                                             ? 'text-[var(--text-main)]'
                                             : 'text-[var(--text-muted)]'
