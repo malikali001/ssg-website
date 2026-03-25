@@ -12,7 +12,7 @@ export default function UtilityBar() {
 
     return (
         <div className="bg-[var(--section-dark)] text-white text-sm">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
                 <div className="flex items-center justify-between h-10">
                     {/* Left: Location + Phone */}
                     <div className="flex items-center gap-3 sm:gap-6">

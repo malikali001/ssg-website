@@ -16,7 +16,7 @@ const items = [
 export default function AboutDropdown() {
     return (
         <div className="w-full bg-white border-b border-[var(--border-color)] shadow-lg animate-fade-in">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-10">
                 <div className="flex gap-10">
                     {/* Left Side */}
                     <div className="flex-1 min-w-0">

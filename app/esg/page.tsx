@@ -169,7 +169,7 @@ export default function ESGPage() {
                     <h2 className="font-black text-white mb-8">
                         Integrity in Action
                     </h2>
-                    <p className="text-slate-200 max-w-3xl mx-auto leading-relaxed mb-16">
+                    <p className="text-[#1B1F3B] font-medium max-w-3xl mx-auto leading-relaxed mb-16">
                         Strong governance is the backbone of our trust. We operate with full transparency, accountability, and adherence to the highest regulatory standards.
                     </p>
 
@@ -294,7 +294,7 @@ export default function ESGPage() {
                         <div className="bg-[--color-deep-navy] rounded-3xl p-10 md:p-12 text-white shadow-2xl flex flex-col justify-center relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
 
-                            <h3 className="text-3xl font-bold mb-8 relative z-10">Annual Highlights</h3>
+                            <h3 className="text-3xl font-bold mb-8 relative z-10 text-[#1B1F3B]">Annual Highlights</h3>
                             <ul className="space-y-6 relative z-10">
                                 {[
                                     "Launched new Electric Vehicle fleet transition plan",
@@ -306,7 +306,7 @@ export default function ESGPage() {
                                         <div className="w-8 h-8 rounded-full bg-purple-600/20 flex items-center justify-center shrink-0 border border-purple-600/30">
                                             <CheckCircle2 className="w-5 h-5 text-purple-400" />
                                         </div>
-                                        <span className="text-slate-200 text-lg">{item}</span>
+                                        <span className="text-[#1B1F3B] font-medium text-lg">{item}</span>
                                     </li>
                                 ))}
                             </ul>

@@ -12,14 +12,16 @@ const stats = [
 
 export default function StatsBar() {
     return (
-        <section className="relative bg-[#F7F7F7] overflow-hidden border-b border-[var(--border-color)]">
-            {/* Red dotted pattern — soft, muted, evenly spaced */}
-            <div className="absolute inset-0" style={{
-                backgroundImage: 'radial-gradient(circle, rgba(200, 50, 50, 0.18) 1.2px, transparent 1.2px)',
-                backgroundSize: '22px 22px',
-            }} />
+        <section className="bg-white px-5 md:px-10 lg:px-16">
+            <div className="max-w-[1280px] mx-auto py-10 sm:py-16 lg:py-20">
+                <div className="relative bg-white overflow-hidden rounded-[24px]">
+                    {/* Red dotted pattern — soft, muted, evenly spaced */}
+                    <div className="absolute inset-0" style={{
+                        backgroundImage: 'radial-gradient(circle, rgba(200, 50, 50, 0.18) 1.2px, transparent 1.2px)',
+                        backgroundSize: '22px 22px',
+                    }} />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
+                    <div className="relative z-10 px-5 sm:px-8 md:px-10 lg:px-12 py-12 sm:py-20 lg:py-28">
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -55,18 +57,20 @@ export default function StatsBar() {
                                 </div>
 
                                 {/* Stat number */}
-                                <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.4rem] font-bold text-[#C83232] leading-none mb-2 sm:mb-3">
+                                <div className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-extrabold text-[#C83232] leading-none mb-2 sm:mb-3">
                                     {stat.value}
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-[var(--text-main)] text-xs sm:text-[15px] leading-snug">
+                                <p className="text-[var(--text-main)] text-sm sm:text-base leading-snug font-medium">
                                     {stat.label}
                                 </p>
                             </motion.div>
                         );
                     })}
                 </div>
+                </div>
+            </div>
             </div>
         </section>
     );

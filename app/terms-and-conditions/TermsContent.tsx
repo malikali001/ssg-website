@@ -26,7 +26,7 @@ export default function TermsContent() {
                 description="Terms and conditions governing the use of the SSG Support Services Group LTD website and services."
             />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     <aside className="lg:col-span-1">
                         <TableOfContents sections={sections} />

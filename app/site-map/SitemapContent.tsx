@@ -78,7 +78,7 @@ export default function SitemapContent() {
                 description="Complete navigation guide to all pages and services on the SSG Support Services Group LTD website."
             />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {sitemapSections.map((section, index) => {
                         const Icon = section.icon;

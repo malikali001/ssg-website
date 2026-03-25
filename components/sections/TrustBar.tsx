@@ -13,8 +13,8 @@ const accreditations = [
 
 export default function TrustBar() {
     return (
-        <section className="bg-white border-t border-[var(--border-color)]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <section className="bg-white px-5 md:px-10 lg:px-16">
+            <div className="max-w-[1280px] mx-auto py-10 sm:py-16 lg:py-20">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left — Text */}
                     <motion.div

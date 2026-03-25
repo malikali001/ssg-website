@@ -29,7 +29,7 @@ export default function IntelligenceFeature({
 }: IntelligenceFeatureProps) {
     return (
         <section className="py-12 sm:py-24 bg-slate-50 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                     {/* Feature Text */}
