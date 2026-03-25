@@ -59,7 +59,7 @@ export default function HeroSection() {
     return (
         <section className="bg-white px-5 md:px-10 lg:px-16 pt-3 sm:pt-4 pb-6 sm:pb-8">
             {/* Rounded image container with side margins */}
-            <div className="relative max-w-[1280px] mx-auto h-[480px] sm:h-[560px] md:h-[660px] lg:h-[760px] rounded-xl sm:rounded-2xl overflow-hidden">
+            <div className="relative max-w-[1280px] mx-auto h-[460px] sm:h-[520px] md:h-[610px] lg:h-[690px] rounded-xl sm:rounded-2xl overflow-hidden">
                 {/* Background Image */}
                 <AnimatePresence mode="popLayout">
                     <motion.div
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 </AnimatePresence>
 
                 {/* White Content Card — tall, flush left, rounded right */}
-                <div className="absolute top-6 bottom-6 sm:top-8 sm:bottom-8 left-4 sm:left-8 lg:left-12 z-10 w-[calc(100%-2rem)] sm:w-[420px] md:w-[480px] lg:w-[540px]">
+                <div className="absolute top-6 bottom-6 sm:top-8 sm:bottom-8 left-4 sm:left-8 lg:left-12 z-10 w-[calc(100%-2rem)] sm:w-[460px] md:w-[520px] lg:w-[600px]">
                     <div className="relative h-full bg-white/[0.97] backdrop-blur-sm rounded-2xl sm:rounded-3xl flex flex-col justify-center p-5 sm:p-9 lg:p-12">
                         {/* Dotted pattern inside card */}
                         <div className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none">
@@ -95,10 +95,10 @@ export default function HeroSection() {
                         <div className="relative z-10">
                             {/* Badge */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
-                                <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#C83232] text-white text-[10px] sm:text-xs font-bold tracking-wide">
+                                <span className="inline-flex items-center px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#C83232] text-white text-xs sm:text-sm font-bold tracking-wide">
                                     SSG Security Services
                                 </span>
-                                <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
+                                <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-[15px] font-semibold text-[var(--text-muted)] hover:text-[var(--signal-red)] transition-colors">
                                     Find your solution <ChevronRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -111,7 +111,7 @@ export default function HeroSection() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -8 }}
                                     transition={{ duration: 0.35 }}
-                                    className="font-bold leading-[1.15] mb-5 sm:mb-6 whitespace-pre-line"
+                                    className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold leading-[1.15] mb-5 sm:mb-6 whitespace-pre-line tracking-tight"
                                 >
                                     {slide.heading}
                                 </motion.h1>
@@ -125,7 +125,7 @@ export default function HeroSection() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -8 }}
                                     transition={{ duration: 0.35, delay: 0.08 }}
-                                    className="text-[var(--text-main)] mb-6 sm:mb-8 text-sm sm:text-[17px] leading-relaxed"
+                                    className="text-[var(--text-main)] mb-6 sm:mb-8 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed font-medium"
                                 >
                                     {slide.description}
                                 </motion.p>
