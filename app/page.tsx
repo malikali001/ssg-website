@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <ServiceCards />
       <StatsBar />
+      <ServiceCards />
       <ValuePropositions />
       <CTABanner />
 
