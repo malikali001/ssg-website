@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CTABanner() {
@@ -12,8 +13,15 @@ export default function CTABanner() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
-                    className="bg-[var(--section-dark)] rounded-[24px] px-6 py-10 sm:px-8 sm:py-14 md:px-16 md:py-20 text-center"
+                    className="relative overflow-hidden bg-[var(--section-dark)] rounded-[24px] px-6 py-10 sm:px-8 sm:py-14 md:px-16 md:py-20 text-center"
                 >
+                    <Image
+                        src="/dot-image.webp"
+                        alt=""
+                        fill
+                        className="object-cover object-top scale-[1.8] -translate-x-[20%] -translate-y-[15%]"
+                    />
+                    <div className="relative z-10">
                     <h2 className="text-white mb-4">
                         Ready to secure what matters?
                     </h2>
@@ -26,6 +34,7 @@ export default function CTABanner() {
                     >
                         Contact Us
                     </Link>
+                    </div>
                 </motion.div>
             </div>
         </section>
