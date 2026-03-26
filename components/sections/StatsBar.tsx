@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ShieldCheck, Users, Handshake, Eye } from 'lucide-react';
 
 const stats = [
@@ -13,15 +14,14 @@ const stats = [
 export default function StatsBar() {
     return (
         <section className="bg-white px-5 md:px-10 lg:px-16">
-            <div className="max-w-[1280px] mx-auto py-10 sm:py-16 lg:py-20">
-                <div className="relative bg-white overflow-hidden rounded-[24px]">
-                    {/* Red dotted pattern — soft, muted, evenly spaced */}
-                    <div className="absolute inset-0" style={{
-                        backgroundImage: 'radial-gradient(circle, rgba(200, 50, 50, 0.18) 1.2px, transparent 1.2px)',
-                        backgroundSize: '22px 22px',
-                    }} />
-
-                    <div className="relative z-10 px-5 sm:px-8 md:px-10 lg:px-12 py-12 sm:py-20 lg:py-28">
+            <div className="relative overflow-hidden max-w-[1280px] mx-auto py-10 sm:py-16 lg:py-20">
+                    <Image
+                        src="/commitment-section-dotted-image.webp"
+                        alt=""
+                        fill
+                        className="object-cover"
+                    />
+                <div className="relative z-10">
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -70,7 +70,6 @@ export default function StatsBar() {
                     })}
                 </div>
                 </div>
-            </div>
             </div>
         </section>
     );
