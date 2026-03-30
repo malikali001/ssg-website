@@ -10,9 +10,9 @@ import AboutDropdown from './AboutDropdown';
 import MobileNav from './MobileNav';
 
 const navItems = [
+    { key: 'about', label: 'About Us' },
     { key: 'security', label: 'Security Services' },
     { key: 'sectors', label: 'Sectors' },
-    { key: 'about', label: 'About Us' },
 ] as const;
 
 type DropdownKey = (typeof navItems)[number]['key'];
@@ -56,7 +56,30 @@ export default function MainNav() {
 
                         {/* Center Menu - Desktop */}
                         <div className="hidden lg:flex items-center gap-1">
-                            {navItems.map((item) => (
+                            {/* About Us */}
+                            <div
+                                className="relative h-16 sm:h-20 flex items-center"
+                                onMouseEnter={() => setActiveDropdown('about')}
+                            >
+                                <button className={`flex items-center gap-1 px-4 transition-colors duration-200 font-semibold text-[15px] py-2 ${activeDropdown === 'about' ? 'text-[var(--signal-red)]' : 'text-[var(--text-main)] hover:text-[var(--signal-red)]'}`}>
+                                    About Us
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
+                                </button>
+                            </div>
+
+                            {/* SSG Intelligence Centre - external link */}
+                            <a
+                                href="https://ssgic.ssgukltd.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-4 text-[var(--text-main)] hover:text-[var(--signal-red)] transition-colors duration-200 font-semibold text-[15px]"
+                                onMouseEnter={closeDropdown}
+                            >
+                                SSG Intelligence Centre
+                            </a>
+
+                            {/* Remaining dropdown items */}
+                            {navItems.filter(item => item.key !== 'about').map((item) => (
                                 <div
                                     key={item.key}
                                     className="relative h-16 sm:h-20 flex items-center"

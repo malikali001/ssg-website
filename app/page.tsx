@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import ServiceCards from "@/components/sections/ServiceCards";
+import SIAApproved from "@/components/sections/SIAApproved";
 import StatsBar from "@/components/sections/StatsBar";
 import ValuePropositions from "@/components/sections/ValuePropositions";
 import CTABanner from "@/components/sections/CTABanner";
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <SIAApproved />
       <StatsBar />
       <ServiceCards />
       <ValuePropositions />
