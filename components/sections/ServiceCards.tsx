@@ -50,22 +50,10 @@ const services: ServiceCardItem[] = [
         href: '/services/security/concierge',
     },
     {
-        title: 'Commercial Cleaning',
-        description: 'Advanced security systems safeguard properties with smart, reliable protection solutions.',
-        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
-        href: '/services/facilities/commercial-cleaning',
-    },
-    {
-        title: 'Property Maintenance',
-        description: 'Advanced security systems safeguard properties with smart, reliable protection solutions.',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-        href: '/services/facilities/property-maintenance',
-    },
-    {
-        title: 'Waste Management',
-        description: 'Advanced security systems safeguard properties with smart, reliable protection solutions.',
-        image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80',
-        href: '/services/facilities/waste-management',
+        title: 'Reception Services',
+        description: 'Professional front-of-house concierge and reception management for your premises.',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+        href: '/services/facilities/reception',
     },
 ];
 

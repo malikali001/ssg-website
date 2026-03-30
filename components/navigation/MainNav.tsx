@@ -11,7 +11,6 @@ import MobileNav from './MobileNav';
 
 const navItems = [
     { key: 'security', label: 'Security Services' },
-    { key: 'facilities', label: 'Facilities Services' },
     { key: 'sectors', label: 'Sectors' },
     { key: 'about', label: 'About Us' },
 ] as const;
@@ -101,8 +100,7 @@ export default function MainNav() {
                 </div>
 
                 {/* Full-width Mega Menu Dropdowns */}
-                {activeDropdown === 'security' && <ServiceDropdown type="security" />}
-                {activeDropdown === 'facilities' && <ServiceDropdown type="facilities" />}
+                {activeDropdown === 'security' && <ServiceDropdown />}
                 {activeDropdown === 'sectors' && <SectorsDropdown />}
                 {activeDropdown === 'about' && <AboutDropdown />}
             </nav>

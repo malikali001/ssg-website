@@ -4,7 +4,7 @@
 import LegalHero from '@/components/legal/LegalHero';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Link from 'next/link';
-import { Shield, Wrench, Building2, FileText, Phone, Users, Award } from 'lucide-react';
+import { Shield, Building2, FileText, Phone, Users, Award } from 'lucide-react';
 
 export default function SitemapContent() {
     const sitemapSections = [
@@ -30,15 +30,6 @@ export default function SitemapContent() {
                 { name: 'Electronic Security', href: '/services/security/electronic-security' },
                 { name: 'Concierge Security', href: '/services/security/concierge' },
                 { name: 'Key Holding & Response', href: '/services/security/key-holding' },
-            ],
-        },
-        {
-            title: 'Facilities Management',
-            icon: Wrench,
-            links: [
-                { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning' },
-                { name: 'Waste Management', href: '/services/facilities/waste-management' },
-                { name: 'Property Maintenance', href: '/services/facilities/property-maintenance' },
                 { name: 'Reception Services', href: '/services/facilities/reception' },
             ],
         },
@@ -121,7 +112,7 @@ export default function SitemapContent() {
                                     Can't Find What You're Looking For?
                                 </h3>
                                 <p className="text-slate-200 mb-6">
-                                    Our team is here to help. Contact us directly for any inquiries about our security and facilities management services.
+                                    Our team is here to help. Contact us directly for any inquiries about our security services.
                                 </p>
                                 <Link
                                     href="/contact-us"

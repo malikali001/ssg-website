@@ -5,13 +5,10 @@ import ServiceHero from "@/components/services/ServiceHero";
 import ServiceGrid from "@/components/services/ServiceGrid";
 import ServiceCTA from "@/components/services/ServiceCTA";
 import TrustBar from "@/components/sections/TrustBar";
-import { Sparkles, Trash2, Wrench, Monitor } from 'lucide-react';
+import { Monitor } from 'lucide-react';
 
 export default function SoftServicesContent() {
     const services = [
-        { icon: Sparkles, title: 'Commercial Cleaning', desc: 'Deep cleaning, sanitization, and daily office maintenance to high standards.' },
-        { icon: Trash2, title: 'Waste Management', desc: 'Sustainable disposal and recycling solutions for commercial premises.' },
-        { icon: Wrench, title: 'Property Maintenance', desc: 'Reactive and planned preventative maintenance for building fabrics.' },
         { icon: Monitor, title: 'Reception Services', desc: 'Front-of-house concierge and reception management.' },
     ];
 

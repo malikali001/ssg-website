@@ -18,10 +18,10 @@ const serviceCategories = [
         href: '/services/security',
     },
     {
-        title: 'Facilities Services',
-        description: 'Commercial cleaning, waste management, property maintenance, and reception.',
+        title: 'Reception Services',
+        description: 'Professional front-of-house concierge and reception management for your premises.',
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-        href: '/services/facilities',
+        href: '/services/facilities/reception',
     },
     {
         title: 'Intelligence & Technology',

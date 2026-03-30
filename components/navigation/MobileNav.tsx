@@ -18,14 +18,6 @@ const menuSections = [
             { name: 'Electronic Security', href: '/services/security/electronic-security' },
             { name: 'Concierge Security', href: '/services/security/concierge' },
             { name: 'Key Holding & Alarm Response', href: '/services/security/key-holding' },
-        ],
-    },
-    {
-        title: 'Facilities Services',
-        items: [
-            { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning' },
-            { name: 'Waste Management', href: '/services/facilities/waste-management' },
-            { name: 'Property Maintenance', href: '/services/facilities/property-maintenance' },
             { name: 'Reception Services', href: '/services/facilities/reception' },
         ],
     },

@@ -22,10 +22,10 @@ const heroSlides = [
         image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
     },
     {
-        heading: 'Facilities that\ndeliver results',
+        heading: 'Professional\nreception services',
         description:
-            'From commercial cleaning to property maintenance, we keep your facilities running smoothly so you can focus on what matters most.',
-        cta: { label: 'Explore Facilities Services', href: '/services/facilities/commercial-cleaning' },
+            'Front-of-house concierge and reception management, delivering a welcoming and professional first impression for your visitors.',
+        cta: { label: 'Explore Reception Services', href: '/services/facilities/reception' },
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
     },
 ];

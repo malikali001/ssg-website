@@ -1,8 +1,8 @@
 import SoftServicesContent from "./SoftServicesContent";
 
 export const metadata = {
-    title: 'Soft Services & Facilities Management | SSG',
-    description: 'Commercial cleaning, waste management, and property maintenance services. Integrated facilities management solutions.',
+    title: 'Reception Services | SSG',
+    description: 'Professional front-of-house concierge and reception management services by SSG.',
 };
 
 export default function SoftServicesPage() {
