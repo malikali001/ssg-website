@@ -66,8 +66,13 @@ export default function PageHero({
                                 </h2>
 
                                 {/* Description */}
-                                <p className="text-[var(--text-main)] mb-5 sm:mb-7 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed font-medium">
+                                <p className="text-[var(--text-main)] mb-4 sm:mb-5 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed font-medium">
                                     {description}
+                                </p>
+
+                                {/* Tagline */}
+                                <p className="text-sm sm:text-base font-semibold text-[var(--signal-red)] italic tracking-wide mb-5 sm:mb-7">
+                                    Focusing on What Matters
                                 </p>
 
                                 {/* CTA */}

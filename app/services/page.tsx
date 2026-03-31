@@ -15,9 +15,9 @@ export default function ServicesPage() {
             {/* Hero */}
             <PageHero
                 badge="Our Services"
-                title="Our"
-                subtitle="Services"
-                description="Choose your path to comprehensive protection and professional reception services."
+                title="Security &"
+                subtitle="Reception Services"
+                description="SIA approved manned guarding, mobile patrols, concierge and professional front-of-house services tailored to your needs."
                 imageSrc="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
             />
             <section className="section-container">

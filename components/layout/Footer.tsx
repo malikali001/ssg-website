@@ -21,7 +21,7 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                            Making people and places the best they can be.
+                            Focusing on What Matters.
                         </p>
                     </div>
 

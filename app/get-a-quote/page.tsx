@@ -105,9 +105,9 @@ export default function GetAQuotePage() {
             {/* Hero */}
             <PageHero
                 badge="Free Quote"
-                title="Get a Quote"
-                subtitle=""
-                description="Tell us your security requirements and our team will get back to you with a tailored solution."
+                title="Request a"
+                subtitle="Free Quote"
+                description="Share your security requirements and our team will provide a tailored, competitive proposal."
                 imageSrc="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80"
             />
 
