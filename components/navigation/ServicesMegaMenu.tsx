@@ -4,12 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
     Shield, Car, Camera, UserCheck, Key, Dog,
-    Sparkles, Trash2, Wrench, Monitor, ArrowUpRight
+    Monitor, ArrowUpRight
 } from 'lucide-react';
-
-interface ServiceDropdownProps {
-    type: 'security' | 'facilities';
-}
 
 const securityServices = [
     { name: 'Manned Guarding', href: '/services/security/manned-guarding', icon: Shield },
@@ -18,42 +14,23 @@ const securityServices = [
     { name: 'Electronic Security', href: '/services/security/electronic-security', icon: Camera },
     { name: 'Concierge Security', href: '/services/security/concierge', icon: UserCheck },
     { name: 'Key Holding & Alarm Response', href: '/services/security/key-holding', icon: Key },
-];
-
-const facilitiesServices = [
-    { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning', icon: Sparkles },
-    { name: 'Waste Management', href: '/services/facilities/waste-management', icon: Trash2 },
-    { name: 'Property Maintenance', href: '/services/facilities/property-maintenance', icon: Wrench },
     { name: 'Reception Services', href: '/services/facilities/reception', icon: Monitor },
 ];
 
 const config = {
-    security: {
-        heading: 'Expert security services delivering outstanding protection outcomes.',
-        description: 'Our mission is to make people and places safer, smarter, and stronger every day.',
-        services: securityServices,
-        card: {
-            image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
-            title: 'Security Services',
-            description: 'Comprehensive security services protect businesses, assets, and people effectively.',
-            href: '/services/security',
-        },
-    },
-    facilities: {
-        heading: 'Professional facilities management for immaculate, efficient spaces.',
-        description: 'Integrated facility services that maintain your environment to the highest standards.',
-        services: facilitiesServices,
-        card: {
-            image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-            title: 'Facilities Services',
-            description: 'End-to-end facilities management keeping your premises in peak condition.',
-            href: '/services/facilities',
-        },
+    heading: 'Expert security services delivering outstanding protection outcomes.',
+    description: 'Our mission is to make people and places safer, smarter, and stronger every day.',
+    services: securityServices,
+    card: {
+        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
+        title: 'Security Services',
+        description: 'Comprehensive security services protect businesses, assets, and people effectively.',
+        href: '/services/security',
     },
 };
 
-export default function ServiceDropdown({ type }: ServiceDropdownProps) {
-    const { heading, description, services, card } = config[type];
+export default function ServiceDropdown() {
+    const { heading, description, services, card } = config;
 
     return (
         <div className="w-full bg-white border-b border-[var(--border-color)] shadow-lg animate-fade-in">

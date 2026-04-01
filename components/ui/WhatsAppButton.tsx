@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
 
     // WhatsApp business number - Update this with your actual number
     // Format: country code + number (no spaces, dashes, or special characters)
-    const phoneNumber = '447123456789'; // Replace with your WhatsApp business number
+    const phoneNumber = '442085910330';
 
     // Pre-filled message
     const message = encodeURIComponent("Hi, I'm interested in SSG's services");

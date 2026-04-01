@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Shield, Building2, Monitor, ChevronRight, Leaf, Heart, Scale, Award, Clock, MapPin } from 'lucide-react';
+import { Target, Users, Lightbulb, Flame, Zap, MessageCircle } from 'lucide-react';
 import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
@@ -10,56 +8,49 @@ export const metadata: Metadata = {
     keywords: ['About SSG', 'Security Company UK', 'ESG', 'Compliance', 'SIA Approved'],
 };
 
-const serviceCategories = [
+const spiritValues = [
     {
-        title: 'Security Services',
-        description: 'SIA-approved manned guarding, mobile patrols, K9 units, and electronic security.',
-        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
-        href: '/services/security',
+        title: 'Candour',
+        tagline: 'We will be open and honest with ourselves and others.',
+        description: 'We value and respect candour, encouraging open and honest feedback recognizing that our reputation and the trust people place in us depends on being honest with ourselves and others.',
+        icon: MessageCircle,
+        color: 'blue',
     },
     {
-        title: 'Facilities Services',
-        description: 'Commercial cleaning, waste management, property maintenance, and reception.',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-        href: '/services/facilities',
+        title: 'Collaboration',
+        tagline: 'We will work as a team and succeed together.',
+        description: 'We put the needs of the team above our own, respect the role others play and work collaboratively to ensure we achieve our vision.',
+        icon: Users,
+        color: 'green',
     },
     {
-        title: 'Intelligence & Technology',
-        description: 'Real-time guard tracking, incident reporting, and predictive risk analytics.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-        href: '/portals/intelligence',
+        title: 'Opportunity',
+        tagline: 'For people to succeed.',
+        description: 'We will inspire, support and invest in our people who will share in our success. We will provide the opportunity, inspiration, investment and support to enable our people to realise their full potential because they belong to our family and are core to our success.',
+        icon: Lightbulb,
+        color: 'amber',
+    },
+    {
+        title: 'Relentless',
+        tagline: 'Desire to succeed.',
+        description: 'We are driven to be the best. We have a relentless desire to succeed, be the best, and deliver superior services which create long-term value for the business and our customers.',
+        icon: Flame,
+        color: 'red',
+    },
+    {
+        title: 'Disruptive Innovation',
+        tagline: 'We will continually challenge convention.',
+        description: 'We will continually challenge the status quo, push boundaries and utilise leading edge technology, to optimize how we work, to deliver superior value-added services.',
+        icon: Zap,
+        color: 'purple',
     },
 ];
 
-const stats = [
-    { value: '150+', label: 'Sites Secured', icon: Shield },
-    { value: '15+', label: 'Years Excellence', icon: Clock },
-    { value: '24/7', label: 'National Coverage', icon: MapPin },
-    { value: '100%', label: 'SIA Approved', icon: Award },
-];
-
-const narrativeBlocks = [
-    {
-        title: 'Security with Purpose',
-        description: 'Founded with a vision to revolutionize the security and facilities management industry, SSG UK Ltd has grown from a regional security provider to a national leader in integrated protection services.',
-        secondParagraph: 'Our journey has been defined by continuous innovation, from implementing the SSG Intelligence Center to pioneering sustainable facilities management practices. We\'ve built our reputation on precision, reliability, and an unwavering commitment to our clients\' success.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-        href: '/portals/intelligence',
-    },
-    {
-        title: 'People at the Heart',
-        description: 'Our 150+ highly trained professionals are the foundation of everything we do. Every team member is SIA-licensed, thoroughly vetted, and continuously trained to the highest industry standards.',
-        secondParagraph: 'We are a proud Living Wage employer, investing in our people because we know that motivated, well-supported staff deliver exceptional service. Our employee development programs ensure continuous growth and career progression.',
-        image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
-        href: '/careers',
-    },
-    {
-        title: 'Built on Trust and Integrity',
-        description: 'SSG operates with full transparency and accountability. Our ISO 9001 and ISO 14001 certifications, combined with SIA ACS Approved Contractor status, demonstrate our commitment to quality and compliance.',
-        secondParagraph: 'Our ESG initiatives ensure we deliver social value alongside operational excellence — from reducing environmental impact to supporting local communities across the UK.',
-        image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80',
-        href: '/esg',
-    },
+const missionValues = [
+    'A work environment for our employees that encourages good performance and rewards individual achievement.',
+    'Listen to all concerned to ensure we get things right, first time, every time.',
+    'Never stop seeking new ways of improving our business for the benefit of all those associated with it.',
+    'Generate an acceptable return on investment thereby enabling growth and maintaining stability.',
 ];
 
 export default function AboutPage() {
@@ -68,143 +59,127 @@ export default function AboutPage() {
             {/* Hero */}
             <PageHero
                 badge="About Us"
-                title="About"
-                subtitle="SSG UK Ltd"
-                description="Our mission is to make people and places safer, smarter, and stronger every day."
+                title="SSG Support"
+                subtitle="Services Group"
+                description="A nationally operating, SIA approved security company passionate about protecting people, property and premises."
                 imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
                 ctaLabel="Get in Touch"
                 ctaHref="/contact-us"
             />
 
-            {/* Service Category Cards */}
-            <section className="section-container bg-white">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
-                    {serviceCategories.map((cat) => (
-                        <Link
-                            key={cat.href}
-                            href={cat.href}
-                            className="group block bg-white border border-[var(--border-color)] rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
-                        >
-                            <div className="aspect-[16/10] overflow-hidden">
-                                <Image
-                                    src={cat.image}
-                                    alt={cat.title}
-                                    width={800}
-                                    height={500}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-2 text-[var(--deep-navy)] group-hover:text-[var(--signal-red)] transition-colors">
-                                    {cat.title}
-                                </h3>
-                                <p className="text-[var(--text-muted)] text-sm mb-3">{cat.description}</p>
-                                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--signal-red)] group-hover:gap-2 transition-all">
-                                    Learn More <ChevronRight className="w-4 h-4" />
-                                </span>
-                            </div>
-                        </Link>
-                    ))}
+            {/* Company Profile — Focusing on What Matters */}
+            <section className="bg-white">
+                <div className="section-container">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-10">
+                            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[var(--signal-red)] mb-3">
+                                Company Profile &amp; Passion
+                            </span>
+                            <h2 className="font-bold text-[var(--deep-navy)] mb-4">
+                                Focusing on <span className="text-[var(--accent-amber)]">What Matters</span>
+                            </h2>
+                        </div>
+
+                        <div className="space-y-6 text-[var(--text-main)] leading-relaxed">
+                            <p>
+                                SSG Support Services Group is rapidly expanding within the security manned guarding industry. Our nationwide operations and workforce is supported by the 24/7 SSG control team based in London to ensure the quality of service surpasses client expectations.
+                            </p>
+                            <p>
+                                We understand the importance within the retail, corporate and commercial industry of balancing essential security needs with the highest levels of customer care and staff protection, providing a secure and friendly environment.
+                            </p>
+                            <p>
+                                Our workforces are the day to day ambassadors of SSG. Therefore we have invested heavily in selecting, vetting, training and retaining the right SIA trained security officers to share initiatives with our clients by offering services that add value, remove costs and improve productivity.
+                            </p>
+                            <p>
+                                SSG are proud of our distinctive culture and core values that have cascaded through the organisation. The entire workforce is passionate on how we conduct our business and help develop positive relationships with all staff and clients. Our carefully-developed business strategy makes sure we offer high quality security services at competitive rates.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Stats */}
+            {/* Mission Statement */}
             <section className="relative bg-[var(--section-dark)] overflow-hidden">
-                <div className="absolute inset-0 dotted-bg opacity-30" />
-                <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16">
-                    <h2 className="font-bold text-white text-center mb-10">
-                        Trusted Security. Proven Results.
-                    </h2>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                        {stats.map((stat, idx) => {
-                            const Icon = stat.icon;
-                            return (
-                                <div key={idx} className="text-center">
-                                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[var(--accent-amber)]/15 mb-3">
-                                        <Icon className="w-5 h-5 text-[var(--accent-amber)]" />
+                <div className="absolute inset-0 dotted-bg opacity-20" />
+                <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16 lg:py-24">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-10">
+                            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[var(--accent-amber)]/15 mb-5">
+                                <Target className="w-7 h-7 text-[var(--accent-amber)]" />
+                            </div>
+                            <h2 className="font-bold text-white mb-4">
+                                Mission Statement
+                            </h2>
+                        </div>
+
+                        <div className="space-y-6 text-white/80 leading-relaxed text-center">
+                            <p>
+                                SSG Support Services Group Ltd is driven by a desire to provide a quality of service to all clients that can be considered in best in class.
+                            </p>
+                            <p>
+                                We will motivate and reward our staff to ensure they all focus on the aspects of service that contribute to our success.
+                            </p>
+                        </div>
+
+                        <div className="mt-10 bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8">
+                            <p className="text-white font-semibold text-center mb-6">
+                                Our Security Officers will provide security of the highest order to deter crime and prevent incidents of damage, loss or harm to the people, property or premises that they protect.
+                            </p>
+                            <p className="text-white/60 text-sm text-center mb-6">
+                                To achieve our mission we must implement and follow business values and work ethics:
+                            </p>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                {missionValues.map((value, idx) => (
+                                    <div key={idx} className="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+                                        <div className="w-6 h-6 rounded-full bg-[var(--accent-amber)]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span className="text-[var(--accent-amber)] text-xs font-bold">{idx + 1}</span>
+                                        </div>
+                                        <p className="text-white/80 text-sm leading-relaxed">{value}</p>
                                     </div>
-                                    <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                                    <div className="text-xs sm:text-sm text-white/60 font-medium uppercase tracking-wide">{stat.label}</div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* The SSG Spirit */}
+            <section className="bg-[var(--section-light)]">
+                <div className="section-container">
+                    <div className="text-center mb-12">
+                        <span className="inline-block text-xs font-bold uppercase tracking-widest text-[var(--signal-red)] mb-3">
+                            Our Core Values
+                        </span>
+                        <h2 className="font-bold text-[var(--deep-navy)]">
+                            The SSG <span className="text-[var(--accent-amber)]">Spirit</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+                        {spiritValues.map((val, idx) => {
+                            const Icon = val.icon;
+                            const colorMap: Record<string, { bg: string; text: string }> = {
+                                blue: { bg: 'bg-blue-500/10', text: 'text-blue-600' },
+                                green: { bg: 'bg-green-500/10', text: 'text-green-600' },
+                                amber: { bg: 'bg-amber-500/10', text: 'text-amber-600' },
+                                red: { bg: 'bg-red-500/10', text: 'text-red-600' },
+                                purple: { bg: 'bg-purple-500/10', text: 'text-purple-600' },
+                            };
+                            const colors = colorMap[val.color];
+                            return (
+                                <div
+                                    key={idx}
+                                    className={`bg-white rounded-xl p-6 sm:p-7 border border-[var(--border-color)] hover:shadow-lg transition-all duration-300 ${idx === 4 ? 'sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto lg:max-w-none' : ''}`}
+                                >
+                                    <div className={`inline-flex items-center justify-center w-12 h-12 ${colors.bg} rounded-full mb-5`}>
+                                        <Icon className={`w-6 h-6 ${colors.text}`} />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-1">{val.title}</h3>
+                                    <p className="text-sm font-semibold text-[var(--signal-red)] mb-3">{val.tagline}</p>
+                                    <p className="text-[var(--text-muted)] text-sm leading-relaxed">{val.description}</p>
                                 </div>
                             );
                         })}
-                    </div>
-                </div>
-            </section>
-
-            {/* Narrative Blocks */}
-            {narrativeBlocks.map((block, index) => {
-                const isReversed = index % 2 !== 0;
-                const bgColor = index % 2 === 0 ? 'bg-white' : 'bg-[var(--section-light)]';
-                return (
-                    <section key={index} className={bgColor}>
-                        <div className="section-container">
-                            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                                <div className={isReversed ? 'lg:order-2' : ''}>
-                                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                                        <Image src={block.image} alt={block.title} width={800} height={600} className="w-full h-full object-cover" />
-                                    </div>
-                                </div>
-                                <div className={isReversed ? 'lg:order-1' : ''}>
-                                    <h2 className="font-bold mb-6 text-[var(--deep-navy)]">
-                                        {block.title}
-                                    </h2>
-                                    <p className="text-[var(--text-main)] leading-relaxed mb-4">{block.description}</p>
-                                    <p className="text-[var(--text-main)] leading-relaxed mb-6">{block.secondParagraph}</p>
-                                    <Link href={block.href} className="arrow-link text-sm">
-                                        Find out more <ChevronRight className="w-4 h-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                );
-            })}
-
-            {/* ESG Section */}
-            <section className="section-container bg-white">
-                <div className="text-center mb-12">
-                    <h2 className="font-bold mb-4">
-                        Our <span className="text-[var(--accent-amber)]">ESG</span> Commitment
-                    </h2>
-                    <p className="text-[var(--text-main)] max-w-3xl mx-auto">
-                        Environmental, Social, and Governance excellence at the heart of everything we do.
-                    </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
-                    <div className="bg-[var(--section-light)] rounded-lg p-5 sm:p-7 border border-[var(--border-color)]">
-                        <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-full mb-5">
-                            <Leaf className="w-6 h-6 text-green-600" />
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">Environmental</h3>
-                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Net Zero commitment by 2040</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Carbon reduction plans across all operations</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Eco-friendly practices and waste reduction</span></li>
-                        </ul>
-                    </div>
-                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
-                        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-full mb-5">
-                            <Heart className="w-6 h-6 text-blue-600" />
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">Social</h3>
-                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Community support initiatives</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Employee wellbeing and development</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Living Wage employer, diversity commitment</span></li>
-                        </ul>
-                    </div>
-                    <div className="bg-[var(--section-light)] rounded-lg p-7 border border-[var(--border-color)]">
-                        <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-full mb-5">
-                            <Scale className="w-6 h-6 text-purple-600" />
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">Governance</h3>
-                        <ul className="space-y-2 text-[var(--text-muted)] text-sm">
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Ethical business practices and transparency</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Robust compliance frameworks</span></li>
-                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-[var(--signal-red)] rounded-full mt-1.5 flex-shrink-0" /><span>Anti-corruption and modern slavery policies</span></li>
-                        </ul>
                     </div>
                 </div>
             </section>

@@ -21,7 +21,7 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                            Making people and places the best they can be.
+                            Focusing on What Matters.
                         </p>
                     </div>
 
@@ -35,16 +35,6 @@ export default function Footer() {
                             <li><Link href="/services/security/key-holding" className="hover:text-[var(--signal-red)] transition-colors">Key Holding</Link></li>
                             <li><Link href="/services/security/electronic-security" className="hover:text-[var(--signal-red)] transition-colors">Electronic Security</Link></li>
                             <li><Link href="/services/security/concierge" className="hover:text-[var(--signal-red)] transition-colors">Concierge Security</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Column 3: Facilities Services */}
-                    <div>
-                        <h4 className="text-[var(--deep-navy)] font-semibold text-sm sm:text-base mb-3 sm:mb-4">Facilities Services</h4>
-                        <ul className="space-y-2 sm:space-y-2.5 text-sm sm:text-[15px]">
-                            <li><Link href="/services/facilities/commercial-cleaning" className="hover:text-[var(--signal-red)] transition-colors">Commercial Cleaning</Link></li>
-                            <li><Link href="/services/facilities/waste-management" className="hover:text-[var(--signal-red)] transition-colors">Waste Management</Link></li>
-                            <li><Link href="/services/facilities/property-maintenance" className="hover:text-[var(--signal-red)] transition-colors">Property Maintenance</Link></li>
                             <li><Link href="/services/facilities/reception" className="hover:text-[var(--signal-red)] transition-colors">Reception Services</Link></li>
                         </ul>
                     </div>

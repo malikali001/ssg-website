@@ -174,7 +174,7 @@ export default function ModernSlaveryContent() {
                                     </p>
                                     <div className="space-y-2 text-slate-200">
                                         <p><strong>Email:</strong> compliance@ssgukltd.com</p>
-                                        <p><strong>Phone:</strong> 0800 123 4567</p>
+                                        <p><strong>Phone:</strong> 0208 591 0330</p>
                                         <p><strong>Address:</strong> SSG Support Services Group LTD, Head Office</p>
                                     </div>
                                     <p className="mt-4 text-sm text-slate-300">

@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SSG UK Ltd | Elite Security & Facilities Management",
-  description: "Precision protection and integrated intelligence. SSG UK Ltd provides elite, technology-driven security and facilities management across the UK.",
-  keywords: ["Security Services UK", "Facilities Management London", "SIA Approved Contractor", "Manned Guarding", "Commercial Cleaning"],
+  title: "SSG UK Ltd | Elite Security Services",
+  description: "Precision protection and integrated intelligence. SSG UK Ltd provides elite, technology-driven security services across the UK.",
+  keywords: ["Security Services UK", "SIA Approved Contractor", "Manned Guarding", "Reception Services"],
   openGraph: {
-    title: "SSG UK Ltd | Elite Security & Facilities Management",
-    description: "Precision protection and integrated intelligence. Elite security and FM services across the UK.",
+    title: "SSG UK Ltd | Elite Security Services",
+    description: "Precision protection and integrated intelligence. Elite security services across the UK.",
     type: "website",
   },
 };
@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <UtilityBar />

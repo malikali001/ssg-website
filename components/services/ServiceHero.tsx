@@ -44,11 +44,13 @@ export default function ServiceHero({
                         className="relative h-full bg-white/[0.97] backdrop-blur-sm rounded-2xl sm:rounded-3xl flex flex-col justify-center p-5 sm:p-9 lg:p-12 shadow-xl"
                     >
                             {/* Dotted pattern */}
-                            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-                                <div className="absolute inset-0 opacity-[0.04]" style={{
-                                    backgroundImage: 'radial-gradient(circle, #0C1E33 1px, transparent 1px)',
-                                    backgroundSize: '16px 16px',
-                                }} />
+                            <div className="absolute left-0 bottom-0 w-full h-1/2 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none">
+                                <Image
+                                    src="/dotted-image.webp"
+                                    alt=""
+                                    fill
+                                    className="object-cover object-center scale-[3]"
+                                />
                             </div>
 
                             <div className="relative z-10">

@@ -16,13 +16,7 @@ const categories = [
         title: 'Security Services',
         description: 'Comprehensive security services protect businesses, assets, and people effectively.',
         image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
-        href: '/services/facilities',
-    },
-    {
-        title: 'Facilities Services',
-        description: 'Professional facilities management keeping properties with smart, reliable protection solutions.',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-        href: '/portals/intelligence',
+        href: '/services/security/manned-guarding',
     },
 ];
 
@@ -30,7 +24,7 @@ export default function ServiceShowcase() {
     return (
         <section id="services" className="bg-white">
             <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 py-16 lg:py-20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {categories.map((cat, index) => (
                         <motion.div
                             key={cat.href}

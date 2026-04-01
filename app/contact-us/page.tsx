@@ -14,9 +14,9 @@ export default function ContactPage() {
             {/* Hero */}
             <PageHero
                 badge="Contact Us"
-                title="Contact"
-                subtitle="SSG UK Ltd"
-                description="We're here to help with all your security and facilities management requirements."
+                title="Get in Touch"
+                subtitle="With Our Team"
+                description="Speak to our security specialists about protecting your people, property and premises nationwide."
                 imageSrc="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80"
             />
 

@@ -18,14 +18,6 @@ const menuSections = [
             { name: 'Electronic Security', href: '/services/security/electronic-security' },
             { name: 'Concierge Security', href: '/services/security/concierge' },
             { name: 'Key Holding & Alarm Response', href: '/services/security/key-holding' },
-        ],
-    },
-    {
-        title: 'Facilities Services',
-        items: [
-            { name: 'Commercial Cleaning', href: '/services/facilities/commercial-cleaning' },
-            { name: 'Waste Management', href: '/services/facilities/waste-management' },
-            { name: 'Property Maintenance', href: '/services/facilities/property-maintenance' },
             { name: 'Reception Services', href: '/services/facilities/reception' },
         ],
     },
@@ -87,6 +79,17 @@ export default function MobileNav({ onClose }: MobileNavProps) {
                 ))}
 
                 {/* Direct links */}
+                <a
+                    href="https://ssgic.ssgukltd.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClose}
+                    className="flex items-center justify-between py-3 text-[var(--text-main)] font-semibold text-base border-b border-[var(--border-color)]"
+                >
+                    SSG Intelligence Centre
+                    <ChevronRight className="w-5 h-5 text-[var(--text-muted)]" />
+                </a>
+
                 <Link
                     href="/case-studies"
                     onClick={onClose}
