@@ -6,61 +6,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const heroSlides = [
-    {
-        heading: "UK's trusted\nsecurity partner",
-        description:
-            "We're on a mission to protect people, property, and peace of mind — because everyone deserves to feel safe, secure, and supported wherever they live, work, or visit.",
-        cta: { label: 'Get in Touch to Learn', href: '/contact-us' },
-        image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80',
-    },
-    {
-        heading: 'Expert security\nnationwide',
-        description:
-            'SIA-approved manned guarding, mobile patrols, K9 units, and concierge services — delivering round-the-clock protection you can trust.',
-        cta: { label: 'Explore Security Services', href: '/services/security/manned-guarding' },
-        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80',
-    },
-    {
-        heading: 'Professional\nreception services',
-        description:
-            'Front-of-house concierge and reception management, delivering a welcoming and professional first impression for your visitors.',
-        cta: { label: 'Explore Reception Services', href: '/services/facilities/reception' },
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
-    },
+const heroImages = [
+    '/images/Gemini_Generated_Image_lfoqt6lfoqt6lfoq.png',
+    '/images/Gemini_Generated_Image_8mmsg78mmsg78mms.png',
 ];
 
 export default function HeroSection() {
     const [current, setCurrent] = useState(0);
 
-    const goTo = useCallback(
-        (index: number) => {
-            setCurrent(index);
-        },
-        [],
-    );
-
     const next = useCallback(() => {
-        setCurrent((prev) => (prev + 1) % heroSlides.length);
+        setCurrent((prev) => (prev + 1) % heroImages.length);
     }, []);
 
     const prev = useCallback(() => {
-        setCurrent((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+        setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
     }, []);
 
-    // Auto-advance every 6 seconds
     useEffect(() => {
         const timer = setInterval(next, 6000);
         return () => clearInterval(timer);
     }, [next]);
 
-    const slide = heroSlides[current];
-
     return (
         <section className="bg-white px-5 md:px-10 lg:px-16 pt-3 sm:pt-4 pb-6 sm:pb-8">
-            {/* Rounded image container with side margins */}
             <div className="relative max-w-[1280px] mx-auto h-[460px] sm:h-[520px] md:h-[610px] lg:h-[690px] rounded-xl sm:rounded-2xl overflow-hidden">
-                {/* Background Image */}
+                {/* Sliding Background Images */}
                 <AnimatePresence mode="popLayout">
                     <motion.div
                         key={current}
@@ -71,7 +41,7 @@ export default function HeroSection() {
                         className="absolute inset-0 z-0"
                     >
                         <Image
-                            src={slide.image}
+                            src={heroImages[current]}
                             alt="SSG security and facilities services"
                             fill
                             priority
@@ -81,10 +51,10 @@ export default function HeroSection() {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* White Content Card — tall, flush left, rounded right */}
+                {/* Fixed Content Card */}
                 <div className="absolute top-6 bottom-6 sm:top-8 sm:bottom-8 left-4 sm:left-8 lg:left-12 z-10 w-[calc(100%-2rem)] sm:w-[460px] md:w-[520px] lg:w-[600px]">
                     <div className="relative h-full bg-white/[0.97] backdrop-blur-sm rounded-2xl sm:rounded-3xl flex flex-col justify-center p-5 sm:p-9 lg:p-12">
-                        {/* Dotted pattern inside card */}
+                        {/* Dotted pattern */}
                         <div className="absolute left-0 bottom-0 w-full h-1/2 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none">
                             <Image
                                 src="/dotted-image.webp"
@@ -106,43 +76,29 @@ export default function HeroSection() {
                             </div>
 
                             {/* Heading */}
-                            <AnimatePresence mode="wait">
-                                <motion.h1
-                                    key={`heading-${current}`}
-                                    initial={{ opacity: 0, y: 12 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -8 }}
-                                    transition={{ duration: 0.35 }}
-                                    className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold leading-[1.15] mb-5 sm:mb-6 whitespace-pre-line tracking-tight"
-                                >
-                                    {slide.heading}
-                                </motion.h1>
-                            </AnimatePresence>
+                            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold leading-[1.15] mb-5 sm:mb-6 tracking-tight">
+                                {"UK's trusted"}<br />security partner
+                            </h1>
 
                             {/* Description */}
-                            <AnimatePresence mode="wait">
-                                <motion.p
-                                    key={`desc-${current}`}
-                                    initial={{ opacity: 0, y: 8 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -8 }}
-                                    transition={{ duration: 0.35, delay: 0.08 }}
-                                    className="text-[var(--text-main)] mb-6 sm:mb-8 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed font-medium"
-                                >
-                                    {slide.description}
-                                </motion.p>
-                            </AnimatePresence>
+                            <p className="text-[var(--text-main)] mb-4 sm:mb-5 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed font-medium">
+                                We&apos;re on a mission to protect people, property, and peace of mind — because everyone deserves to feel safe, secure, and supported wherever they live, work, or visit.
+                            </p>
 
-                            {/* CTA + Arrows Row */}
+                            {/* Tagline */}
+                            <p className="text-sm sm:text-base font-semibold text-[var(--signal-red)] italic tracking-wide mb-5 sm:mb-7">
+                                Focusing on What Matters
+                            </p>
+
+                            {/* CTA + Arrows */}
                             <div className="flex items-center justify-between gap-3">
                                 <Link
-                                    href={slide.cta.href}
+                                    href="/contact-us"
                                     className="inline-flex items-center gap-2 bg-[var(--section-dark)] text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:scale-110 transition-transform duration-300"
                                 >
-                                    {slide.cta.label}
+                                    Get in Touch to Learn
                                 </Link>
 
-                                {/* Slider Navigation */}
                                 <div className="flex items-center gap-2">
                                     <button
                                         onClick={prev}
@@ -166,10 +122,10 @@ export default function HeroSection() {
 
                 {/* Slide Indicator Dots */}
                 <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-                    {heroSlides.map((_, i) => (
+                    {heroImages.map((_, i) => (
                         <button
                             key={i}
-                            onClick={() => goTo(i)}
+                            onClick={() => setCurrent(i)}
                             className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'w-7 bg-[#C83232]' : 'w-2 bg-white/60 hover:bg-white'}`}
                             aria-label={`Go to slide ${i + 1}`}
                         />
