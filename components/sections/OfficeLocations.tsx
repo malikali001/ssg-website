@@ -12,8 +12,7 @@ export default function OfficeLocations() {
             phone: "0208 591 0330",
             email: "info@ssgukltd.com",
             images: [
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800", // Standard office placeholder
-                "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800"
+                "/offices/Head-office-768x745.webp"
             ],
             type: "Head Office"
         },
@@ -23,8 +22,7 @@ export default function OfficeLocations() {
             phone: "0191 564 0300",
             email: "info@ssgukltd.com",
             images: [
-                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800", // Building placeholder
-                "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=800"
+                "/offices/Sunderland-office.webp"
             ],
             type: "Regional Office"
         }

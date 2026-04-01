@@ -178,7 +178,7 @@ export default function CookiePolicyContent() {
                                     </p>
                                     <div className="space-y-2 text-slate-200">
                                         <p><strong>Email:</strong> privacy@ssgukltd.com</p>
-                                        <p><strong>Phone:</strong> 0800 123 4567</p>
+                                        <p><strong>Phone:</strong> 0208 591 0330</p>
                                     </div>
                                 </div>
                             </AnimatedSection>

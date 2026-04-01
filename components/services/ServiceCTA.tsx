@@ -31,11 +31,11 @@ export default function ServiceCTA() {
                             Request a Quote
                         </Link>
                         <a
-                            href="tel:+442012345678"
+                            href="tel:02085910330"
                             className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-3.5 rounded-full font-semibold text-base hover:scale-110 transition-transform duration-300"
                         >
                             <Phone className="w-4 h-4" />
-                            +44 20 1234 5678
+                            0208 591 0330
                         </a>
                     </div>
                 </motion.div>

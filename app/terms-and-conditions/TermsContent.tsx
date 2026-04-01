@@ -194,7 +194,7 @@ export default function TermsContent() {
                                         <p><strong>Company:</strong> SSG Support Services Group LTD</p>
                                         <p><strong>VAT Number:</strong> 217428120</p>
                                         <p><strong>Email:</strong> info@ssgukltd.com</p>
-                                        <p><strong>Phone:</strong> 0800 123 4567</p>
+                                        <p><strong>Phone:</strong> 0208 591 0330</p>
                                         <p><strong>Address:</strong> [Head Office Address]</p>
                                     </div>
                                 </div>

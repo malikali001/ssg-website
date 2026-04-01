@@ -126,8 +126,8 @@ export default function SitemapContent() {
                                     <Phone className="w-5 h-5 text-electric-blue mt-1" />
                                     <div>
                                         <p className="font-semibold">24/7 Emergency Line</p>
-                                        <a href="tel:08001234567" className="text-slate-200 hover:text-electric-blue">
-                                            0800 123 4567
+                                        <a href="tel:02085910330" className="text-slate-200 hover:text-electric-blue">
+                                            0208 591 0330
                                         </a>
                                     </div>
                                 </div>
