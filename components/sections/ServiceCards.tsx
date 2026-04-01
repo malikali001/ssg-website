@@ -55,6 +55,18 @@ const services: ServiceCardItem[] = [
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
         href: '/services/facilities/reception',
     },
+    {
+        title: 'Retail Security',
+        description: 'Loss prevention and customer safety solutions tailored for the retail environment.',
+        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+        href: '/sectors/retail',
+    },
+    {
+        title: 'Corporate Security',
+        description: 'Seamless protection for corporate headquarters, offices and business environments.',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+        href: '/sectors/corporate',
+    },
 ];
 
 function ServiceCard({ service, index }: { service: ServiceCardItem; index: number }) {
@@ -111,7 +123,7 @@ export default function ServiceCards() {
                         transition={{ duration: 0.4 }}
                         className="mb-10 sm:mb-12"
                     >
-                        <h2 className="mb-4 max-w-[750px]">
+                        <h2 className="mb-4">
                             Specialist security services – where your safety becomes our priority
                         </h2>
                         <p className="text-[var(--text-muted)] max-w-2xl text-base sm:text-lg">

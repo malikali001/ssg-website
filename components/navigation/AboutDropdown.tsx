@@ -3,13 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-    Building, Leaf, Briefcase, Award, ClipboardList, ArrowUpRight
+    Building, Leaf, Briefcase, Award, ClipboardList, Heart, ArrowUpRight
 } from 'lucide-react';
 
 const items = [
     { name: 'About SSG', href: '/about', icon: Building },
     { name: 'Management Responsibility', href: '/about/management-responsibility', icon: ClipboardList },
     { name: 'Our Accreditations', href: '/about/accreditations', icon: Award },
+    { name: 'Social Responsibilities', href: '/about/social-responsibilities', icon: Heart },
     { name: 'ESG & Compliance', href: '/esg', icon: Leaf },
     { name: 'Careers', href: '/careers', icon: Briefcase },
     { name: 'Awards & Recognition', href: '/awards-recognition', icon: Award },
