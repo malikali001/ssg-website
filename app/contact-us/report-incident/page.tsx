@@ -596,11 +596,11 @@ export default function ReportIncidentPage() {
                                         <h3 className="text-base font-bold text-[var(--deep-navy)] mb-4 pb-2 border-b border-[var(--border-color)]">
                                             Security Officer Signature and Confirmation of Truthfulness
                                         </h3>
-                                        <div className="flex gap-4">
+                                        <div className="flex flex-wrap gap-3 sm:gap-4">
                                             <button
                                                 type="button"
                                                 onClick={() => setFormData(prev => ({ ...prev, confirmTruthfulness: 'Yes' }))}
-                                                className={`px-6 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
+                                                className={`flex-1 sm:flex-none px-6 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
                                                     formData.confirmTruthfulness === 'Yes'
                                                         ? 'bg-[var(--signal-red)] text-white border-[var(--signal-red)] shadow-sm'
                                                         : 'bg-white text-[var(--text-main)] border-[var(--border-color)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)]'
@@ -611,7 +611,7 @@ export default function ReportIncidentPage() {
                                             <button
                                                 type="button"
                                                 onClick={() => setFormData(prev => ({ ...prev, confirmTruthfulness: 'No' }))}
-                                                className={`px-6 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
+                                                className={`flex-1 sm:flex-none px-6 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
                                                     formData.confirmTruthfulness === 'No'
                                                         ? 'bg-[var(--signal-red)] text-white border-[var(--signal-red)] shadow-sm'
                                                         : 'bg-white text-[var(--text-main)] border-[var(--border-color)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)]'

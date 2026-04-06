@@ -26,12 +26,12 @@ export default function ServicesPage() {
                 <div className="max-w-3xl mx-auto">
                     <Link
                         href="/services/security/manned-guarding"
-                        className="group relative bg-gunmetal rounded-lg p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
+                        className="group relative bg-gunmetal rounded-lg p-6 sm:p-8 md:p-12 border-2 border-transparent hover:border-signal-red transition-all duration-300 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-signal-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         <div className="relative z-10">
-                            <Shield className="w-20 h-20 text-signal-red mb-6 group-hover:scale-110 transition-transform duration-300" />
+                            <Shield className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-signal-red mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300" />
 
                             <h2 className="font-bold mb-4 group-hover:text-signal-red transition-colors duration-300">
                                 Security Solutions

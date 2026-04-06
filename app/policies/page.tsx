@@ -150,10 +150,10 @@ export default function PoliciesPage() {
             <section className="py-16 md:py-20">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Category Filter */}
-                    <div className="flex flex-wrap gap-2 mb-10">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-8 sm:mb-10">
                         <button
                             onClick={() => setActiveCategory(null)}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                                 activeCategory === null
                                     ? 'bg-[var(--signal-red)] text-white shadow-sm'
                                     : 'bg-[var(--section-light)] text-[var(--text-main)] hover:bg-gray-200'
@@ -165,7 +165,7 @@ export default function PoliciesPage() {
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                                     activeCategory === cat
                                         ? 'bg-[var(--signal-red)] text-white shadow-sm'
                                         : 'bg-[var(--section-light)] text-[var(--text-main)] hover:bg-gray-200'

@@ -58,13 +58,13 @@ function RatingGroup({
             <label className="block text-sm font-semibold text-[var(--text-main)] mb-3">
                 {label}
             </label>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {options.map(option => (
                     <button
                         key={option.value}
                         type="button"
                         onClick={() => onChange(name, option.value)}
-                        className={`px-3 py-2 rounded-lg border text-sm font-medium transition-all ${
+                        className={`px-2.5 py-2 sm:px-3 sm:py-2.5 rounded-lg border text-xs sm:text-sm font-medium transition-all ${
                             value === option.value
                                 ? 'bg-[var(--signal-red)] text-white border-[var(--signal-red)] shadow-sm'
                                 : 'bg-white text-[var(--text-main)] border-[var(--border-color)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)]'
@@ -374,13 +374,13 @@ export default function ConsumerFeedbackPage() {
                                         <label className="block text-sm font-semibold text-[var(--text-main)] mb-3">
                                             Did our security have a positive or negative impact on you during this visit? (-10 Negative to +10 Positive)
                                         </label>
-                                        <div className="flex flex-wrap gap-1.5">
+                                        <div className="flex flex-wrap gap-1 sm:gap-1.5">
                                             {impactOptions.map(score => (
                                                 <button
                                                     key={score}
                                                     type="button"
                                                     onClick={() => handleRatingChange('impactScore', String(score))}
-                                                    className={`w-10 h-10 rounded-lg border text-xs font-semibold transition-all ${
+                                                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg border text-[10px] sm:text-xs font-semibold transition-all ${
                                                         formData.impactScore === String(score)
                                                             ? 'bg-[var(--signal-red)] text-white border-[var(--signal-red)] shadow-sm'
                                                             : score < 0

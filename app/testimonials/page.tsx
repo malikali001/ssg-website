@@ -69,11 +69,11 @@ export default function TestimonialsPage() {
 
             <section className="py-16 md:py-20">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="columns-1 md:columns-2 gap-6 space-y-6">
+                    <div className="columns-1 md:columns-2 gap-4 sm:gap-6 space-y-4 sm:space-y-6">
                         {testimonials.map((t, i) => (
                             <div
                                 key={i}
-                                className="break-inside-avoid rounded-2xl border border-[var(--border-color)] bg-white p-6 sm:p-8 hover:border-[var(--signal-red)] hover:shadow-lg transition-all"
+                                className="break-inside-avoid rounded-2xl border border-[var(--border-color)] bg-white p-4 sm:p-6 md:p-8 hover:border-[var(--signal-red)] hover:shadow-lg transition-all"
                             >
                                 <Quote className="w-8 h-8 text-[var(--signal-red)] opacity-30 mb-4" />
                                 <p className="text-[var(--text-main)] text-sm sm:text-[15px] leading-relaxed mb-6">

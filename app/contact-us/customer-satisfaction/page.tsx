@@ -43,17 +43,17 @@ function RatingGroup({
             <label className="block text-sm font-semibold text-[var(--text-main)] mb-3">
                 {label}
             </label>
-            <div className={`flex flex-wrap gap-2 ${isNumeric ? '' : 'gap-3'}`}>
+            <div className={`flex flex-wrap gap-1.5 sm:gap-2 ${isNumeric ? '' : 'sm:gap-3'}`}>
                 {options.map(option => (
                     <button
                         key={option}
                         type="button"
                         onClick={() => onChange(name, option)}
-                        className={`px-3 py-2 rounded-lg border text-sm font-medium transition-all ${
+                        className={`px-2.5 py-2 sm:px-3 sm:py-2.5 rounded-lg border text-xs sm:text-sm font-medium transition-all ${
                             value === option
                                 ? 'bg-[var(--signal-red)] text-white border-[var(--signal-red)] shadow-sm'
                                 : 'bg-white text-[var(--text-main)] border-[var(--border-color)] hover:border-[var(--signal-red)] hover:text-[var(--signal-red)]'
-                        } ${isNumeric ? 'min-w-[42px] text-center' : ''}`}
+                        } ${isNumeric ? 'min-w-[36px] sm:min-w-[44px] text-center' : ''}`}
                     >
                         {option}
                     </button>

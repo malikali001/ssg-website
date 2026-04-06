@@ -38,9 +38,23 @@ const menuSections = [
         title: 'About Us',
         items: [
             { name: 'About SSG', href: '/about' },
+            { name: 'Accreditations', href: '/about/accreditations' },
+            { name: 'Management Responsibility', href: '/about/management-responsibility' },
+            { name: 'Social Responsibilities', href: '/about/social-responsibilities' },
             { name: 'ESG & Compliance', href: '/esg' },
+            { name: 'Testimonials', href: '/testimonials' },
             { name: 'Careers', href: '/careers' },
             { name: 'Awards & Recognition', href: '/awards-recognition' },
+            { name: 'Policies & Documents', href: '/policies' },
+        ],
+    },
+    {
+        title: 'Get In Touch',
+        items: [
+            { name: 'Contact Us', href: '/contact-us' },
+            { name: 'Customer Satisfaction', href: '/contact-us/customer-satisfaction' },
+            { name: 'Consumer Feedback', href: '/contact-us/consumer-feedback' },
+            { name: 'Report an Incident', href: '/contact-us/report-incident' },
         ],
     },
 ];
