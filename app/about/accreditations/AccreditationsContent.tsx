@@ -37,6 +37,7 @@ const qualityAccreditations = [
     {
         title: 'ISO 27001:2013 (The Information Security Management System)',
         icon: Lock,
+        logo: '/certifications/iso27001.jpg',
         certificate: '/certifications/iso-27001-2022.pdf',
         content: [
             'SSG is approved to the ISO 27001:2013 The Information Security Management Systems. (Certificate Number: 14234-EMS-001) (UKAS).',
@@ -46,6 +47,7 @@ const qualityAccreditations = [
     {
         title: 'ISO 22301:2012 Business Continuity Management System',
         icon: RefreshCw,
+        logo: '/certifications/iso22301.jpg',
         certificate: '/certifications/iso-22301-2019.pdf',
         content: [
             'SSG is approved to the ISO 22301:2012 The Business Continuity Management Systems. (Certificate Number: 14234-EMS-001) (UKAS).',
@@ -56,6 +58,7 @@ const qualityAccreditations = [
     {
         title: 'Community Safety Accreditations Scheme',
         icon: Users,
+        logo: '/certifications/cssa.png',
         content: [
             'SSG is one of the few companies, approved as a company suitable to provide staff under the auspices of the Community Safety Accreditations Scheme (CSAS).  CSAS is a voluntary scheme under which Chief constables can choose to accredit employed already working in roles which contribute to maintain and improving community safety with limited but targeted powers. These roles include neighbourhood wardens, hospital security guards, park wardens, shopping mall guards and train guards. SSG works closely with Metropolitan Police to Tackle Anti-Social Behaviour. All CSAS schemes are managed, monitored and assessed at a local level by the Police Chief Constable.',
         ],
@@ -63,6 +66,7 @@ const qualityAccreditations = [
     {
         title: 'Avetta',
         icon: Award,
+        logo: '/certifications/avetta.png',
         content: [
             'SSG is the member of Avetta. SSG has gone through a rigorous audit to assess their capability, competence and compliance, which demonstrate our compliance and improvement against leading standard of excellence.',
         ],
@@ -70,6 +74,7 @@ const qualityAccreditations = [
     {
         title: 'Peninsula',
         icon: Landmark,
+        logo: '/certifications/peninsula.png',
         content: [
             'SSG is proud to be a member of Peninsula (Membership Number: SUP094). Being a Peninsula member, SSG has the most trusted HR, employment law and health & safety consultants in the UK, protecting our business. Membership of Peninsula has a range of benefits, including:',
         ],
@@ -105,6 +110,7 @@ const healthSafetyAccreditations = [
     {
         title: 'ISO 45001:2018 Occupational Health and Safety Management Systems',
         icon: HardHat,
+        logo: '/certifications/iso45001.jpg',
         certificate: '/certifications/iso-45001-2018.pdf',
         content: [
             'SSG is approved to the ISO 45001:2018 Occupational Health and Safety Management Systems. (UKAS)(Certificate Number: 14234-EMS-001). which shows our commitment and dedication to providing safe working conditions for our staff.',
@@ -113,6 +119,7 @@ const healthSafetyAccreditations = [
     {
         title: 'RoSPA',
         icon: Heart,
+        logo: '/certifications/rospa.png',
         content: [
             'SSG Support Services Group LTD is is a RoSPA member. RoSPA is committed to preventing accidents, all the while seeking to strike the right balance between prescription and individual choice. RoSPA is the UK\u2019s second largest health & safety organisation after the HSE.',
         ],
@@ -137,6 +144,7 @@ const healthSafetyAccreditations = [
     {
         title: 'Disability Confident Committed',
         icon: Accessibility,
+        logo: '/certifications/disability-confident.png',
         content: [
             'SSG Support Services Group LTD DCS032384 is Disability Confident Committed.',
             'Disability Confident organisations play a leading role in changing attitudes for the better. They\u2019re changing behaviour and cultures in their own businesses, networks and communities, and reaping the benefits of inclusive recruitment practices.',
