@@ -42,6 +42,15 @@ export default function UtilityBar() {
                         >
                             Employee Portal
                         </a>
+                        <span className="text-white/30">|</span>
+                        <a
+                            href="http://ssgic.ssgukltd.com/admin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/80 hover:text-white transition-colors duration-200 text-xs font-medium uppercase tracking-wider"
+                        >
+                            SSIC Admin
+                        </a>
                     </div>
                 </div>
             </div>

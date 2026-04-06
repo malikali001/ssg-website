@@ -57,6 +57,9 @@ export default function Footer() {
                         <h4 className="text-[var(--deep-navy)] font-semibold text-sm sm:text-base mb-3 sm:mb-4">Company</h4>
                         <ul className="space-y-2 sm:space-y-2.5 text-sm sm:text-[15px]">
                             <li><Link href="/contact-us" className="hover:text-[var(--signal-red)] transition-colors">Contact Us</Link></li>
+                            <li><Link href="/contact-us/customer-satisfaction" className="hover:text-[var(--signal-red)] transition-colors">Customer Satisfaction</Link></li>
+                            <li><Link href="/contact-us/consumer-feedback" className="hover:text-[var(--signal-red)] transition-colors">Consumer Feedback</Link></li>
+                            <li><Link href="/contact-us/report-incident" className="hover:text-[var(--signal-red)] transition-colors">Report an Incident</Link></li>
                             <li><Link href="/about" className="hover:text-[var(--signal-red)] transition-colors">About Us</Link></li>
                             <li><Link href="/esg" className="hover:text-[var(--signal-red)] transition-colors">ESG & Compliance</Link></li>
                             <li><Link href="/careers" className="hover:text-[var(--signal-red)] transition-colors">Careers</Link></li>
