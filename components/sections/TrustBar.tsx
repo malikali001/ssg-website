@@ -68,6 +68,7 @@ export default function TrustBar() {
                         ))}
                     </motion.div>
                 </div>
+
             </div>
         </section>
     );

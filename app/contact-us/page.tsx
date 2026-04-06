@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import OfficeLocations from '@/components/sections/OfficeLocations';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ClipboardCheck, MessageSquareText, ShieldAlert } from 'lucide-react';
+import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
 
 export const metadata: Metadata = {
@@ -52,6 +53,56 @@ export default function ContactPage() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Feedback Forms */}
+            <section className="bg-white py-12 border-b border-[var(--border-color)]">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+                    <Link
+                        href="/contact-us/customer-satisfaction"
+                        className="flex items-center gap-6 p-6 sm:p-8 rounded-2xl border border-[var(--border-color)] bg-[var(--section-light)] hover:border-[var(--signal-red)] transition-all group"
+                    >
+                        <div className="w-14 h-14 rounded-full bg-white border border-[var(--border-color)] flex items-center justify-center group-hover:border-[var(--signal-red)] transition-colors shadow-sm flex-shrink-0">
+                            <ClipboardCheck className="w-6 h-6 text-[var(--signal-red)]" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-1">Customer Satisfaction Questionnaire</h3>
+                            <p className="text-sm text-[var(--text-muted)]">
+                                Help us improve our services by completing our customer satisfaction questionnaire.
+                            </p>
+                        </div>
+                    </Link>
+
+                    <Link
+                        href="/contact-us/consumer-feedback"
+                        className="flex items-center gap-6 p-6 sm:p-8 rounded-2xl border border-[var(--border-color)] bg-[var(--section-light)] hover:border-[var(--signal-red)] transition-all group"
+                    >
+                        <div className="w-14 h-14 rounded-full bg-white border border-[var(--border-color)] flex items-center justify-center group-hover:border-[var(--signal-red)] transition-colors shadow-sm flex-shrink-0">
+                            <MessageSquareText className="w-6 h-6 text-[var(--signal-red)]" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-1">Consumer Feedback</h3>
+                            <p className="text-sm text-[var(--text-muted)]">
+                                Share your experience with our on-site security staff and help us maintain high standards.
+                            </p>
+                        </div>
+                    </Link>
+
+                    <Link
+                        href="/contact-us/report-incident"
+                        className="flex items-center gap-6 p-6 sm:p-8 rounded-2xl border border-[var(--border-color)] bg-[var(--section-light)] hover:border-[var(--signal-red)] transition-all group"
+                    >
+                        <div className="w-14 h-14 rounded-full bg-white border border-[var(--border-color)] flex items-center justify-center group-hover:border-[var(--signal-red)] transition-colors shadow-sm flex-shrink-0">
+                            <ShieldAlert className="w-6 h-6 text-[var(--signal-red)]" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-1">Report an Incident / Accident</h3>
+                            <p className="text-sm text-[var(--text-muted)]">
+                                Security officers can report incidents and accidents using our secure online form.
+                            </p>
+                        </div>
+                    </Link>
                 </div>
             </section>
 
