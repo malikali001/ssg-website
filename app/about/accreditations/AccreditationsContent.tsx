@@ -21,7 +21,7 @@ const qualityAccreditations = [
     {
         title: 'ISO 9001:2015 (Quality Management System)',
         icon: FileCheck,
-        logo: '/certifications/iso9001.png',
+        logo: '/certifications/iso9001.jpg',
         certificate: '/certifications/iso-9001-2015.pdf',
         content: [
             'SSG is approved to ISO 9001:2015(UKAS) (Certificate Number: 14234).  This internationally recognised accreditation is certified by ISOQAR (UKAS) and highlights our commitment towards providing our customers with a quality service that is achieved through our operating and business procedures and is implemented via our Quality Management System. The ISO9001 accreditation includes the provision of:',
@@ -98,7 +98,7 @@ const environmentalAccreditations = [
     {
         title: 'ISO 14001:2015 Environmental Management System',
         icon: Leaf,
-        logo: '/certifications/iso14001.png',
+        logo: '/certifications/iso14001.jpg',
         certificate: '/certifications/iso-14001-2015.pdf',
         content: [
             'SSG is approved to ISO 14001:2015 Environmental Management System standard. (Certificate Number: 14234-EMS-001) (UKAS). We\u2019re committed to providing our customers with a high-quality service whilst reducing the impact of our activities on the environment. Our EMS programme focuses on the environmental issues closely aligned with our business and geared towards improved environmental performance throughout all our offices.',
@@ -175,23 +175,22 @@ interface Accreditation {
 function AccreditationCard({ item, onViewCertificate }: { item: Accreditation; onViewCertificate: (pdf: string, title: string) => void }) {
     const Icon = item.icon;
     return (
-        <div className="bg-[var(--section-light)] rounded-xl p-6 sm:p-7 border border-[var(--border-color)] hover:shadow-lg transition-all duration-300">
-            <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="flex items-center gap-3">
-                    <div className="inline-flex items-center justify-center w-10 h-10 bg-[var(--signal-red)]/10 rounded-full flex-shrink-0">
-                        <Icon className="w-5 h-5 text-[var(--signal-red)]" />
-                    </div>
-                    <h3 className="text-base font-bold text-[var(--deep-navy)]">{item.title}</h3>
-                </div>
-                {item.logo && (
+        <div className="bg-[var(--section-light)] rounded-xl border border-[var(--border-color)] hover:shadow-lg transition-all duration-300 p-6 sm:p-7">
+            <div className="mb-4 flex items-start gap-4 sm:gap-5">
+                {item.logo ? (
                     <Image
                         src={item.logo}
                         alt={item.title}
-                        width={60}
-                        height={60}
-                        className="w-12 h-12 sm:w-14 sm:h-14 object-contain flex-shrink-0"
+                        width={200}
+                        height={200}
+                        className="h-24 sm:h-28 md:h-32 w-auto max-w-[40%] object-contain flex-shrink-0"
                     />
+                ) : (
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-[var(--signal-red)]/10 rounded-full flex-shrink-0">
+                        <Icon className="w-7 h-7 text-[var(--signal-red)]" />
+                    </div>
                 )}
+                <h3 className="text-base sm:text-lg font-bold text-[var(--deep-navy)] self-center">{item.title}</h3>
             </div>
             <div className="space-y-3">
                 {item.content.map((para, i) => (
@@ -293,13 +292,13 @@ function CertificateListView({ items, onViewCertificate }: { items: typeof allCe
                                     <Image
                                         src={item.logo}
                                         alt={item.title}
-                                        width={80}
-                                        height={80}
-                                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                                        width={160}
+                                        height={160}
+                                        className="h-28 sm:h-32 w-auto max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                                     />
                                 ) : (
-                                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[var(--signal-red)]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                        <Icon className="w-8 h-8 text-[var(--signal-red)]" />
+                                    <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[var(--signal-red)]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <Icon className="w-12 h-12 text-[var(--signal-red)]" />
                                     </div>
                                 )}
                                 <p className="text-xs sm:text-sm font-semibold text-[var(--deep-navy)] text-center leading-tight">
@@ -393,7 +392,7 @@ export default function AccreditationsContent() {
                 badge="Accreditations"
                 title="Our"
                 subtitle="Accreditations"
-                description="SSG has an established Integrated Quality Management System that is routinely audited by accredited certification bodies."
+                description="At SSG, quality, compliance, and continuous improvement are at the core of everything we do. Our fully integrated Quality Management System is independently audited and certified by UKAS-accredited bodies, ensuring that our operations consistently meet the highest industry and regulatory standards."
                 imageSrc="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
                 ctaLabel="Contact Us"
                 ctaHref="/contact-us"
