@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const accreditations = [
     { name: 'SIA Approved Contractor', logo: '/certifications/sia.png' },
-    { name: 'ISO 9001', logo: '/certifications/iso9001.png' },
-    { name: 'ISO 14001', logo: '/certifications/iso14001.png' },
+    { name: 'ISO 9001', logo: '/certifications/iso9001.jpg' },
+    { name: 'ISO 14001', logo: '/certifications/iso14001.jpg' },
     { name: 'SafeContractor', logo: '/certifications/safecontractor.png' },
     { name: 'Constructionline', logo: '/certifications/constructionline.png' },
     { name: 'CHAS', logo: '/certifications/chas.png' },
