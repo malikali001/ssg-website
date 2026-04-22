@@ -37,7 +37,7 @@ const partners = [
         category: 'Community',
     },
     {
-        name: 'Employee Assistance Program',
+        name: 'Employee Assistance Programme',
         image: '/images/social-responsibilities/5-rs.jpg',
         category: 'Employee Wellbeing',
     },

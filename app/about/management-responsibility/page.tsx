@@ -52,7 +52,7 @@ const managementResponsibilities = [
     {
         title: 'Work Environment',
         icon: HardHat,
-        content: 'The Operations Director operating with a team of management in the organisation tree document will ensure the work environment is maintained in accordance with BS 7499 and is also responsible for ensuring the Health and Safety Policy as authorized by the Chief Executive Officer and associated legislation is adhered to.',
+        content: 'The Operations Director operating with a team of management in the organisation tree document will ensure the work environment is maintained in accordance with BS 7499 and is also responsible for ensuring the Health and Safety Policy as authorised by the Chief Executive Officer and associated legislation is adhered to.',
     },
     {
         title: 'Customer Communication',

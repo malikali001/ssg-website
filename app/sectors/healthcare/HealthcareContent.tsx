@@ -17,7 +17,7 @@ export default function HealthcareContent() {
     ];
 
     const challenges = [
-        { title: "Aggressive Behavior", description: "A&E departments and wards frequently face violence from intoxicated or distressed individuals." },
+        { title: "Aggressive Behaviour", description: "A&E departments and wards frequently face violence from intoxicated or distressed individuals." },
         { title: "Controlled Drugs", description: "Pharmacy and storage areas holding high-value narcotics require strict anti-theft measures." },
         { title: "Vulnerable Patients", description: "Ensuring patients with dementia or mental health issues remain within safe zones." }
     ];
@@ -25,7 +25,7 @@ export default function HealthcareContent() {
     const solutions = [
         { title: "Bedside Watch", description: "Specialist officers trained to monitor high-risk patients 1-on-1, supporting clinical staff." },
         { title: "Conflict Management", description: "Advanced de-escalation training to handle aggression without disrupting medical care." },
-        { title: "Access Zoning", description: "Strict control of public vs clinical areas to prevent unauthorized wandering." }
+        { title: "Access Zoning", description: "Strict control of public vs clinical areas to prevent unauthorised wandering." }
     ];
 
     return (

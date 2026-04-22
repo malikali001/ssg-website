@@ -63,7 +63,7 @@ export default function PrivacyPolicyContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Contact Information:</strong> Name, email address, phone number, postal address</li>
                                     <li><strong>Business Information:</strong> Company name, job title, business address</li>
-                                    <li><strong>Inquiry Details:</strong> Information you provide when requesting quotes or services</li>
+                                    <li><strong>Enquiry Details:</strong> Information you provide when requesting quotes or services</li>
                                     <li><strong>Employment Information:</strong> CV, references, qualifications (for job applicants)</li>
                                 </ul>
 
@@ -85,11 +85,11 @@ export default function PrivacyPolicyContent() {
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Service Delivery:</strong> To provide security and facilities management services</li>
-                                    <li><strong>Communication:</strong> To respond to inquiries, provide quotes, and send service updates</li>
+                                    <li><strong>Communication:</strong> To respond to enquiries, provide quotes, and send service updates</li>
                                     <li><strong>Contract Management:</strong> To manage contracts and billing</li>
                                     <li><strong>Recruitment:</strong> To process job applications and conduct background checks</li>
                                     <li><strong>Legal Compliance:</strong> To comply with SIA regulations and other legal obligations</li>
-                                    <li><strong>Website Improvement:</strong> To analyze usage and improve our website</li>
+                                    <li><strong>Website Improvement:</strong> To analyse usage and improve our website</li>
                                     <li><strong>Marketing:</strong> To send relevant information about our services (with your consent)</li>
                                 </ul>
                             </AnimatedSection>
@@ -103,7 +103,7 @@ export default function PrivacyPolicyContent() {
                                     Under GDPR, we process your personal data based on the following legal grounds:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
-                                    <li><strong>Contractual Necessity:</strong> Processing necessary to fulfill our contract with you</li>
+                                    <li><strong>Contractual Necessity:</strong> Processing necessary to fulfil our contract with you</li>
                                     <li><strong>Legal Obligation:</strong> Compliance with SIA licensing, employment law, and other regulations</li>
                                     <li><strong>Legitimate Interests:</strong> Business operations, fraud prevention, and service improvement</li>
                                     <li><strong>Consent:</strong> Marketing communications and non-essential cookies (where applicable)</li>
@@ -135,7 +135,7 @@ export default function PrivacyPolicyContent() {
                                     Data Retention
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    We retain personal information for as long as necessary to fulfill the purposes outlined in this policy:
+                                    We retain personal information for as long as necessary to fulfil the purposes outlined in this policy:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Client Data:</strong> Duration of contract plus 6 years (for legal and accounting purposes)</li>
@@ -174,7 +174,7 @@ export default function PrivacyPolicyContent() {
                                     Security Measures
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    We implement appropriate technical and organizational measures to protect your personal information:
+                                    We implement appropriate technical and organisational measures to protect your personal information:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>SSL/TLS encryption for data transmission</li>

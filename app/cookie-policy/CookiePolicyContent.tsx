@@ -93,7 +93,7 @@ export default function CookiePolicyContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>Language preferences</li>
                                     <li>Region selection</li>
-                                    <li>User interface customization</li>
+                                    <li>User interface customisation</li>
                                 </ul>
 
                                 <h3 className="text-xl font-bold text-slate-900 mb-3 mt-6">Marketing Cookies</h3>

@@ -119,7 +119,7 @@ export default function ModernSlaveryContent() {
                                     Training & Awareness
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    We are committed to building awareness of modern slavery risks throughout our organization:
+                                    We are committed to building awareness of modern slavery risks throughout our organisation:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>Mandatory modern slavery awareness training for all management staff</li>
@@ -140,7 +140,7 @@ export default function ModernSlaveryContent() {
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>Annual review of supplier compliance and audit results</li>
-                                    <li>Tracking of training completion rates across the organization</li>
+                                    <li>Tracking of training completion rates across the organisation</li>
                                     <li>Monitoring of whistleblowing reports and investigation outcomes</li>
                                     <li>Regular review of recruitment and employment practices</li>
                                     <li>Continuous improvement based on lessons learned and best practices</li>

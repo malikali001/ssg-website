@@ -112,7 +112,7 @@ export default function SitemapContent() {
                                     Can't Find What You're Looking For?
                                 </h3>
                                 <p className="text-slate-200 mb-6">
-                                    Our team is here to help. Contact us directly for any inquiries about our security services.
+                                    Our team is here to help. Contact us directly for any enquiries about our security services.
                                 </p>
                                 <Link
                                     href="/contact-us"
@@ -134,7 +134,7 @@ export default function SitemapContent() {
                                 <div className="flex items-start gap-3">
                                     <Phone className="w-5 h-5 text-electric-blue mt-1" />
                                     <div>
-                                        <p className="font-semibold">General Inquiries</p>
+                                        <p className="font-semibold">General Enquiries</p>
                                         <a href="mailto:info@ssgukltd.com" className="text-slate-200 hover:text-electric-blue">
                                             info@ssgukltd.com
                                         </a>

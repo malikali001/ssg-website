@@ -17,14 +17,14 @@ export default function LogisticsContent() {
     ];
 
     const challenges = [
-        { title: "Cargo Theft", description: "High-value goods in transit or storage are prime targets for organized crime." },
-        { title: "Unauthorized Access", description: "Busy yards with constant vehicle movement are vulnerable to infiltration." },
+        { title: "Cargo Theft", description: "High-value goods in transit or storage are prime targets for organised crime." },
+        { title: "Unauthorised Access", description: "Busy yards with constant vehicle movement are vulnerable to infiltration." },
         { title: "Internal Shrinkage", description: "Employee theft and pilferage can significantly impact margins." }
     ];
 
     const solutions = [
         { title: "Gatehouse Management", description: "Strict access control, vehicle logging, and seal integrity checks." },
-        { title: "Yard Marshals", description: "Ensuring safe vehicle movement and preventing unauthorized loitering." },
+        { title: "Yard Marshals", description: "Ensuring safe vehicle movement and preventing unauthorised loitering." },
         { title: "Search Procedures", description: "Randomized vehicle and staff searches to deter and detect theft." }
     ];
 

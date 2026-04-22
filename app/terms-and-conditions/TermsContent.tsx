@@ -60,7 +60,7 @@ export default function TermsContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>In any way that breaches applicable local, national, or international law</li>
                                     <li>To transmit any unlawful, harmful, or offensive material</li>
-                                    <li>To attempt to gain unauthorized access to any part of the Website</li>
+                                    <li>To attempt to gain unauthorised access to any part of the Website</li>
                                     <li>To interfere with or disrupt the Website or servers</li>
                                     <li>For any commercial purposes without our express written consent</li>
                                 </ul>
@@ -72,7 +72,7 @@ export default function TermsContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>Maintaining the confidentiality of your login credentials</li>
                                     <li>All activities that occur under your account</li>
-                                    <li>Notifying us immediately of any unauthorized use</li>
+                                    <li>Notifying us immediately of any unauthorised use</li>
                                 </ul>
                             </AnimatedSection>
 

@@ -3,7 +3,7 @@ import { GuardsActiveChart, IncidentHeatmap, ComplianceGauge, StatCard, Activity
 import { MapPin, Bell, FileText, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Intelligence Center | SSG UK Ltd',
+    title: 'Intelligence Centre | SSG UK Ltd',
     description: 'Total estate visibility with real-time GPS tracking, incident monitoring, and compliance reporting.',
     keywords: ['Security Intelligence', 'Real-time Monitoring', 'GPS Tracking', 'Compliance Dashboard'],
 };
@@ -15,7 +15,7 @@ export default function IntelligenceCenterPage() {
             <section className="section-container pt-32 pb-12">
                 <div className="text-center max-w-4xl mx-auto mb-12">
                     <h1 className="text-5xl md:text-6xl font-black mb-6">
-                        SSG <span className="text-signal-red">Intelligence Center</span>
+                        SSG <span className="text-signal-red">Intelligence Centre</span>
                     </h1>
                     <p className="text-xl text-text-muted">
                         Total Estate Visibility. The brain behind every contract.
@@ -83,7 +83,7 @@ export default function IntelligenceCenterPage() {
                         Ready to Experience <span className="text-signal-red">Total Visibility</span>?
                     </h2>
                     <p className="text-text-muted text-lg mb-8 max-w-2xl mx-auto">
-                        Request a demo of the SSG Intelligence Center and see how we power elite security operations.
+                        Request a demo of the SSG Intelligence Centre and see how we power elite security operations.
                     </p>
                     <a href="/get-a-quote" className="btn-primary text-lg px-8 py-4 inline-block">
                         Request a Demo

@@ -69,10 +69,10 @@ export default function ESGPage() {
                             <Globe className="w-5 h-5" /> Environmental Stewardship
                         </div>
                         <h2 className="font-black text-[--color-deep-navy] mb-6 leading-tight">
-                            Minimizing Our <span className="text-green-600">Footprint</span>
+                            Minimising Our <span className="text-green-600">Footprint</span>
                         </h2>
                         <p className="text-[--color-text-main] mb-8 leading-relaxed font-medium">
-                            We recognize our responsibility to the planet. Our environmental strategy focuses on tangible, measurable actions that reduce impact across all operations, from our vehicle fleet to our office supplies.
+                            We recognise our responsibility to the planet. Our environmental strategy focuses on tangible, measurable actions that reduce impact across all operations, from our vehicle fleet to our office supplies.
                         </p>
 
                         <ul className="space-y-8">
@@ -82,7 +82,7 @@ export default function ESGPage() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-[--color-deep-navy] text-xl mb-2">Energy Efficiency</h4>
-                                    <p className="text-slate-600 leading-relaxed">Optimizing energy use in our offices and operations, transitioning to LED lighting and smart monitoring systems.</p>
+                                    <p className="text-slate-600 leading-relaxed">Optimising energy use in our offices and operations, transitioning to LED lighting and smart monitoring systems.</p>
                                 </div>
                             </li>
                             <li className="flex gap-5 group">
@@ -206,7 +206,7 @@ export default function ESGPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-[--color-deep-navy] mb-4">Certifications</h3>
                             <p className="text-slate-600 leading-relaxed mb-6 font-medium">
-                                Recognized excellence through industry-leading accreditations and standards.
+                                Recognised excellence through industry-leading accreditations and standards.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100 transition-colors cursor-default shadow-sm text-center">
@@ -299,7 +299,7 @@ export default function ESGPage() {
                                 {[
                                     "Launched new Electric Vehicle fleet transition plan",
                                     "Achieved ISO 45001 Health & Safety Certification",
-                                    "Expanded local apprenticeship program by 150%",
+                                    "Expanded local apprenticeship programme by 150%",
                                     "Zero reportable environmental incidents across all sites"
                                 ].map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-4">

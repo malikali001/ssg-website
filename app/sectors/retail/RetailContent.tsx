@@ -17,7 +17,7 @@ export default function RetailContent() {
     ];
 
     const challenges = [
-        { title: "Organized Retail Crime", description: "Gangs targeting high-value items with aggressive tactics." },
+        { title: "Organised Retail Crime", description: "Gangs targeting high-value items with aggressive tactics." },
         { title: "Internal Shrinkage", description: "Staff theft and administrative errors contributing to stock loss." },
         { title: "Abuse of Staff", description: "Frontline workers facing increasing aggression from shoplifters and the public." }
     ];

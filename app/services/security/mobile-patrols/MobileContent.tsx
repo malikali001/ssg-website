@@ -76,7 +76,7 @@ export default function MobileContent() {
             <ServiceGrid
                 title="Mobile"
                 subtitle="Services"
-                description="Flexible security solutions designed for businesses that don't require permanent specialized staff."
+                description="Flexible security solutions designed for businesses that don't require permanent specialised staff."
                 services={services}
             />
 

@@ -12,7 +12,7 @@ const spiritValues = [
     {
         title: 'Candour',
         tagline: 'We will be open and honest with ourselves and others.',
-        description: 'We value and respect candour, encouraging open and honest feedback recognizing that our reputation and the trust people place in us depends on being honest with ourselves and others.',
+        description: 'We value and respect candour, encouraging open and honest feedback recognising that our reputation and the trust people place in us depends on being honest with ourselves and others.',
         icon: MessageCircle,
         color: 'blue',
     },
@@ -40,7 +40,7 @@ const spiritValues = [
     {
         title: 'Disruptive Innovation',
         tagline: 'We will continually challenge convention.',
-        description: 'We will continually challenge the status quo, push boundaries and utilise leading edge technology, to optimize how we work, to deliver superior value-added services.',
+        description: 'We will continually challenge the status quo, push boundaries and utilise leading edge technology, to optimise how we work, to deliver superior value-added services.',
         icon: Zap,
         color: 'purple',
     },
