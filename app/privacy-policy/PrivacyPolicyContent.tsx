@@ -37,7 +37,7 @@ export default function PrivacyPolicyContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* Introduction */}
                             <AnimatedSection id="introduction">
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
+                                <h2 className="font-bold text-deep-navy mb-4">
                                     Introduction
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -52,7 +52,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Information We Collect */}
                             <AnimatedSection id="information-we-collect" delay={0.1}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Information We Collect
                                 </h2>
 
@@ -77,7 +77,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* How We Use Your Information */}
                             <AnimatedSection id="how-we-use" delay={0.2}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     How We Use Your Information
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -96,7 +96,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Legal Basis for Processing */}
                             <AnimatedSection id="legal-basis" delay={0.3}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Legal Basis for Processing
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -112,7 +112,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Data Sharing & Third Parties */}
                             <AnimatedSection id="data-sharing" delay={0.4}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Data Sharing & Third Parties
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -131,7 +131,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Data Retention */}
                             <AnimatedSection id="data-retention" delay={0.5}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Data Retention
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -148,7 +148,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Your Rights */}
                             <AnimatedSection id="your-rights" delay={0.6}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Your Rights
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -170,7 +170,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Security Measures */}
                             <AnimatedSection id="security" delay={0.7}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Security Measures
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -188,7 +188,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Contact Information */}
                             <AnimatedSection id="contact" delay={0.8}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Contact Information
                                 </h2>
                                 <div className="bg-deep-navy text-white rounded-xl p-8">

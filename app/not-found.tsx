@@ -7,7 +7,7 @@ export default function NotFound() {
                 <p className="text-[var(--signal-red)] font-semibold text-sm uppercase tracking-wider mb-4">
                     Error 404
                 </p>
-                <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-[var(--deep-navy)] mb-4">
+                <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-montserrat font-bold text-[var(--deep-navy)] mb-4">
                     Page Not Found
                 </h1>
                 <p className="text-[var(--text-muted)] text-lg mb-8">

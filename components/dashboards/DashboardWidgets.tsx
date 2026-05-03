@@ -113,7 +113,7 @@ export function StatCard({ title, value, subtitle, trend }: { title: string; val
     return (
         <div className="bg-gunmetal rounded-lg p-4 sm:p-6 border border-text-muted/10">
             <div className="text-text-muted text-sm mb-2">{title}</div>
-            <div className="text-2xl sm:text-4xl font-black text-signal-red mb-1">{value}</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-signal-red mb-1">{value}</div>
             <div className="text-text-muted text-xs">{subtitle}</div>
             {trend && (
                 <div className={`text-xs mt-2 ${trend === 'up' ? 'text-green-500' : 'text-red-500'}`}>

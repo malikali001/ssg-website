@@ -26,10 +26,10 @@ export default function TrustBar() {
                         <h2 className="mb-5">
                             Keeping your commercial premises looking the part
                         </h2>
-                        <p className="text-[var(--text-main)] mb-4">
+                        <p className="text-[var(--text-main)] text-base sm:text-xl leading-relaxed mb-4">
                             When you&apos;re running a business, it&apos;s imperative that everything runs like clockwork. The environment needs to bring the best out of our employees, while visitors and customers should be instantly impressed.
                         </p>
-                        <p className="text-[var(--text-main)]">
+                        <p className="text-[var(--text-main)] text-base sm:text-xl leading-relaxed">
                             Our integrated facilities management services for commercial customers help you deliver uninterrupted and hassle-free services while we keep everything in perfect working order behind the scenes.
                         </p>
                     </motion.div>

@@ -12,7 +12,7 @@ export default function Error({
                 <p className="text-[var(--signal-red)] font-semibold text-sm uppercase tracking-wider mb-4">
                     Something went wrong
                 </p>
-                <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-[var(--deep-navy)] mb-4">
+                <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-montserrat font-bold text-[var(--deep-navy)] mb-4">
                     Unexpected Error
                 </h1>
                 <p className="text-[var(--text-muted)] text-lg mb-8">

@@ -56,7 +56,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="sticky top-24 bg-white rounded-xl border border-slate-200 p-6 shadow-sm"
         >
-            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-4">
                 Table of Contents
             </h3>
             <nav className="space-y-2">
@@ -66,7 +66,7 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
                         onClick={() => scrollToSection(section.id)}
                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-all duration-200 ${activeSection === section.id
                                 ? 'bg-signal-red text-white font-semibold'
-                                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                : 'text-[var(--text-muted)] hover:bg-slate-50 hover:text-[var(--deep-navy)]'
                             }`}
                     >
                         {section.title}

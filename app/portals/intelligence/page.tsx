@@ -14,7 +14,7 @@ export default function IntelligenceCenterPage() {
             {/* Hero */}
             <section className="section-container pt-32 pb-12">
                 <div className="text-center max-w-4xl mx-auto mb-12">
-                    <h1 className="text-5xl md:text-6xl font-black mb-6">
+                    <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black mb-6">
                         SSG <span className="text-signal-red">Intelligence Centre</span>
                     </h1>
                     <p className="text-xl text-text-muted">

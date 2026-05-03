@@ -43,7 +43,7 @@ export default function SectorStats({ title, subtitle, stats }: SectorStatsProps
                                     <stat.icon className="w-5 h-5 text-[var(--accent-amber)]" />
                                 </div>
                             )}
-                            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
+                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</div>
                             <div className="text-xs sm:text-sm font-semibold text-[var(--accent-amber)] uppercase tracking-wider mb-1">{stat.label}</div>
                             {stat.subtext && <div className="text-xs text-white/50">{stat.subtext}</div>}
                         </motion.div>
