@@ -44,11 +44,11 @@ export default function IntelligenceFeature({
                                 {topicTag}
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-4 sm:mb-6">
+                        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[var(--deep-navy)] mb-4 sm:mb-6">
                             {title} <br />
                             <span className="text-signal-red">{subtitle}</span>
                         </h2>
-                        <p className="text-base sm:text-xl text-slate-500 mb-6 sm:mb-8 leading-relaxed">
+                        <p className="text-base sm:text-xl text-[var(--text-muted)] mb-6 sm:mb-8 leading-relaxed">
                             {description}
                         </p>
 
@@ -66,8 +66,8 @@ export default function IntelligenceFeature({
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-slate-900 font-bold text-lg mb-1">{item.title}</h4>
-                                        <p className="text-slate-500 text-sm">{item.desc}</p>
+                                        <h4 className="text-[var(--deep-navy)] font-bold text-lg mb-1">{item.title}</h4>
+                                        <p className="text-[var(--text-muted)] text-sm">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

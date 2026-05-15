@@ -93,14 +93,14 @@ function ServiceCard({ service, index }: { service: ServiceCardItem; index: numb
                 {/* White text area — overlaps image bottom */}
                 <div className="relative z-[2] -mt-[36px] bg-white rounded-t-[24px] pt-[24px] px-[24px] pb-[24px]">
                     <div className="flex justify-between items-start">
-                        <h3 className="text-[22px] font-bold text-[#1a1a1a] leading-[1.25] max-w-[75%]">
+                        <h3 className="text-xl font-bold text-[#1a1a1a] leading-[1.25] max-w-[75%]">
                             {service.title}
                         </h3>
                         <div className="w-[42px] h-[42px] min-w-[42px] rounded-full bg-[#1e2a3a] flex items-center justify-center mt-[4px]">
                             <ArrowUpRight className="w-[18px] h-[18px] text-white" />
                         </div>
                     </div>
-                    <p className="mt-[14px] text-[15px] font-normal text-[#6b7280] leading-[1.5]">
+                    <p className="mt-[14px] text-[15px] sm:text-base font-normal text-[var(--text-muted)] leading-relaxed">
                         {service.description}
                     </p>
                 </div>

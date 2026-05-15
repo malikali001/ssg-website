@@ -4,7 +4,7 @@ import AwardBlock from '@/components/ui/AwardBlock';
 
 export const metadata: Metadata = {
     title: 'Awards & Recognition | SSG',
-    description: 'Recognizing excellence, leadership, and industry impact. Explore the awards and accolades earned by SSG and its team.',
+    description: 'Recognising excellence, leadership, and industry impact. Explore the awards and accolades earned by SSG and its team.',
 };
 
 export default function AwardsPage() {
@@ -17,11 +17,11 @@ export default function AwardsPage() {
                     <span className="text-[--color-signal-red] font-bold tracking-wider uppercase text-sm mb-4 block">
                         Excellence
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-black text-[--color-deep-navy] mb-6 leading-tight">
+                    <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-[--color-deep-navy] mb-6 leading-tight">
                         Awards & <span className="text-[--color-signal-red]">Recognition</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-500 font-medium leading-relaxed">
-                        Recognizing excellence, leadership, and industry impact.
+                    <p className="text-xl md:text-2xl text-[var(--text-muted)] font-medium leading-relaxed">
+                        Recognising excellence, leadership, and industry impact.
                     </p>
                 </div>
             </section>

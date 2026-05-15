@@ -17,8 +17,8 @@ export default function ConstructionContent() {
     ];
 
     const challenges = [
-        { title: "Plant & Machinery Theft", description: "High-value assets are prime targets for organized criminal gangs, leading to project delays and insurance hikes." },
-        { title: "Health & Safety Risks", description: "Unauthorized access by the public or children can result in severe legal liability and tragic accidents." },
+        { title: "Plant & Machinery Theft", description: "High-value assets are prime targets for organised criminal gangs, leading to project delays and insurance hikes." },
+        { title: "Health & Safety Risks", description: "Unauthorised access by the public or children can result in severe legal liability and tragic accidents." },
         { title: "Fuel Theft", description: "Rising fuel costs make site storage tanks vulnerable to overnight syphoning." }
     ];
 

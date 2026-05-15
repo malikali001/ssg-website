@@ -38,7 +38,7 @@ export default function ServiceDropdown() {
                 <div className="flex gap-10">
                     {/* Left Side - Heading + Services Grid */}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-2xl md:text-[1.7rem] font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[var(--deep-navy)] leading-snug mb-3 max-w-lg">
                             {heading}
                         </h3>
                         <p className="text-[var(--text-muted)] text-sm mb-6 max-w-lg">

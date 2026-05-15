@@ -37,7 +37,7 @@ export default function PrivacyPolicyContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* Introduction */}
                             <AnimatedSection id="introduction">
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
+                                <h2 className="font-bold text-deep-navy mb-4">
                                     Introduction
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -52,7 +52,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Information We Collect */}
                             <AnimatedSection id="information-we-collect" delay={0.1}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Information We Collect
                                 </h2>
 
@@ -63,7 +63,7 @@ export default function PrivacyPolicyContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Contact Information:</strong> Name, email address, phone number, postal address</li>
                                     <li><strong>Business Information:</strong> Company name, job title, business address</li>
-                                    <li><strong>Inquiry Details:</strong> Information you provide when requesting quotes or services</li>
+                                    <li><strong>Enquiry Details:</strong> Information you provide when requesting quotes or services</li>
                                     <li><strong>Employment Information:</strong> CV, references, qualifications (for job applicants)</li>
                                 </ul>
 
@@ -77,7 +77,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* How We Use Your Information */}
                             <AnimatedSection id="how-we-use" delay={0.2}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     How We Use Your Information
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -85,25 +85,25 @@ export default function PrivacyPolicyContent() {
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Service Delivery:</strong> To provide security and facilities management services</li>
-                                    <li><strong>Communication:</strong> To respond to inquiries, provide quotes, and send service updates</li>
+                                    <li><strong>Communication:</strong> To respond to enquiries, provide quotes, and send service updates</li>
                                     <li><strong>Contract Management:</strong> To manage contracts and billing</li>
                                     <li><strong>Recruitment:</strong> To process job applications and conduct background checks</li>
                                     <li><strong>Legal Compliance:</strong> To comply with SIA regulations and other legal obligations</li>
-                                    <li><strong>Website Improvement:</strong> To analyze usage and improve our website</li>
+                                    <li><strong>Website Improvement:</strong> To analyse usage and improve our website</li>
                                     <li><strong>Marketing:</strong> To send relevant information about our services (with your consent)</li>
                                 </ul>
                             </AnimatedSection>
 
                             {/* Legal Basis for Processing */}
                             <AnimatedSection id="legal-basis" delay={0.3}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Legal Basis for Processing
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
                                     Under GDPR, we process your personal data based on the following legal grounds:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
-                                    <li><strong>Contractual Necessity:</strong> Processing necessary to fulfill our contract with you</li>
+                                    <li><strong>Contractual Necessity:</strong> Processing necessary to fulfil our contract with you</li>
                                     <li><strong>Legal Obligation:</strong> Compliance with SIA licensing, employment law, and other regulations</li>
                                     <li><strong>Legitimate Interests:</strong> Business operations, fraud prevention, and service improvement</li>
                                     <li><strong>Consent:</strong> Marketing communications and non-essential cookies (where applicable)</li>
@@ -112,7 +112,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Data Sharing & Third Parties */}
                             <AnimatedSection id="data-sharing" delay={0.4}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Data Sharing & Third Parties
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -131,11 +131,11 @@ export default function PrivacyPolicyContent() {
 
                             {/* Data Retention */}
                             <AnimatedSection id="data-retention" delay={0.5}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Data Retention
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    We retain personal information for as long as necessary to fulfill the purposes outlined in this policy:
+                                    We retain personal information for as long as necessary to fulfil the purposes outlined in this policy:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li><strong>Client Data:</strong> Duration of contract plus 6 years (for legal and accounting purposes)</li>
@@ -148,7 +148,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Your Rights */}
                             <AnimatedSection id="your-rights" delay={0.6}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Your Rights
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -170,11 +170,11 @@ export default function PrivacyPolicyContent() {
 
                             {/* Security Measures */}
                             <AnimatedSection id="security" delay={0.7}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Security Measures
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
-                                    We implement appropriate technical and organizational measures to protect your personal information:
+                                    We implement appropriate technical and organisational measures to protect your personal information:
                                 </p>
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>SSL/TLS encryption for data transmission</li>
@@ -188,7 +188,7 @@ export default function PrivacyPolicyContent() {
 
                             {/* Contact Information */}
                             <AnimatedSection id="contact" delay={0.8}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Contact Information
                                 </h2>
                                 <div className="bg-deep-navy text-white rounded-xl p-8">

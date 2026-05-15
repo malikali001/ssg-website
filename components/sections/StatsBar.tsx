@@ -33,7 +33,7 @@ export default function StatsBar() {
                     <h2 className="mb-4">
                         Trusted Security. Proven Results.
                     </h2>
-                    <p className="text-[var(--text-main)] max-w-2xl mx-auto">
+                    <p className="text-[var(--text-main)] text-base sm:text-xl leading-relaxed max-w-2xl mx-auto">
                         Dedicated to safeguarding people, property, and progress with unmatched protection and professionalism.
                     </p>
                 </motion.div>
@@ -57,7 +57,7 @@ export default function StatsBar() {
                                 </div>
 
                                 {/* Stat number */}
-                                <div className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-extrabold text-[#C83232] leading-none mb-2 sm:mb-3">
+                                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#C83232] leading-none mb-2 sm:mb-3">
                                     {stat.value}
                                 </div>
 
