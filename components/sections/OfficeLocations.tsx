@@ -87,7 +87,7 @@ export default function OfficeLocations() {
                                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover/item:border-[--color-signal-red] transition-colors">
                                             <MapPin className="w-5 h-5 text-[--color-signal-red]" />
                                         </div>
-                                        <p className="text-slate-600 leading-relaxed pt-1">
+                                        <p className="text-[var(--text-muted)] leading-relaxed pt-1">
                                             {office.address}
                                         </p>
                                     </div>
@@ -96,7 +96,7 @@ export default function OfficeLocations() {
                                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover/item:border-[--color-signal-red] transition-colors">
                                             <Phone className="w-5 h-5 text-[--color-signal-red]" />
                                         </div>
-                                        <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-slate-600 font-medium hover:text-[--color-deep-navy] transition-colors pt-1">
+                                        <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-[var(--text-muted)] font-medium hover:text-[--color-deep-navy] transition-colors pt-1">
                                             {office.phone}
                                         </a>
                                     </div>
@@ -105,7 +105,7 @@ export default function OfficeLocations() {
                                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-slate-100 group-hover/item:border-[--color-signal-red] transition-colors">
                                             <Mail className="w-5 h-5 text-[--color-signal-red]" />
                                         </div>
-                                        <a href={`mailto:${office.email}`} className="text-slate-600 font-medium hover:text-[--color-deep-navy] transition-colors pt-1">
+                                        <a href={`mailto:${office.email}`} className="text-[var(--text-muted)] font-medium hover:text-[--color-deep-navy] transition-colors pt-1">
                                             {office.email}
                                         </a>
                                     </div>

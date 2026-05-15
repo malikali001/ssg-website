@@ -58,7 +58,7 @@ export default function ServiceShowcase() {
                                             <ArrowUpRight className="w-4 h-4 text-white" />
                                         </div>
                                     </div>
-                                    <p className="text-[var(--text-main)] text-[15px] leading-relaxed">
+                                    <p className="text-[var(--text-main)] text-[15px] sm:text-base leading-relaxed">
                                         {cat.description}
                                     </p>
                                 </div>

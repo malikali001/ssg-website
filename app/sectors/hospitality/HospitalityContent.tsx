@@ -17,7 +17,7 @@ export default function HospitalityContent() {
     ];
 
     const challenges = [
-        { title: "Guest Intoxication", description: "Managing behavior at bars and clubs while maintaining a fun atmosphere." },
+        { title: "Guest Intoxication", description: "Managing behaviour at bars and clubs while maintaining a fun atmosphere." },
         { title: "Crowd Control", description: "Ensuring safe capacity limits and movement flows during high-volume events." },
         { title: "Brand Reputation", description: "Security staff are often the first face guests see; poor presentation reflects on the venue." }
     ];
@@ -33,7 +33,7 @@ export default function HospitalityContent() {
             <ServiceHero
                 title="Hospitality Security."
                 subtitle="Secure Experience."
-                description="Protecting your guests and your license. We provide door supervision and event security that enhances the customer experience rather than hindering it."
+                description="Protecting your guests and your licence. We provide door supervision and event security that enhances the customer experience rather than hindering it."
                 imageSrc="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"
             />
 

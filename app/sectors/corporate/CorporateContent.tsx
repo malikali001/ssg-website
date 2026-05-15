@@ -17,7 +17,7 @@ export default function CorporateContent() {
     ];
 
     const challenges = [
-        { title: "Tailgating & Unauthorized Entry", description: "Individuals following staff through secure doors, compromising sensitive zones." },
+        { title: "Tailgating & Unauthorised Entry", description: "Individuals following staff through secure doors, compromising sensitive zones." },
         { title: "Intellectual Property Theft", description: "Corporate espionage or data theft from unsecured server rooms or offices." },
         { title: "Visitor Experience", description: "Balancing strict security protocols with a welcoming environment for clients and partners." }
     ];

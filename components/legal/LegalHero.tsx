@@ -17,14 +17,14 @@ export default function LegalHero({ title, lastUpdated, description }: LegalHero
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h1 className="text-4xl md:text-5xl font-black text-deep-navy mb-4">
+                    <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-deep-navy mb-4">
                         {title}
                     </h1>
-                    <p className="text-slate-500 text-sm mb-2">
-                        Last Updated: <span className="font-semibold text-slate-700">{lastUpdated}</span>
+                    <p className="text-[var(--text-muted)] text-sm mb-2">
+                        Last Updated: <span className="font-semibold text-[var(--text-main)]">{lastUpdated}</span>
                     </p>
                     {description && (
-                        <p className="text-lg text-slate-600 mt-4 leading-relaxed">
+                        <p className="text-lg text-[var(--text-muted)] mt-4 leading-relaxed">
                             {description}
                         </p>
                     )}

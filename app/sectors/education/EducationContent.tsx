@@ -18,7 +18,7 @@ export default function EducationContent() {
 
     const challenges = [
         { title: "Campus Permeability", description: "Multiple entry points on large campuses make it difficult to track who is on site." },
-        { title: "Student Welfare", description: "Protecting students from external threats, substance abuse, and anti-social behavior." },
+        { title: "Student Welfare", description: "Protecting students from external threats, substance abuse, and anti-social behaviour." },
         { title: "Asset Protection", description: "Expensive IT equipment and laboratories are high-value targets for theft." }
     ];
 

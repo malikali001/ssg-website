@@ -18,7 +18,7 @@ export default function K9Content() {
     const services = [
         { icon: Shield, title: 'General Purpose Patrol', desc: 'Visual deterrent and protection for large perimeters.' },
         { icon: Search, title: 'Drug Detection', desc: 'Proactive searching for illicit substances at events or workplaces.' },
-        { icon: Skull, title: 'Explosive Detection', desc: 'Specialized units for high-threat environments and counter-terrorism.' },
+        { icon: Skull, title: 'Explosive Detection', desc: 'Specialised units for high-threat environments and counter-terrorism.' },
         { icon: Zap, title: 'Response Units', desc: 'Emergency support for alarm activations and hostile situations.' },
     ];
 

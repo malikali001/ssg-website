@@ -59,12 +59,12 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                     <div className="mb-2">
                         <span className="text-xs font-bold text-[var(--signal-red)] uppercase tracking-wider">{award.organization}</span>
                         <span className="mx-2 text-slate-300">•</span>
-                        <span className="text-xs font-medium text-slate-500">{award.year}</span>
+                        <span className="text-xs font-medium text-[var(--text-muted)]">{award.year}</span>
                     </div>
                     <h3 className="text-lg font-bold text-[var(--deep-navy)] mb-3 group-hover:text-[var(--signal-red)] transition-colors line-clamp-2">
                         {award.title}
                     </h3>
-                    <p className="text-sm text-slate-600 line-clamp-3">
+                    <p className="text-sm text-[var(--text-muted)] line-clamp-3">
                         {award.description}
                     </p>
                 </div>
@@ -95,7 +95,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                         <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase tracking-wider">
                                             {award.category}
                                         </span>
-                                        <span className="text-sm font-semibold text-slate-500">{award.year}</span>
+                                        <span className="text-sm font-semibold text-[var(--text-muted)]">{award.year}</span>
                                     </div>
                                     <h3 className="text-2xl md:text-3xl font-bold text-[var(--deep-navy)] mb-4">
                                         {award.title}
@@ -103,7 +103,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                     <p className="text-lg font-medium text-[var(--signal-red)] mb-6">
                                         {award.organization}
                                     </p>
-                                    <p className="text-slate-600 mb-6 leading-relaxed">
+                                    <p className="text-[var(--text-muted)] mb-6 leading-relaxed">
                                         {award.description}
                                     </p>
                                 </div>
@@ -117,13 +117,13 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                     {award.aboutAward && (
                                         <div>
                                             <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">About the Award</h4>
-                                            <p className="text-sm text-slate-500 leading-relaxed">{award.aboutAward}</p>
+                                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.aboutAward}</p>
                                         </div>
                                     )}
                                     {award.whyEarned && (
                                         <div>
                                             <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">Why It Was Earned</h4>
-                                            <p className="text-sm text-slate-500 leading-relaxed">{award.whyEarned}</p>
+                                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.whyEarned}</p>
                                         </div>
                                     )}
                                 </div>
@@ -146,7 +146,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                 <span className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider border border-slate-200">
                                     {award.category}
                                 </span>
-                                <span className="text-sm font-semibold text-slate-500">{award.year}</span>
+                                <span className="text-sm font-semibold text-[var(--text-muted)]">{award.year}</span>
                             </div>
                             <h3 className="text-2xl md:text-3xl font-bold text-[var(--deep-navy)] mb-2">
                                 {award.title}
@@ -154,7 +154,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                             <p className="text-lg font-medium text-[var(--signal-red)] mb-6">
                                 {award.organization}
                             </p>
-                            <p className="text-slate-600 mb-8 leading-relaxed max-w-2xl">
+                            <p className="text-[var(--text-muted)] mb-8 leading-relaxed max-w-2xl">
                                 {award.description}
                             </p>
                             {(award.aboutAward || award.whyEarned) && (
@@ -162,13 +162,13 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                     {award.aboutAward && (
                                         <div>
                                             <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">About the Award</h4>
-                                            <p className="text-sm text-slate-500 leading-relaxed">{award.aboutAward}</p>
+                                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.aboutAward}</p>
                                         </div>
                                     )}
                                     {award.whyEarned && (
                                         <div>
                                             <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">Why It Was Earned</h4>
-                                            <p className="text-sm text-slate-500 leading-relaxed">{award.whyEarned}</p>
+                                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.whyEarned}</p>
                                         </div>
                                     )}
                                 </div>
@@ -184,7 +184,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                 {award.category}
                             </span>
                             <span className="w-1 h-1 bg-slate-300 rounded-full" />
-                            <span className="text-sm font-semibold text-slate-500">{award.year}</span>
+                            <span className="text-sm font-semibold text-[var(--text-muted)]">{award.year}</span>
                         </div>
                         <h3 className="text-3xl md:text-4xl font-black text-[var(--deep-navy)] mb-4">
                             {award.title}
@@ -192,7 +192,7 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                         <p className="text-xl text-[var(--signal-red)] font-medium mb-8">
                             {award.organization}
                         </p>
-                        <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                        <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-10 max-w-2xl mx-auto">
                             {award.description}
                         </p>
                         {(award.aboutAward || award.whyEarned) && (
@@ -200,13 +200,13 @@ export default function AwardBlock({ award, layout = 'default' }: AwardBlockProp
                                 {award.aboutAward && (
                                     <div>
                                         <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">About the Award</h4>
-                                        <p className="text-sm text-slate-500 leading-relaxed">{award.aboutAward}</p>
+                                        <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.aboutAward}</p>
                                     </div>
                                 )}
                                 {award.whyEarned && (
                                     <div>
                                         <h4 className="text-sm font-bold text-[var(--deep-navy)] uppercase tracking-wider mb-2">Why It Was Earned</h4>
-                                        <p className="text-sm text-slate-500 leading-relaxed">{award.whyEarned}</p>
+                                        <p className="text-sm text-[var(--text-muted)] leading-relaxed">{award.whyEarned}</p>
                                     </div>
                                 )}
                             </div>

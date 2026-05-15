@@ -43,7 +43,7 @@ export default function CaseStudyCard({
                     height={500}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-widest border border-white">
+                <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[var(--deep-navy)] uppercase tracking-widest border border-white">
                     {sector}
                 </div>
             </div>
@@ -55,12 +55,12 @@ export default function CaseStudyCard({
                         <ShieldCheck className="w-4 h-4" />
                         {client}
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight group-hover:text-signal-red transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-black text-[var(--deep-navy)] leading-tight group-hover:text-signal-red transition-colors">
                         {title}
                     </h3>
                 </div>
 
-                <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-6 flex-grow">
                     {summary}
                 </p>
 
@@ -68,15 +68,15 @@ export default function CaseStudyCard({
                 <div className="grid grid-cols-2 gap-4 mb-8 py-4 border-y border-slate-100">
                     {stats.map((stat, idx) => (
                         <div key={idx}>
-                            <div className="text-xl font-black text-slate-900">{stat.value}</div>
-                            <div className="text-xs text-slate-400 font-bold uppercase">{stat.label}</div>
+                            <div className="text-xl font-black text-[var(--deep-navy)]">{stat.value}</div>
+                            <div className="text-xs text-[var(--text-muted)] font-bold uppercase">{stat.label}</div>
                         </div>
                     ))}
                 </div>
 
                 <Link
                     href={link}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-signal-red transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[var(--deep-navy)] group-hover:text-signal-red transition-colors"
                 >
                     Read Full Study <ArrowRight className="w-4 h-4" />
                 </Link>

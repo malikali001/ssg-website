@@ -18,7 +18,7 @@ export default function ConciergeContent() {
     const services = [
         { icon: UserCheck, title: 'Front of House', desc: 'Greeting visitors, managing badges, and providing first impressions.' },
         { icon: Building, title: 'Access Management', desc: 'Controlling entry points and verifying visitor credentials.' },
-        { icon: Coffee, title: 'Tenant Services', desc: 'Handling mail, deliveries, and resident inquiries with care.' },
+        { icon: Coffee, title: 'Tenant Services', desc: 'Handling mail, deliveries, and resident enquiries with care.' },
         { icon: Shield, title: 'Conflict Resolution', desc: 'De-escalating situations professionally without disrupting the environment.' },
     ];
 

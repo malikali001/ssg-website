@@ -34,7 +34,7 @@ export default function CookiePolicyContent() {
                         <div className="prose prose-slate max-w-none">
                             {/* What Are Cookies */}
                             <AnimatedSection id="what-are-cookies">
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4">
+                                <h2 className="font-bold text-deep-navy mb-4">
                                     What Are Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -47,7 +47,7 @@ export default function CookiePolicyContent() {
 
                             {/* How We Use Cookies */}
                             <AnimatedSection id="how-we-use" delay={0.1}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     How We Use Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -64,7 +64,7 @@ export default function CookiePolicyContent() {
 
                             {/* Types of Cookies */}
                             <AnimatedSection id="types-of-cookies" delay={0.2}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Types of Cookies We Use
                                 </h2>
 
@@ -93,7 +93,7 @@ export default function CookiePolicyContent() {
                                 <ul className="list-disc pl-6 mb-4 text-slate-600 space-y-2">
                                     <li>Language preferences</li>
                                     <li>Region selection</li>
-                                    <li>User interface customization</li>
+                                    <li>User interface customisation</li>
                                 </ul>
 
                                 <h3 className="text-xl font-bold text-slate-900 mb-3 mt-6">Marketing Cookies</h3>
@@ -109,7 +109,7 @@ export default function CookiePolicyContent() {
 
                             {/* Managing Cookies */}
                             <AnimatedSection id="managing-cookies" delay={0.3}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Managing Cookie Preferences
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -145,7 +145,7 @@ export default function CookiePolicyContent() {
 
                             {/* Third-Party Cookies */}
                             <AnimatedSection id="third-party" delay={0.4}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Third-Party Cookies
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
@@ -158,7 +158,7 @@ export default function CookiePolicyContent() {
 
                             {/* Updates */}
                             <AnimatedSection id="updates" delay={0.5}>
-                                <h2 className="text-3xl font-bold text-deep-navy mb-4 mt-12">
+                                <h2 className="font-bold text-deep-navy mb-4 mt-12">
                                     Updates to This Policy
                                 </h2>
                                 <p className="text-slate-600 leading-relaxed mb-4">
